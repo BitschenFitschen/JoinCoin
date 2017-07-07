@@ -1,0 +1,15 @@
+.beginner, .advanced, .introduction {
+	text-align: center;
+}
+
+.side {
+	height: 800px;
+}
+
+.fluff {
+	height: 20%;
+}
+
+.sideButton {
+	height: 60%;
+}
