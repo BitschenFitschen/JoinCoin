@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Col, Row} from 'react-bootstrap';
+import {Col} from 'react-bootstrap';
 import './main.css'
 
 class Advanced extends Component {

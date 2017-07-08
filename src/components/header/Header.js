@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Col, Row} from 'react-bootstrap';
+import {Col} from 'react-bootstrap';
 import './header.css';
 
 class Header extends Component {
@@ -7,9 +7,9 @@ class Header extends Component {
     return (
       <div className="header">
          <Col xs={12} sm={12} md={12} lg={12} xl={12}>
-				<h1>Header</h1>
-				<h3>sub-Header</h3>
-		</Col>
+				  <h1>Header</h1>
+				  <h3>sub-Header</h3>
+		    </Col>
       </div>
     );
   }
