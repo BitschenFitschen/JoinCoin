@@ -6,7 +6,7 @@ class Introduction extends Component {
     return (
       <div className="introduction">
         <Col xs={12} sm={6} md={6} lg={6} xl={6}>
-				<p>Intro Section</p>
+				<p>Introduction Section</p>
 		</Col>
       </div>
     );
