@@ -4,11 +4,10 @@ import './profit.css';
 
 class ProfitCalculator extends Component {
   render () {
-
     return (
-     
+      <h1>ProfitCalculator</h1>
     );
   }
 }
 
-export default Education;
+export default ProfitCalculator;

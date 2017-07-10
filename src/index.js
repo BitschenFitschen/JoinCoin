@@ -5,7 +5,7 @@ import App from './components/App';
 import Education from './components/education/Education';
 import AdvancedUserTools from './components/advancedUserTools/AdvancedUserTools';
 import Dashboard from './components/dashboard/Dashboard';
-import ProfitCalculator from './components/dashboard/ProfitCalculator';
+import ProfitCalculator from './components/profitCalculator/ProfitCalculator';
 import NotFound from './components/NotFound';
 import registerServiceWorker from './registerServiceWorker';
 
