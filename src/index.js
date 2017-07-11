@@ -5,22 +5,26 @@ import App from './components/App';
 import Education from './components/education/Education';
 import AdvancedUserTools from './components/advancedUserTools/AdvancedUserTools';
 import Dashboard from './components/dashboard/Dashboard';
+import ProfitCalculator from './components/profitCalculator/ProfitCalculator';
+import Coins from './components/coins/Coins';
 import NotFound from './components/NotFound';
 import registerServiceWorker from './registerServiceWorker';
 
 const Root = () => {
-	return (
-		<BrowserRouter>
-			<div>
-				<Match exactly pattern="/" component={App} />
-				<Match pattern="/education" component={Education} />
-				<Match pattern="/advancedUserTools" component={AdvancedUserTools} />
-				<Match pattern="/dashboard" component={Dashboard} />
-				<Miss component={NotFound} />
-			</div>
-		</BrowserRouter>
-		)
-}
+  return (
+    <BrowserRouter>
+      <div>
+        <Match exactly pattern='/' component={App} />
+        <Match pattern='/education' component={Education} />
+        <Match pattern='/advancedUserTools' component={AdvancedUserTools} />
+        <Match pattern='/dashboard' component={Dashboard} />
+        <Match pattern='/profitCalculator' component={ProfitCalculator} />
+        <Match pattern='/coins' component={Coins} />
+        <Miss component={NotFound} />
+      </div>
+    </BrowserRouter>
+  );
+};
 
-ReactDOM.render(<Root/>, document.getElementById('root'));
+ReactDOM.render(<Root />, document.getElementById('root'));
 registerServiceWorker();
