@@ -31,14 +31,16 @@ class Dashboard extends Component {
 
 
   render() {
+    let dataDash = this.state.dashboardData;
     return (
       <div className="dashboard">
         <Col xs={12} sm={12} md={12} lg={12} xl={12}>
-				<p>Dashboard</p>
+				<p>{dataDash}</p>
 		</Col>
       </div>
     );
   }
+}
 }
 
 export default Dashboard;
