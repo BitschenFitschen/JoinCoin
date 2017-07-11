@@ -7,6 +7,9 @@ import AdvancedUserTools from './components/advancedUserTools/AdvancedUserTools'
 import Dashboard from './components/dashboard/Dashboard';
 import ProfitCalculator from './components/profitCalculator/ProfitCalculator';
 import Coins from './components/coins/Coins';
+import Register from './components/register/Register';
+import Login from './components/login/Login';
+import EditProfile from './components/editProfile/EditProfile';
 import NotFound from './components/NotFound';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -20,6 +23,9 @@ const Root = () => {
         <Match pattern='/dashboard' component={Dashboard} />
         <Match pattern='/profitCalculator' component={ProfitCalculator} />
         <Match pattern='/coins' component={Coins} />
+        <Match pattern='/users/register' component={Register} />
+        <Match pattern='/users/login' component={Login} />
+        <Match pattern='/users/profile' component={EditProfile} />
         <Miss component={NotFound} />
       </div>
     </BrowserRouter>
