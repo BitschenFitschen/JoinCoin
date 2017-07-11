@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
 // import {Col, Accordion, Panel} from 'react-bootstrap';
 import './coins.css';
-// import Coin from './Coin';
+import Coin from './Coin';
 import axios from 'axios';
 
 class Coins extends Component {
-  // constructor() {
-  //   super();
-  // }
+  constructor(props) {
+    super(props);
+    this.handleSearchTermChange = this.handleSearchTermChange.bind(this);
+  }
 
   state = {
-    coins: []
+    coins: [],
+    searchTerm: ''
   };
+
+  handleSearchTermChange (event) {
+    this.setState({ searchTerm: event.target.value });
+  }
 
   componentWillMount() {
     let that = this;
@@ -26,7 +32,7 @@ class Coins extends Component {
           arr.push(response.data.Data[key]);
         }
 
-        console.log(arr);
+        // console.log(arr);
 
         that.setState( { coins: arr } );
       })
@@ -41,14 +47,27 @@ class Coins extends Component {
     return (
       <div className="container-fluid">
         <h1>Coins</h1>
-        <input type="text" placeholder="Search for coin" />
-        <div className="coin-container">
+        <input onChange={this.handleSearchTermChange} type="text" value={this.state.searchTerm} placeholder="Search for coin" />
+        <div className="coins-container">
           {
-            this.state.coins.map(coin => (
-              <div className="coin-card">
-                <h6>{this.state.coins[coin].CoinName}</h6>
-                <span>{this.state.coins[coin].Algorithm}</span>
-              </div>
+            this.state.coins
+              .sort( (a, b) => {
+                var idA = a.SortOrder;
+                var idB = b.SortOrder;
+
+                if(idA < idB) {
+                  return -1;
+                } 
+
+                if(idA > idB) {
+                  return 1;
+                }
+
+                return 0;
+              })
+              .filter( coin => `${coin.FullName}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase()) >= 0)
+              .map( coin => (
+              <Coin key={coin.Id} coin={coin} />
             ))
           }
         </div>

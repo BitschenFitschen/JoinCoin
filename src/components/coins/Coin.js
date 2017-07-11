@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 // import {Col, Accordion, Panel} from 'react-bootstrap';
 import './coin.css';
-import axios from 'axios';
+// import axios from 'axios';
 
-const Coin = props => (
-  <div className='coin-card'>
-    <h6>{props.coins[key].CoinName}</h6>
+const Coin = (props) => (
+  <div className='coin-container'>
+    <h5>{props.coin.CoinName}</h5>
   </div>
 );
 
