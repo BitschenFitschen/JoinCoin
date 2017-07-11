@@ -11,9 +11,10 @@ router.get('/register', function (req, res) {
 });
 
 // Login
-router.get('/login', function (req, res) {
-  res.send('login');
-});
+// Routed via React
+// router.get('/login', function (req, res) {
+//   res.send('login');
+// });
 
 // Register User
 router.post('/register', function (req, res) {
