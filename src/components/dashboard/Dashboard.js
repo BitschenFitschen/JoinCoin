@@ -6,6 +6,10 @@ class Dashboard extends Component {
   componentWillMount() {
     axios.get('https://api.cryptonator.com/api/full/btc-usd')
       .then(function (response) {
+
+     	for (var i = 0; i < 10; i++) {
+        console.log(response.data.ticker.markets[i]);
+    }
     	console.log(response.data.ticker.base)
       })
       .catch(function (errorMsg) {
