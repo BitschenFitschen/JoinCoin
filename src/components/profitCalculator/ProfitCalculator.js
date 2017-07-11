@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Col, Accordion, Panel} from 'react-bootstrap';
+// import {Col, Accordion, Panel} from 'react-bootstrap';
 import './profit.css';
 import axios from 'axios';
 
@@ -44,7 +44,7 @@ class ProfitCalculator extends Component {
 
   buyIn(e) {
     console.log(e.target.value);
-    this.setState({ buyin: parseInt(e.target.value) });
+    this.setState({ buyin: parseInt(e.target.value, 10) });
 
     // if(e.target.value > 0 && this.state.coin !== 'null') {
     //   this.makeRequest();
@@ -60,7 +60,7 @@ class ProfitCalculator extends Component {
   // }
 
   payOff(amount) {
-    this.setState({ payoff: parseInt(amount) })
+    this.setState({ payoff: parseInt(amount, 10) })
   }
 
   render () {
