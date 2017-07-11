@@ -29,7 +29,9 @@ class Coins extends Component {
 
         for (var key in response.data.Data) {
           // console.log(response.data.Data[key]);
-          arr.push(response.data.Data[key]);
+          if (Object.prototype.hasOwnProperty.call(response.data.Data, key)) {
+              arr.push(response.data.Data[key]);
+          }
         }
 
         // console.log(arr);
