@@ -11,9 +11,9 @@
 	font-size: 100px;
 }
 
-h1, p, h3, .innerIntro, .upperLowerSideBarFringe, .middleSideBarFringe {
+/*h1, p, h3, .innerIntro, .upperLowerSideBarFringe, .middleSideBarFringe {
 	border: 2px solid black;
-}
+}*/
 
 h3 {
 	padding: 10px;
@@ -33,6 +33,7 @@ h3 {
 
 .middleSideBarFringe {
 	height: 100px;
+	background-color: #585858;
 }
 
 .introCarouselImage {
