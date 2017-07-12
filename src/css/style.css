@@ -1,6 +1,9 @@
 .landingPage {
-	background: #969696;
+	/*background: #969696;*/
+	background-image: url("http://cdn.wallpapersafari.com/20/57/QhXgUi.jpg");
 	overflow: auto;
+	color: #ddd;
+	font-family: 'Amiri', serif;
 }
 
 .header {
@@ -9,6 +12,16 @@
 
 #banner {
 	font-size: 100px;
+	margin-top: -10px;
+	margin-bottom: -20px;
+}
+
+#c {
+	font-size:135px;
+}
+
+#j {
+	font-size:90px;
 }
 
 /*h1, p, h3, .innerIntro, .upperLowerSideBarFringe, .middleSideBarFringe {
@@ -16,27 +29,46 @@
 }*/
 
 h3 {
-	padding: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
 }
 
-.beginner, .advanced, .introduction {
+.beginner, .advanced, .introduction, .middleSideBarFringe {
 	text-align: center;
 }
 
-.innerIntro {
+/*.innerIntro {
 	height: 500px;
 }
+*/
+.middleIntro {
+	height: 300px;
+	width: 100%;
+}
 
-.upperLowerSideBarFringe {
-	height: 200px;
+/*.introFringeUpper {
+	height: 50px;
+}*/
+
+.introFringeLower {
+	height: 50px;
+}
+
+.upperSideBarFringe {
+	height: 100px;
+}
+
+.lowerSideBarFringe {
+	height: 150px;
 }
 
 .middleSideBarFringe {
-	height: 100px;
+	height: 150px;
 	background-color: #585858;
 }
 
 .introCarouselImage {
 	width: 100%;
-	height: auto;
+	height: 400px;
+	border: 2px solid black;
 }

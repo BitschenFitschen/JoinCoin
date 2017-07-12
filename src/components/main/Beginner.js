@@ -6,13 +6,13 @@ class Beginner extends Component {
     return (
         <div className="Row sideSection">
             <Col xs={12} sm={3} md={3} lg={3}>
-              <div className="upperLowerSideBarFringe">
+              <div className="upperSideBarFringe">
               </div>
               <div className="middleSideBarFringe">
       				  <p>Beginner  
       				  </p>
               </div>
-              <div className="upperLowerSideBarFringe">
+              <div className="lowerSideBarFringe">
               </div>
             </Col>
         </div>

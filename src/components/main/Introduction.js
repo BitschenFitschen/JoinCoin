@@ -7,10 +7,15 @@ class Introduction extends Component {
     return (
       <div className="introduction">
         <Col xs={12} sm={6} md={6} lg={6}>
-        	<div className="innerIntro">
-				<p>Introduction Section</p>
-				<CarouselInstance />
-			</div>
+        <div className="innerIntro">
+        	<div className="introFringeUpper">
+          </div>
+        	<div className="middleIntro">
+				    <CarouselInstance />
+			    </div>
+			    <div className="introFringeLower">
+          </div>
+		</div>
 		</Col>
       </div>
     );
