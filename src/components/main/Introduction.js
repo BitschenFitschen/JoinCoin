@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Col} from 'react-bootstrap';
+import CarouselInstance from './introCarousel/IntroCarousel';
 
 class Introduction extends Component {
   render() {
@@ -8,6 +9,7 @@ class Introduction extends Component {
         <Col xs={12} sm={6} md={6} lg={6}>
         	<div className="innerIntro">
 				<p>Introduction Section</p>
+				<CarouselInstance />
 			</div>
 		</Col>
       </div>
