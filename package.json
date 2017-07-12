@@ -1,5 +1,5 @@
 {
-  "name": "cotd",
+  "name": "JoinCoin",
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
@@ -14,7 +14,21 @@
     "stylus": "0.54.5"
   },
   "dependencies": {
+    "axios": "^0.16.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^4.0.0",
+    "es6-promisify": "^5.0.0",
+    "express": "^4.15.3",
+    "express-session": "^1.15.3",
+    "express-validator": "^3.2.1",
     "history": "4.2.0",
+    "mongodb": "^2.2.30",
+    "mongoose": "^4.11.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
     "re-base": "2.2.0",
     "react": "15.3.2",
     "react-addons-css-transition-group": "15.3.2",
@@ -23,7 +37,7 @@
     "react-router": "4.0.0-alpha.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"react-scripts start\" \"node server\"",
     "watch": "concurrently --names \"webpack, stylus\" --prefix name \"npm run start\" \"npm run styles:watch\"",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
@@ -32,5 +46,6 @@
   },
   "eslintConfig": {
     "extends": "./node_modules/react-scripts/.eslintrc"
-  }
+  },
+  "proxy": "http://localhost:3001"
 }
