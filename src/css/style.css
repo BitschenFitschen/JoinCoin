@@ -1,0 +1,32 @@
+.landingPage {
+	background: #969696;
+	overflow: auto;
+}
+
+.header {
+	text-align: center;
+}
+
+#banner {
+	font-size: 100px;
+}
+
+h1, p, h3, .innerIntro, .upperLowerSideBarFringe, .middleSideBarFringe {
+	border: 2px solid black;
+}
+
+.beginner, .advanced, .introduction {
+	text-align: center;
+}
+
+.innerIntro {
+	height: 500px;
+}
+
+.upperLowerSideBarFringe {
+	height: 200px;
+}
+
+.middleSideBarFringe {
+	height: 100px;
+}
