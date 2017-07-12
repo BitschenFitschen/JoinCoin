@@ -35,6 +35,8 @@ h3 {
 
 .beginner, .advanced, .introduction, .middleSideBarFringe {
 	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /*.innerIntro {
@@ -44,6 +46,11 @@ h3 {
 .middleIntro {
 	height: 300px;
 	width: 100%;
+}
+
+#introSideBarImage {
+	width: 150px;
+	height: 150px;
 }
 
 /*.introFringeUpper {
