@@ -7,7 +7,7 @@ class Dashboard extends Component {
    constructor(props) {
    	super(props)
    	this.state = {
-   		dashboardData: 9001
+   		render1: 9001
    	}
    }
 
