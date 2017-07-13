@@ -27,8 +27,6 @@ class Education extends Component {
                     <Col md={6}>
                       <h3>{slide.title}</h3>
                       {/* <p>{slide.description}</p> */}
-                                            {/* <p>{slide.description}</p> */}
-
 
                       <Accordion>
                             <Panel header={slide.question01} eventKey='1'>
