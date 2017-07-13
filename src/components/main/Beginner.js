@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Col, Row} from 'react-bootstrap';
-import Image from 'react-image-resizer';
 
 class Beginner extends Component {
   render() {
@@ -10,11 +9,8 @@ class Beginner extends Component {
               <div className="upperSideBarFringe">
               </div>
               <div className="middleSideBarFringe">
-      				  <Image 
-                src='http://wrapious.com/news/02_03_2017/img/2.jpg'
-                height={190}
-                width={275}
-                />
+
+                  <div className="Row"><h3 className="sideHeader">New to Cryptocurrency?</h3><h4>Click here for a simple and complete tutorial on everything you need to know</h4></div>
               </div>
               <div className="lowerSideBarFringe">
               </div>

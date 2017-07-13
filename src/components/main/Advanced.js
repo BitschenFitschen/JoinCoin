@@ -10,11 +10,7 @@ class Advanced extends Component {
             <div className="upperSideBarFringe">
             </div>
             <div className="middleSideBarFringe">
-  				    <Image 
-                src='http://wrapious.com/news/02_03_2017/img/2.jpg'
-                height={190}
-                width={275}
-                />
+  				    <div className="Row"><h3 className="sideHeader">You already know?</h3><h4>Here you will find advanced user tools for monitoring and forecasting all major coins</h4></div>
             </div>
             <div className="lowerSideBarFringe">
             </div>

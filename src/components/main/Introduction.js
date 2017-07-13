@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Col} from 'react-bootstrap';
+import Image from 'react-image-resizer';
 import CarouselInstance from './introCarousel/IntroCarousel';
 
 class Introduction extends Component {
@@ -11,12 +12,12 @@ class Introduction extends Component {
         	<div className="introFringeUpper">
           </div>
         	<div className="middleIntro">
-				    <CarouselInstance />
+            <CarouselInstance />
 			    </div>
 			    <div className="introFringeLower">
           </div>
-		</div>
-		</Col>
+		    </div>
+		    </Col>
       </div>
     );
   }
