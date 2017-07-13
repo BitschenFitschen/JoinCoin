@@ -2,9 +2,17 @@
   "slides": [
     {
       "index": 0,
-      "title": "Title for Slide #1",
+      "title": "The Basics",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      "image": "0.jpg",
+      "image": "./img/bitcoin.jpg",
+
+      "question01": "What Is A Cryptocurrency?",
+      "answer01": "A cryptocurrency is a digital or virtual currency that uses cryptography for security. Transactions are made with no middle men – meaning, no banks. A defining feature of a cryptocurrency, it is not issued by any central authority, rendering it theoretically immune to government interference or manipulation. There are no transaction fees and no need to give your real name. The first cryptocurrency to capture the public imagination was Bitcoin, which was launched in 2009 by an individual or group known under the pseudonym Satoshi Nakamoto.",
+      "question02": "Why Use Cryptocurrency?",
+      "answer02": "Cryptocurrency can be used to buy anonymously! International payments are easy and cheap, as Cryptocurrency are not tied to any country or subject to regulation. They have no credit card fees and have a large investment opportunity!",
+      "question03": "How to Purchase Cryptocurrency?",
+      "answer03": "Cryptocurrency can be purchase on an online Exchange! There are several marketplaces called “exchanges” that allow people to buy or sell Cryptocurrency using different national currencies. No more needing to convert!",
+      
       "leftSidePanelTitle": "Left Title (Supplementary)",
       "leftSidePanelDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       "rightSidePanelTitle": "Right Title (Supplementary)",
@@ -12,9 +20,17 @@
     },
     {
       "index": 1,
-      "title": "Title for Slide #2",
+      "title": "What Else?",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       "image": "0.jpg",
+
+      "question01": "Who Accepts Cryptocurrency?",
+      "answer01": "More and more restaurants, online e-commerce sites, booking sites like Expedia, and can even purchase gift cards! Lots of gift card businesses accept bitcoins and that can be used at a surprising number of major retailers like Walmart, Amazon, Target and Nike!",
+      "question02": "Is Cryptocurrency In The USA?",
+      "answer02": "Gift Card Companies like Gyft, eGifter, iTradeBTC and GiftCardZen provide widest range of options., but many gift cards are only valid in their country of issue.You will  pay a little more to trade your bitcoins for gift cards,but  you don’t have to deal with exchanges or transfers.",
+      "question03": "Will Cryptocurrency Go Away Soon?",
+      "answer03": "Do you think the internet will go away soon? This is just the beginning of cryptocurrency. As globalization continues, the world will look for a consistent currency for all nations. IT’S ONLY THE BEGINNING!",
+      
       "leftSidePanelTitle": "Left Title (Supplementary)",
       "leftSidePanelDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       "rightSidePanelTitle": "Right Title (Supplementary)",
@@ -22,9 +38,18 @@
     },
     {
       "index": 2,
-      "title": "Title for Slide #3",
+      "title": "Security",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       "image": "0.jpg",
+
+      "question01": "Are Purchases Anonymous?",
+      "answer01": "Each transaction is recorded in a public log(the blockchain: We’ll get to that shortly).Names of buyers and sellers are never revealed! While that keeps bitcoin users’ transactions private, it also lets them buy or sell anything without tracing it back to them.",
+      "question02": "Where Are My Coins Stored?",
+      "answer02": "In your wallet on the blockchain! Think of it like direct deposit to your bank from your work. No actual paper money is exchanged or even seen, rather a transaction history of money/currency transferred and your account with a specific, private ID that reflects the new value!",
+      "question03": "What are the drawbacks of Cryptocurrency?",
+      "answer03": "Cryptocurrencies are virtual and do not have a central repository, a digital cryptocurrency balance can be wiped out by a computer crash if a backup copy of the holdings does not exist. Since prices are based on supply and demand, the rate at which a cryptocurrency can be exchanged for another currency can fluctuate widely. Cryptocurrencies are not immune to the threat of hacking. In Bitcoin's short history, the company has been subject to over 40 thefts, including a few that exceeded $1 million in value.",
+      
+
       "leftSidePanelTitle": "Left Title (Supplementary)",
       "leftSidePanelDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       "rightSidePanelTitle": "Right Title (Supplementary)",
@@ -59,6 +84,23 @@
       "leftSidePanelDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       "rightSidePanelTitle": "Right Title (Supplementary)",
       "rightSidePanelDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    }
+  ],
+  "questions01": [
+    {
+      "index": 0,
+      "question": "What is a Cryptocurrency?",
+      "answer": "A cryptocurrency is a digital or virtual currency that uses cryptography for security. Transactions are made with no middle men – meaning, no banks. A defining feature of a cryptocurrency, it is not issued by any central authority, rendering it theoretically immune to government interference or manipulation. There are no transaction fees and no need to give your real name."
+    },
+        {
+      "index": 1,
+      "question": "Why use Cryptocurrency?",
+      "answer": "Cryptocurrency can be used to buy anonymously! International payments are easy and cheap, as Cryptocurrency are not tied to any country or subject to regulation. They have no credit card fees and have a large investment opportunity!"
+    },
+    {
+      "index": 2,
+      "question": "How to purchase Cryptocurrency?",
+      "answer": "Cryptocurrency can be purchase on an online Exchange! There are several marketplaces called “exchanges” that allow people to buy or sell Cryptocurrency using different national currencies. No more needing to convert!"
     }
   ],
   "questions": [

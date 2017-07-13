@@ -15,6 +15,7 @@ class Education extends Component {
         <Col xs={12} sm={12} md={12} lg={12}>
           <h1>Education</h1>
           <Slider {...settings}>
+
             {
               preload.slides.map(
                 (slide) =>
@@ -25,7 +26,20 @@ class Education extends Component {
                     </Col>
                     <Col md={6}>
                       <h3>{slide.title}</h3>
-                      <p>{slide.description}</p>
+                      {/* <p>{slide.description}</p> */}
+
+                      <Accordion>
+                            <Panel header={slide.question01} eventKey='1'>
+                              {slide.answer01}
+                            </Panel>
+                            <Panel header={slide.question02} eventKey='2'>
+                              {slide.answer02}
+                            </Panel>
+                            <Panel header={slide.question03} eventKey='3'>
+                              {slide.answer03}
+                            </Panel>
+                    </Accordion> 
+
                     </Col>
                     <Col md={3}>
                       <h4>{slide.rightSidePanelTitle}</h4>
