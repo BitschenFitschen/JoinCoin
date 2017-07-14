@@ -3,6 +3,10 @@ import {Col} from 'react-bootstrap';
 import Image from 'react-image-resizer';
 
 class Advanced extends Component {
+  goToAdvanced(event) {
+    event.preventDefault();
+    this.context.router.transitionTo(`/advancedUserTools`);
+  }
   render() {
     return (
       <div className="advanced sideSection">
@@ -10,7 +14,7 @@ class Advanced extends Component {
             <div className="upperSideBarFringe">
             </div>
             <div className="middleSideBarFringe">
-  				    <div className="Row"><h3 className="sideHeader">You already know?</h3><h4>Here you will find advanced user tools for monitoring and forecasting all major coins</h4></div>
+  				    <div onClick={this.goToAdvanced.bind(this)}><h3 className="sideHeader Row">You already know?</h3><h4>Here you will find advanced user tools for monitoring and forecasting all major coins</h4></div>
             </div>
             <div className="lowerSideBarFringe">
             </div>
@@ -18,6 +22,10 @@ class Advanced extends Component {
       </div>
     );
   }
+}
+
+Advanced.contextTypes = {
+  router: React.PropTypes.object
 }
 
 export default Advanced;
