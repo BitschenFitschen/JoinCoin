@@ -34,10 +34,12 @@ class Dashboard extends Component {
       .then(function (response) {
       	for (var i = 0; i < 10; i++) {
         renderArr1.push(<p key={i}>{response.data[i].name}</p>);
+        renderArr2.push(<p key={i}>{response.data[i].price_usd}</p>);
     }
 
     _this.setState({
-      fillerData1: renderArr1
+      fillerData1: renderArr1,
+      fillerData2: renderArr2
     })
       })
       .catch(function (errorMsg) {
@@ -48,11 +50,13 @@ class Dashboard extends Component {
   render() {
 // Place for setStates later 
   let fillerData1 = this.state.fillerData1
+  let fillerData2 = this.state.fillerData2
     return (
       <div className="dashboard">
         <Col xs={12} sm={12} md={12} lg={12} xl={12}>
 				  {
             {fillerData1}
+            {fillerData2}
           }
 		    </Col>
       </div>
