@@ -10,6 +10,7 @@
     "eslint-plugin-flowtype": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.8.0",
+    "react-image-resizer": "^1.2.0",
     "react-scripts": "0.6.1",
     "stylus": "0.54.5"
   },
@@ -34,11 +35,10 @@
     "react-addons-css-transition-group": "15.3.2",
     "react-bootstrap": "^0.31.0",
     "react-dom": "15.3.2",
-
-    "react-ga": "^2.2.0",
+    "react-image-responsive": "^1.0.18",
     "react-router": "4.0.0-alpha.4",
+    "react-ga": "^2.2.0",
     "react-slick": "^0.14.11"
-
   },
   "scripts": {
     "start": "concurrently \"react-scripts start\" \"node server\"",

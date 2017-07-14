@@ -1,27 +1,39 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
+import {Col, Row} from 'react-bootstrap';
+=======
 import { Link } from 'react-router';
 import {Col} from 'react-bootstrap';
 import './main.css';
 import BeginnerImg from './img/CC-beginner.jpg';
+>>>>>>> master
 
 class Beginner extends Component {
+  goToEducation(event) {
+    event.preventDefault();
+    this.context.router.transitionTo(`/education`);
+  }
   render() {
     return (
-        <div className="Row">
-          <Col xs={12} sm={3} md={3} lg={3}>
-            <div className="fluff Row">
-            </div>
-            <Link to="/education">
-              <div className="beginner Row">
-                <img src={BeginnerImg} alt="" className="img-beginner"/>	    
+<<<<<<< HEAD
+        <div className="Row sideSection">
+            <Col xs={12} sm={3} md={3} lg={3}>
+              <div className="upperSideBarFringe">
               </div>
-            </Link>
-            <div className="fluff Row">
-            </div>
-          </Col>
+              <div className="middleSideBarFringe">
+
+                  <div onClick={this.goToEducation.bind(this)}><h3 className="sideHeader Row">New to Cryptocurrency?</h3><h4>Click here for a simple and complete tutorial on everything you need to know</h4></div>
+              </div>
+              <div className="lowerSideBarFringe">
+              </div>
+            </Col>
         </div>
     );
   }
+}
+
+Beginner.contextTypes = {
+  router: React.PropTypes.object
 }
 
 export default Beginner;
