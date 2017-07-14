@@ -71,7 +71,7 @@ class Dashboard extends Component {
     // let render2 = this.state.price
     return (
       <div className="dashboard">
-        <Col xs={12} sm={12} md={6} lg={6} xl={6}>
+        <Col xs={12} sm={12} md={6} lg={6}>
         {
           <div>
           <h1>Search Query Results [BTC as Example]</h1>
@@ -85,7 +85,7 @@ class Dashboard extends Component {
           </div>
         }
         </Col>
-        <Col xs={6} sm={6} md={3} lg={3} xl={3}>
+        <Col xs={6} sm={6} md={3} lg={3}>
         {
           <div>
             <ul>
@@ -95,7 +95,7 @@ class Dashboard extends Component {
           </div>
         }
         </Col>
-                <Col xs={6} sm={6} md={3} lg={3} xl={3}>
+                <Col xs={6} sm={6} md={3} lg={3}>
         {
           <div>
             <ul>
