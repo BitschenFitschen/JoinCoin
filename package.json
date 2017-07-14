@@ -36,7 +36,9 @@
     "react-bootstrap": "^0.31.0",
     "react-dom": "15.3.2",
     "react-image-responsive": "^1.0.18",
-    "react-router": "4.0.0-alpha.4"
+    "react-router": "4.0.0-alpha.4",
+    "react-ga": "^2.2.0",
+    "react-slick": "^0.14.11"
   },
   "scripts": {
     "start": "concurrently \"react-scripts start\" \"node server\"",
