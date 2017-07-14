@@ -34,7 +34,6 @@ class Dashboard extends Component {
       .then(function (response) {
       	for (var i = 0; i < 10; i++) {
 
-        console.log(response.data[i].id));
     }
 
       })
@@ -57,6 +56,10 @@ class Dashboard extends Component {
     );
   }
 }
+  // Testing Mapping to pull data from array of objects
+  // render1.map((objMap, index) => {
+  //  return <p key={index}>{objMap}</p>
+  // })
 
 
 export default Dashboard;
