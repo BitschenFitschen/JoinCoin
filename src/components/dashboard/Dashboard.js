@@ -53,12 +53,26 @@ class Dashboard extends Component {
   let fillerData2 = this.state.fillerData2
     return (
       <div className="dashboard">
-        <Col xs={12} sm={12} md={12} lg={12} xl={12}>
-				  {
+        <Col xs={6} sm={6} md={3} lg={3} xl={3}>
+        {
+          <div>
+            <ul>
+            <h1>Filler Data 01</h1>
             {fillerData1}
+            </ul>
+          </div>
+        }
+        </Col>
+        <Col xs={6} sm={6} md={3} lg={3} xl={3}>
+        {
+          <div>
+            <ul>
+            <h1>Filler Data 02</h1>
             {fillerData2}
-          }
-		    </Col>
+            </ul>
+          </div>
+        }
+        </Col>
       </div>
     );
   }
