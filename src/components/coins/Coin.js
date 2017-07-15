@@ -17,15 +17,17 @@ class Coin extends Component {
     let premined = null;
 
     if (this.props.coin.FullyPremined === '1') {
-      premined = <p>Premined</p>;
+      premined = <span>Premined</span>;
     }
 
     return (
       <a href='#' onClick={(e) => this.handleCoinClick(e)}>
         <div className='coin-container'>
 
-          <h5>{this.props.coin.CoinName}</h5>
-          <p>({this.props.coin.Name})</p>
+          <span>{this.props.coin.CoinName} </span>
+          <span>({this.props.coin.Name}) </span>
+          <span>{"  |  Algorithm: "+ this.props.coin.Algorithm} </span>
+          <span>{"  |  Total Coin Supply: "+ this.props.coin.TotalCoinSupply} </span>
           {premined}
         </div>
       </a>

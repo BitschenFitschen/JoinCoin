@@ -11,10 +11,15 @@ a {
 
 .coin-container {
 /*  border: 2px solid black;*/
-  width: 250px;
-  padding: 10px;
-  background: #ddd;
-  margin: 10px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
   font-size: 1.2em;
+}
+
+.coin-container:hover, .coin-container:active {
+/*  border: 2px solid black;*/
+  background: #eee;
 }
 
