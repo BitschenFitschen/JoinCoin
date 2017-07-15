@@ -4,9 +4,11 @@ import Slider from 'react-slick';
 import './education.css';
 import preload from './educationdata.json';
 
+// import BeginnerImg from './img/CC-beginner.jpg';
+
 class Education extends Component {
   render () {
-    var settings = {
+    var settings ={
       dots: true
     };
 
@@ -20,10 +22,10 @@ class Education extends Component {
               preload.slides.map(
                 (slide) =>
                   <div className='education-panel'>
-                    <Col md={3}>
+                    {/* <Col md={3}>
                       <h4>{slide.leftSidePanelTitle}</h4>
                       <small>{slide.leftSidePanelDescription}</small>
-                    </Col>
+                    </Col> */}
                     <Col md={6}>
                       <h3>{slide.title}</h3>
                       {/* <p>{slide.description}</p> */}
@@ -42,6 +44,8 @@ class Education extends Component {
 
                     </Col>
                     <Col md={3}>
+                      
+                      <img src={slide.image} alt=""/>
                       <h4>{slide.rightSidePanelTitle}</h4>
                       <small>{slide.rightSidePanelDescription}</small>
                     </Col>

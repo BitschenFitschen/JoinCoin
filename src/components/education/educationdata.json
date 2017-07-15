@@ -57,9 +57,17 @@
     },
     {
       "index": 3,
-      "title": "Title for Slide #4",
+      "title": "Blockchain",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       "image": "0.jpg",
+
+      "question01": "What Is A Blockchain?",
+      "answer01": "Remember the global list of transactions? That’s it! A transaction database, a full copy of a currency's block chain contains every transaction ever executed in the currency.",
+      "question02": "How Is the Blockchain being measure?",
+      "answer02": "'Length' is calculated as total combined difficulty of that chain, not number of blocks, though this distinction is only important in the context of a few potential attacks. A chain is valid if all of the blocks and transactions within it are valid, and only if it starts with the genesis block.",
+      "question03": "Want To Know More?",
+      "answer03": "Every block contains a hash of the previous block. Each block is guaranteed to come after the previous block chronologically because the previous block's hash would otherwise not be known. Each block is also computationally impractical to modify once it has been in the chain because every block after it would also have to be regenerated. These properties are what make bitcoins transactions irreversible.",
+     
       "leftSidePanelTitle": "Left Title (Supplementary)",
       "leftSidePanelDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       "rightSidePanelTitle": "Right Title (Supplementary)",
@@ -67,9 +75,17 @@
     },
     {
       "index": 4,
-      "title": "Title for Slide #5",
+      "title": "Mining",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       "image": "0.jpg",
+
+      "question01": "Woahhh There Tiger!",
+      "answer01": "While mining is integral to cryptocurrency, we’re going to stick to the basic ins and outs before we turn you into a algorithm-programming-software-engineering-minor (yes that is the correct term…)",
+      "question02": "How Is the Blockchain being measure?",
+      "answer02": "'Length' is calculated as total combined difficulty of that chain, not number of blocks, though this distinction is only important in the context of a few potential attacks. A chain is valid if all of the blocks and transactions within it are valid, and only if it starts with the genesis block.",
+      "question03": "Want To Know More?",
+      "answer03": "Every block contains a hash of the previous block. Each block is guaranteed to come after the previous block chronologically because the previous block's hash would otherwise not be known. Each block is also computationally impractical to modify once it has been in the chain because every block after it would also have to be regenerated. These properties are what make bitcoins transactions irreversible.",
+
       "leftSidePanelTitle": "Left Title (Supplementary)",
       "leftSidePanelDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       "rightSidePanelTitle": "Right Title (Supplementary)",
