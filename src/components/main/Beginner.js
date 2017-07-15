@@ -14,7 +14,7 @@ class Beginner extends Component {
               </div>
               <div className="middleSideBarFringe">
 
-                  <div onClick={this.goToEducation.bind(this)}><h3 className="sideHeader Row">New to Cryptocurrency?</h3><h4>Click here for a simple and complete tutorial on everything you need to know</h4></div>
+                  <div onClick={this.goToEducation.bind(this)}><h3 className="sideHeader Row">Beginner</h3><h4>Click here</h4></div>
               </div>
               <div className="lowerSideBarFringe">
               </div>

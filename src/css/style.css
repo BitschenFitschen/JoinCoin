@@ -1,6 +1,6 @@
 .landingPage {
 	/*background: #969696;*/
-	background-image: url("http://cdn.wallpapersafari.com/20/57/QhXgUi.jpg");
+	background-image: url("./QhXgUi.jpg");
 	overflow: auto;
 	color: #ddd;
 	font-family: 'Amiri', serif;
@@ -96,21 +96,16 @@ h3 {
 	/*opacity: .8;*/
 }
 
-#introSideBarImage {
-	width: 150px;
-	height: 150px;
-}
-
 /*.introFringeUpper {
 	height: 50px;
 }*/
 
 .introFringeLower {
-	height: 50px;
+	height: 25px;
 }
 
 .upperSideBarFringe {
-	height: 50px;
+	height: 100px;
 }
 
 .lowerSideBarFringe {
@@ -118,7 +113,7 @@ h3 {
 }
 
 .middleSideBarFringe {
-	height: 200px;
+	height: 150px;
 	display: flex;
 	justify-content: center;
 	/*border: 2px solid black;*/
@@ -126,6 +121,7 @@ h3 {
 	background-image: url("https://www.trade-secret.co.uk/wp-content/uploads/2015/08/Dark-Grey-Background-Best-Wallpaper-Gallery-dji6x-Free.jpeg");
 	padding-left: 5px;
 	padding-right: 5px;
+	width: 80%;
 }
 
 .introCarouselImage {
@@ -135,4 +131,267 @@ h3 {
 
 .sideHeader {
 	margin-top: 30px;
+}
+
+.middleIntroBody {
+	height: 200px;
+	border: solid 2px white;
+	width: 200px;
+}
+@media screen and (min-width: 0px) and (max-width: 640px) {
+	#banner {
+		margin-top: -10px;
+		margin-bottom: -10px;
+	}
+
+	.c {
+		font-size:100px;
+	}
+
+	#animated-example {  
+	   height: 180px; 
+	   margin: 10px auto; 
+	   width: 270px; 
+	   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
+	}
+
+	#animated-example2 {  
+	   height: 40px; 
+	   margin: 10px auto; 
+	   margin-bottom: 0px;
+	   width: 700px; 
+	   padding-bottom: 10px;
+	   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7);*/ 
+	}
+
+	@keyframes pulse { 
+	    0% { transform: scale(1); } 
+	    50% { transform: scale(1.4); } 
+	    100% { transform: scale(1); } 
+	} 
+	
+	.pulse { 
+	    animation-name: pulse; 
+	}
+
+	.j {
+		font-size:70px;
+	}
+
+	.o {
+		font-size:75px;
+	}
+
+	.middleIntro {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		/*border: 2px solid black;*/
+		border-radius: 5%;
+		height: 250px;
+		background-image: url("https://www.trade-secret.co.uk/wp-content/uploads/2015/08/Dark-Grey-Background-Best-Wallpaper-Gallery-dji6x-Free.jpeg");
+		/*opacity: .8;*/
+	}
+
+	.introFringeLower {
+		height: 50px;
+	}
+
+	.upperSideBarFringe {
+		height: 100px;
+	}
+
+	.lowerSideBarFringe {
+		height: 100px;
+	}
+
+	.middleSideBarFringe {
+		height: 100px;
+		display: flex;
+		justify-content: center;
+		/*border: 2px solid black;*/
+		border-radius: 20%;
+		background-image: url("https://www.trade-secret.co.uk/wp-content/uploads/2015/08/Dark-Grey-Background-Best-Wallpaper-Gallery-dji6x-Free.jpeg");
+		padding-left: 5px;
+		padding-right: 5px;
+		width: 100%;
+	}
+
+	.sideHeader {
+		margin-top: 20px;
+	}
+
+}
+
+@media (min-width: 640.1px) and (max-width: 768px) {
+	#banner {
+		margin-top: -10px;
+		margin-bottom: -10px;
+	}
+
+	.c {
+		font-size:100px;
+	}
+
+	#animated-example {  
+	   height: 180px; 
+	   margin: 10px auto; 
+	   width: 270px; 
+	   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
+	}
+
+	#animated-example2 {  
+	   height: 40px; 
+	   margin: 10px auto; 
+	   margin-bottom: 0px;
+	   width: 700px; 
+	   padding-bottom: 10px;
+	   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7);*/ 
+	}
+
+	@keyframes pulse { 
+	    0% { transform: scale(1); } 
+	    50% { transform: scale(1.4); } 
+	    100% { transform: scale(1); } 
+	} 
+	
+	.pulse { 
+	    animation-name: pulse; 
+	}
+
+	.j {
+		font-size:70px;
+	}
+
+	.o {
+		font-size:75px;
+	}
+
+	.middleIntro {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		/*border: 2px solid black;*/
+		border-radius: 0%;
+		height: 250px;
+		background-image: url("https://www.trade-secret.co.uk/wp-content/uploads/2015/08/Dark-Grey-Background-Best-Wallpaper-Gallery-dji6x-Free.jpeg");
+		/*opacity: .8;*/
+	}
+
+	.introFringeLower {
+		height: 0px;
+	}
+
+	.upperSideBarFringe {
+		height: 0px;
+	}
+
+	.lowerSideBarFringe {
+		height: 0px;
+	}
+
+	.middleSideBarFringe {
+		height: 100px;
+		display: flex;
+		justify-content: center;
+		/*border: 2px solid black;*/
+		border-radius: 0%;
+		background-image: url("https://www.trade-secret.co.uk/wp-content/uploads/2015/08/Dark-Grey-Background-Best-Wallpaper-Gallery-dji6x-Free.jpeg");
+		padding-left: 0px;
+		padding-right: 0px;
+		width: 100%;
+	}
+
+	.sideHeader {
+		margin-top: 20px;
+	}
+
+}	
+
+@media (min-width: 768.1px) and (max-width: 980px) {
+	#banner {
+		margin-top: -10px;
+		margin-bottom: -10px;
+	}
+
+	.c {
+		font-size:100px;
+	}
+
+	#animated-example {  
+	   height: 180px; 
+	   margin: 10px auto; 
+	   width: 270px; 
+	   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
+	}
+
+	#animated-example2 {  
+	   height: 40px; 
+	   margin: 10px auto; 
+	   margin-bottom: 0px;
+	   width: 700px; 
+	   padding-bottom: 10px;
+	   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7);*/ 
+	}
+
+	@keyframes pulse { 
+	    0% { transform: scale(1); } 
+	    50% { transform: scale(1.4); } 
+	    100% { transform: scale(1); } 
+	} 
+	
+	.pulse { 
+	    animation-name: pulse; 
+	}
+
+	.j {
+		font-size:70px;
+	}
+
+	.o {
+		font-size:75px;
+	}
+
+	.middleIntro {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		/*border: 2px solid black;*/
+		border-radius: 5%;
+		height: 250px;
+		background-image: url("https://www.trade-secret.co.uk/wp-content/uploads/2015/08/Dark-Grey-Background-Best-Wallpaper-Gallery-dji6x-Free.jpeg");
+		/*opacity: .8;*/
+	}
+
+	.introFringeLower {
+		height: 50px;
+	}
+
+	.upperSideBarFringe {
+		height: 100px;
+	}
+
+	.lowerSideBarFringe {
+		height: 100px;
+	}
+
+	.middleSideBarFringe {
+		height: 100px;
+		display: flex;
+		justify-content: center;
+		/*border: 2px solid black;*/
+		border-radius: 20%;
+		background-image: url("https://www.trade-secret.co.uk/wp-content/uploads/2015/08/Dark-Grey-Background-Best-Wallpaper-Gallery-dji6x-Free.jpeg");
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	.sideHeader {
+		margin-top: 20px;
+	}
+}
+
+#animated-example {
+	position: relative;
+	width: 80%;
 }
