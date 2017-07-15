@@ -129,7 +129,7 @@ class Coins extends Component {
           </Infinite>
         </div>
         <div className="floatRight info-panel">
-          <h1>Popular Coins</h1>
+          <h1>Popular Coins/Rising Coins</h1>
           <ol>
             <li><a href="#">Bitcoin</a></li>
             <li><a href="#">Ethereum</a></li>
