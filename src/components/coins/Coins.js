@@ -103,8 +103,8 @@ class Coins extends Component {
             {
               this.state.coins
                 .sort( (a, b) => {
-                  var idA = a.SortOrder;
-                  var idB = b.SortOrder;
+                  var idA = parseInt(a.SortOrder);
+                  var idB = parseInt(b.SortOrder);
 
                   if(idA < idB) {
                     return -1;

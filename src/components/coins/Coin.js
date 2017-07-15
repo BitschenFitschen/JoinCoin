@@ -29,7 +29,7 @@ class Coin extends Component {
           <span>{"  |  Algorithm: "+ this.props.coin.Algorithm} </span>
           <span>{"  |  Total Coin Supply: "+ this.props.coin.TotalCoinSupply} </span>
           {premined}
-          <span>{this.props.coin.SortOrder}</span>
+          <span>{ `| ${this.props.coin.SortOrder}`}</span>
         </div>
       </a>
     );
