@@ -13,6 +13,7 @@ import Login from './components/login/Login';
 import EditProfile from './components/editProfile/EditProfile';
 import NotFound from './components/NotFound';
 import registerServiceWorker from './registerServiceWorker';
+import redditArticles from './components/redditScrape/redditArticles';
 
 const Root = () => {
   return (
@@ -27,6 +28,7 @@ const Root = () => {
         <Match pattern='/users/register' component={Register} />
         <Match pattern='/users/login' component={Login} />
         <Match pattern='/users/profile' component={EditProfile} />
+        <Match pattern='/redditArticles' component={redditArticles} />
         <Miss component={NotFound} />
       </div>
     </BrowserRouter>
