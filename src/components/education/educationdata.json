@@ -4,7 +4,7 @@
       "index": 0,
       "title": "The Basics",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      "image": "./img/bitcoin.jpg",
+      "image": "EducationIMG/CC-Slide1.gif",
 
       "question01": "What Is A Cryptocurrency?",
       "answer01": "A cryptocurrency is a digital or virtual currency that uses cryptography for security. Transactions are made with no middle men – meaning, no banks. A defining feature of a cryptocurrency, it is not issued by any central authority, rendering it theoretically immune to government interference or manipulation. There are no transaction fees and no need to give your real name. The first cryptocurrency to capture the public imagination was Bitcoin, which was launched in 2009 by an individual or group known under the pseudonym Satoshi Nakamoto.",
@@ -22,7 +22,7 @@
       "index": 1,
       "title": "What Else?",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      "image": "0.jpg",
+      "image": "EducationIMG/CC-Slide2.gif",
 
       "question01": "Who Accepts Cryptocurrency?",
       "answer01": "More and more restaurants, online e-commerce sites, booking sites like Expedia, and can even purchase gift cards! Lots of gift card businesses accept bitcoins and that can be used at a surprising number of major retailers like Walmart, Amazon, Target and Nike!",
@@ -40,7 +40,7 @@
       "index": 2,
       "title": "Security",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      "image": "0.jpg",
+      "image": "EducationIMG/CC-Slide3.gif",
 
       "question01": "Are Purchases Anonymous?",
       "answer01": "Each transaction is recorded in a public log(the blockchain: We’ll get to that shortly).Names of buyers and sellers are never revealed! While that keeps bitcoin users’ transactions private, it also lets them buy or sell anything without tracing it back to them.",

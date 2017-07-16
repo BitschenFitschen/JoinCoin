@@ -1,29 +1,31 @@
 import React, { Component } from 'react';
 import {Col, Accordion, Panel} from 'react-bootstrap';
-import Slider from 'react-slick';
+// import Slider from 'react-slick';
 import './education.css';
 import preload from './educationdata.json';
 
+// import CCAnimate from './img/CC-Intro.gif';
+
 class Education extends Component {
   render () {
-    var settings = {
-      dots: true
-    };
+    // var settings ={
+    //   dots: true
+    // };
 
     return (
       <div className='education container-fluid'>
         <Col xs={12} sm={12} md={12} lg={12}>
           <h1>Education</h1>
-          <Slider {...settings}>
+          {/* <Slider {...settings}> */}
 
             {
               preload.slides.map(
                 (slide) =>
                   <div className='education-panel'>
-                    <Col md={3}>
+                    {/* <Col md={3}>
                       <h4>{slide.leftSidePanelTitle}</h4>
                       <small>{slide.leftSidePanelDescription}</small>
-                    </Col>
+                    </Col> */}
                     <Col md={6}>
                       <h3>{slide.title}</h3>
                       {/* <p>{slide.description}</p> */}
@@ -42,13 +44,14 @@ class Education extends Component {
 
                     </Col>
                     <Col md={3}>
+                     {/*
                       <h4>{slide.rightSidePanelTitle}</h4>
-                      <small>{slide.rightSidePanelDescription}</small>
+                      <small>{slide.rightSidePanelDescription}</small> */}
+                      <img width={560} height={300} alt="" id="" className="" src={slide.image}/>
                     </Col>
                   </div>
               )
             }
-
             {/* FAQ */}
             <div className='education-panel'>
               <Col md={3} />
@@ -80,7 +83,7 @@ class Education extends Component {
               </Col>
               <Col md={3} />
             </div>
-          </Slider>
+          {/* </Slider> */}
         </Col>
       </div>
     );

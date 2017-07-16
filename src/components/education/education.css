@@ -3,7 +3,8 @@
 
 .education-panel {
   height: 500px;
-  border: 2px solid #000;
+  /*border: 2px solid #000;*/
+  background-color: #2eb7ff;
 }
 
 .slick-next:before, .slick-prev:before {
