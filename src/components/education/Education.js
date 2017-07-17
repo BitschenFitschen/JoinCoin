@@ -47,7 +47,7 @@ class Education extends Component {
                      {/*
                       <h4>{slide.rightSidePanelTitle}</h4>
                       <small>{slide.rightSidePanelDescription}</small> */}
-                      <img width={560} height={300} alt="" id="" className="" src={slide.image}/>
+                      <img width={550} height={400} alt="" id="" className="animation" src={slide.image}/>
                     </Col>
                   </div>
               )
