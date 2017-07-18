@@ -3,9 +3,9 @@ import {Col} from 'react-bootstrap';
 import Image from 'react-image-resizer';
 
 class Advanced extends Component {
-  goToAdvanced(event) {
+  goToCoins(event) {
     event.preventDefault();
-    this.context.router.transitionTo(`/advancedUserTools`);
+    this.context.router.transitionTo(`/coins`);
   }
   render() {
     return (
@@ -14,7 +14,7 @@ class Advanced extends Component {
             <div className="upperSideBarFringe">
             </div>
             <div className="middleSideBarFringe">
-  				    <div onClick={this.goToAdvanced.bind(this)}><h3 className="sideHeader Row">Advanced</h3></div>
+  				    <div onClick={this.goToCoins.bind(this)}><h3 className="sideHeader Row">Coins</h3></div>
             </div>
             <div className="lowerSideBarFringe">
             </div>
