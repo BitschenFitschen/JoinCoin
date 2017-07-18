@@ -14,7 +14,7 @@ class Advanced extends Component {
             <div className="upperSideBarFringe">
             </div>
             <div className="middleSideBarFringe">
-  				    <div onClick={this.goToAdvanced.bind(this)}><h3 className="sideHeader Row">Advanced</h3><h4>Click here</h4></div>
+  				    <div onClick={this.goToAdvanced.bind(this)}><h3 className="sideHeader Row">Advanced</h3></div>
             </div>
             <div className="lowerSideBarFringe">
             </div>
