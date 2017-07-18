@@ -1,16 +1,25 @@
-// Snatches HTML from URLs
-var request = require("request");
-// Scrapes our HTML
-var cheerio = require("cheerio");
+import React, { Component } from 'react';
+import request from 'request';
+import cheerio from 'cheerio';
 
+class RedditScrape extends Component {
+  constructor(props) {
+    super(props);
+    this.handleCheerioObject = this.handleCheerioObject.bind(this);
+  }
+  state = {
+    result: []
+  };
 
-// First, tell the console what server.js is doing
+   handleCheerioObject () {
+    this.setState({ result: result });
+  }
+  componentWillMount() {
+    // First, tell the console what server.js is doing
 console.log("\n***********************************\n" +
             "Grabbing every thread name and link\n" +
             "from reddit's webdev board:" +
             "\n***********************************\n");
-
-var results = [];
 // Making a request call for reddit's "CryptoCurrency" board. The page's HTML is saved as the callback's third argument
 request("https://www.reddit.com/r/CryptoCurrency", function(error, response, html) {
   // Load the HTML into cheerio and save it to a variable
@@ -34,11 +43,19 @@ request("https://www.reddit.com/r/CryptoCurrency", function(error, response, htm
       title: title,
       link: link
     });
+    this.handleCheerioObject
   });
 
   // Log the result once cheerio analyzes each of its selected elements
-  results = result;
-  console.log(results);
+  console.log("***************************************result zero title and html", result[0].title, result[0].link);
 });
+  }
+  render () {
+    return (
+      <div className="redditScrape">
+        <h1>{this.handleCheerioObject}</h1>
+      </div>)
+  }
+}
 
-module.exports = results;
+export default RedditScrape

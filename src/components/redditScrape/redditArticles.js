@@ -1,23 +1,16 @@
-import React, { Component } from 'react';
-import {Col} from 'react-bootstrap';
-var results = require ("./redditScrape");
+var express = require("express");
+var bodyParser = require("body-parser");
+var results = require("./redditScrape");
+console.log("Articles JS File!!", results);
 
-// console.log(results);
+var result = results.json();
+console.log("***************first page result", result[0]);
+// console.log(results[0].title);
+// console.log(results[1].title);
+// var title = results[0].title;
+// var link = results[0].link;
 
-class RedditArticles extends Component {
-	render() {
-		return (
-			<div className="redditArticles">
-				<Col xs={12} sm={12} md={12} lg={12}>
-					<h1>Reddit Articles</h1>
-						<h3>{results.title}</h3>
-						<a href={results.link}></a>
-				</Col>
-			</div>
-		);
-		
-	}
-}
+// // console.log(results);
 
-export default RedditArticles;
+// console.log(title, link);
 
