@@ -55,7 +55,10 @@ class Dashboard extends Component {
           priceUS: response.data[0].price_usd,
           perChange1h: response.data[0].percent_change_1h,
           perChange24h: response.data[0].percent_change_24h,
-          perChange7d: response.data[0].percent_change_7d
+          perChange7d: response.data[0].percent_change_7d,
+          top10Name: renderArrTop10Name,
+          top10USD: renderArrTop10USD,
+          top10Rank: renderArrTop10Rank
 
         })
 
