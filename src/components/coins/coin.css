@@ -1,4 +1,25 @@
-.coin-container {
-  border: 2px solid black;
-  width: 250px;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 
+      "Segoe UI", "Roboto", "Oxygen", 
+      "Ubuntu", "Cantarell", "Fira Sans", 
+      "Droid Sans", "Helvetica Neue", sans-serif;
 }
+
+a {
+  color: #000;
+}
+
+.coin-container {
+/*  border: 2px solid black;*/
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+.coin-container:hover, .coin-container:active {
+/*  border: 2px solid black;*/
+  background: #eee;
+}
+
