@@ -28,7 +28,7 @@ class EducationHeader extends Component {
             <nav className="navbar navbar-transparent navbar-fixed-top navbar-padded app-navbar p-t-md">
             <div className="container">
               <div className="navbar-header">
-                <a className="navbar-brand" href="">
+                <a className="navbar-brand" href="/">
                     JoinCoin
                     <strong className="text-uppercase">
                       Education

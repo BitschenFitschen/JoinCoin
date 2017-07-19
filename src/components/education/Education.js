@@ -28,6 +28,7 @@ class Education extends Component {
                 (slide) =>
 
                   <div className='education-panel'>
+
                     {/* <Col md={3}>
                       <h4>{slide.leftSidePanelTitle}</h4>
                       <small>{slide.leftSidePanelDescription}</small>
