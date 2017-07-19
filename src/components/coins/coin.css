@@ -25,7 +25,7 @@ a.coin-container:hover  {
 
 .coin-container:hover, .coin-container:active {
 /*  border: 2px solid black;*/
-  background: #eee;
+  background: #d9edf7;
   text-decoration: none !important; 
 }
 
@@ -82,7 +82,7 @@ a.coin-container:hover  {
   text-decoration: none !important; 
 }
 
-.headers {
+/*.headers {
   display: flex;
   padding: 1em;
   text-align: center;
@@ -90,4 +90,4 @@ a.coin-container:hover  {
 
 .header-rank {
   width: 40px;
-}
+}*/
