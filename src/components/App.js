@@ -4,17 +4,20 @@ import Beginner from './main/Beginner';
 import Introduction from './main/Introduction';
 import Advanced from './main/Advanced';
 import Ticker from './footer/Ticker';
+import '../css/style.css';
 
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-         <Header />
-         <Beginner />
-         <Introduction />
-         <Advanced />
-         <Ticker />
+          <div className="landingPage">
+             <Header />
+             <Beginner />
+             <Introduction />
+             <Advanced />
+             <Ticker />
+           </div>
       </div>
     );
   }
