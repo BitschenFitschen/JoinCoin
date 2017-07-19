@@ -26,21 +26,21 @@ class Education extends Component {
                       <h4>{slide.leftSidePanelTitle}</h4>
                       <small>{slide.leftSidePanelDescription}</small>
                     </Col> */}
+                    <h5>{slide.title}</h5>
                     <Col md={6}>
-                      <h3>{slide.title}</h3>
                       {/* <p>{slide.description}</p> */}
 
                       <Accordion>
-                            <Panel header={slide.question01} eventKey='1'>
-                              {slide.answer01}
-                            </Panel>
-                            <Panel header={slide.question02} eventKey='2'>
-                              {slide.answer02}
-                            </Panel>
-                            <Panel header={slide.question03} eventKey='3'>
-                              {slide.answer03}
-                            </Panel>
-                    </Accordion> 
+                        <Panel header={slide.question01} eventKey='1'>
+                          {slide.answer01}
+                        </Panel>
+                        <Panel header={slide.question02} eventKey='2'>
+                          {slide.answer02}
+                        </Panel>
+                        <Panel header={slide.question03} eventKey='3'>
+                          {slide.answer03}
+                        </Panel>
+                      </Accordion> 
 
                     </Col>
                     <Col md={3}>
