@@ -1,16 +1,28 @@
-var express = require("express");
-var bodyParser = require("body-parser");
-var results = require("./redditScrape");
-console.log("Articles JS File!!", results);
+import React, { Component } from 'react';
+import axios from 'axios';
 
-var result = results.json();
-console.log("***************first page result", result[0]);
-// console.log(results[0].title);
-// console.log(results[1].title);
-// var title = results[0].title;
-// var link = results[0].link;
 
-// // console.log(results);
+class RedditArticles extends Component {
+  state = {
+  	result: []
+  }
+  componentWillMount(){
+  	let that = this;
+  	axios.get('http://localhost:3000/redditResult').then(function (response) {
+  		that.setState({result:response.data})
+  	})
+  }
+  render () {
+    return (
+      <div className="redditArticles">
+        <h1></h1>
+        {
+        	this.state.result.map(i => <ol><a href={i.link}><span key={i.title}>{i.title}</span></a><span key={i.link}>    Link: {i.link}</span></ol>) 
+        }
+      </div>
+      )
+  }
 
-// console.log(title, link);
+}
 
+export default RedditArticles;

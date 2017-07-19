@@ -1,9 +1,19 @@
 import React, { Component } from 'react';
 import {Carousel} from 'react-bootstrap';
+import axios from 'axios';
 // import Image from 'react-image-resizer';
 import '../../../css/style.css';
 
 class IntroCarousel extends Component {
+	state = {
+  	result: []
+  }
+  componentWillMount(){
+  	let that = this;
+  	axios.get(`/redditResult`).then(function (response) {
+  		that.setState({result:response.data});
+  	});
+  }
 	goToEducation(event) {
     event.preventDefault();
     this.context.router.transitionTo(`/education`);
@@ -42,7 +52,7 @@ class IntroCarousel extends Component {
 			      <div onClick={this.goToAdvanced.bind(this)}><img alt="" id="animated-example" src="https://crushthestreet.com/wp-content/uploads/2017/06/What-Does-The-Future-Hold-Where-Will-Cryptocurrencies-Be-in-Five-Years-750x331.jpg"/>
 			      </div>
 			      <Carousel.Caption>
-			        <h3>Advanced User Tools</h3>
+			        <a href={this.state.result[2] ? this.state.result[2].link.indexOf('/r/') !== -1 ? `https://www.reddit.com${this.state.result[2].link}`: this.state.result[2].link : ''}><h3>{this.state.result[2] ? this.state.result[2].title : ''}</h3></a>
 			      </Carousel.Caption>
 			    </Carousel.Item>
 			    <Carousel.Item>
