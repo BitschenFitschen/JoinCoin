@@ -28,15 +28,25 @@ class Dashboard extends Component {
    componentWillMount() {
     let renderArr1 = [];
     let renderArr2 = [];
+    let renderArrTop10Name = [];
+    let renderArrTop10USD = [];
+    let renderArrTop10Rank = [];
     let _this = this
     axios.get('https://api.coinmarketcap.com/v1/ticker/')
       .then(function (response) {
-        for (var i = 0; i < response.data.length; i++){
+        for (var i = 0; i < response.data.length; i++) {
           // console.log(response.data[i].id);
           renderArr1.push(<p key={i}>{response.data[i].name}</p>);
           renderArr2.push(<p key={i}>{response.data[i].price_usd}</p>);
         }
+        for (var j = 0; j < 10; j++) {
+          renderArrTop10Name.push(<p key={j}>{response.data[j].name}</p>);
+          renderArrTop10USD.push(<p key={j}>{response.data[j].price_usd}</p>);
+          renderArrTop10Rank.push(<p key={j}>{response.data[j].rank}</p>);
+          console.log(response.data[j]);
+        }
         console.log(response.data[0])
+        
         _this.setState({
           fillerData1: renderArr1,
           fillerData2: renderArr2,
@@ -46,7 +56,10 @@ class Dashboard extends Component {
           priceUS: response.data[0].price_usd,
           perChange1h: response.data[0].percent_change_1h,
           perChange24h: response.data[0].percent_change_24h,
-          perChange7d: response.data[0].percent_change_7d
+          perChange7d: response.data[0].percent_change_7d,
+          top10Name: renderArrTop10Name,
+          top10USD: renderArrTop10USD,
+          top10Rank: renderArrTop10Rank
 
         })
 
@@ -54,7 +67,6 @@ class Dashboard extends Component {
       .catch(function (errorMsg) {
         console.log(errorMsg);
       });
-
 
   }
 
@@ -68,6 +80,9 @@ class Dashboard extends Component {
     let r7 = this.state.perChange7d
     let fillerData1 = this.state.fillerData1
     let fillerData2 = this.state.fillerData2
+    let top10Name = this.state.top10Name
+    let top10USD = this.state.top10USD
+    let top10Rank = this.state.top10Rank
     // let render2 = this.state.price
     return (
       <div className="dashboard">
@@ -85,22 +100,32 @@ class Dashboard extends Component {
           </div>
         }
         </Col>
-        <Col xs={6} sm={6} md={3} lg={3}>
+        <Col xs={4} sm={4} md={2} lg={2}>
         {
           <div>
             <ul>
-            <h1>Filler Data 01</h1>
-            {fillerData1}
+            <h1>Rank</h1>
+            {top10Rank}
             </ul>
           </div>
         }
         </Col>
-                <Col xs={6} sm={6} md={3} lg={3}>
+        <Col xs={4} sm={4} md={2} lg={2}>
         {
           <div>
             <ul>
-            <h1>Filler Data 02</h1>
-            {fillerData2}
+            <h1>Name</h1>
+            {top10Name}
+            </ul>
+          </div>
+        }
+        </Col>
+        <Col xs={4} sm={4} md={2} lg={2}>
+        {
+          <div>
+            <ul>
+            <h1>USD</h1>
+            {top10USD}
             </ul>
           </div>
         }
