@@ -28,6 +28,9 @@ class Dashboard extends Component {
    componentWillMount() {
     let renderArr1 = [];
     let renderArr2 = [];
+    let renderArrTop10Name = [];
+    let renderArrTop10USD = [];
+    let renderArrTop10Rank = [];
     let _this = this
     axios.get('https://api.coinmarketcap.com/v1/ticker/')
       .then(function (response) {
@@ -35,6 +38,12 @@ class Dashboard extends Component {
           // console.log(response.data[i].id);
           renderArr1.push(<p key={i}>{response.data[i].name}</p>);
           renderArr2.push(<p key={i}>{response.data[i].price_usd}</p>);
+        }
+        for (var j = 0; j < 10; j++) {
+          renderArrTop10Name.push(<p key={j}>{response.data[j].name}</p>);
+          renderArrTop10USD.push(<p key={j}>{response.data[j].price_usd}</p>);
+          renderArrTop10Rank.push(<p key={j}>{response.data[j].rank}</p>);
+          console.log(response.data[j]);
         }
         console.log(response.data[0])
         _this.setState({
@@ -47,7 +56,7 @@ class Dashboard extends Component {
           perChange1h: response.data[0].percent_change_1h,
           perChange24h: response.data[0].percent_change_24h,
           perChange7d: response.data[0].percent_change_7d
-asdasdsda
+
         })
 
       })
