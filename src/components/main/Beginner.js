@@ -17,12 +17,12 @@ class Beginner extends Component {
     return (
 <<<<<<< HEAD
         <div className="Row sideSection">
-            <Col xs={12} sm={3} md={3} lg={3}>
+            <Col classname="col-xs-pull-12" xs={12} sm={3} md={3} lg={3}>
               <div className="upperSideBarFringe">
               </div>
               <div className="middleSideBarFringe">
 
-                  <div onClick={this.goToEducation.bind(this)}><h3 className="sideHeader Row">New to Cryptocurrency?</h3><h4>Click here for a simple and complete tutorial on everything you need to know</h4></div>
+                  <div onClick={this.goToEducation.bind(this)}><h3 className="sideHeader Row">Beginner</h3></div>
               </div>
               <div className="lowerSideBarFringe">
               </div>
