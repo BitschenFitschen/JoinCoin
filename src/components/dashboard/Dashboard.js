@@ -34,7 +34,7 @@ class Dashboard extends Component {
     let _this = this
     axios.get('https://api.coinmarketcap.com/v1/ticker/')
       .then(function (response) {
-        for (var i = 0; i < response.data.length; i++){
+        for (var i = 0; i < response.data.length; i++) {
           // console.log(response.data[i].id);
           renderArr1.push(<p key={i}>{response.data[i].name}</p>);
           renderArr2.push(<p key={i}>{response.data[i].price_usd}</p>);
@@ -46,6 +46,7 @@ class Dashboard extends Component {
           console.log(response.data[j]);
         }
         console.log(response.data[0])
+        
         _this.setState({
           fillerData1: renderArr1,
           fillerData2: renderArr2,
@@ -67,7 +68,6 @@ class Dashboard extends Component {
         console.log(errorMsg);
       });
 
-
   }
 
   render() {
@@ -83,7 +83,7 @@ class Dashboard extends Component {
     let top10Name = this.state.top10Name
     let top10USD = this.state.top10USD
     let top10Rank = this.state.top10Rank
-
+    // let render2 = this.state.price
     return (
       <div className="dashboard">
         <Col xs={12} sm={12} md={6} lg={6}>
@@ -100,22 +100,32 @@ class Dashboard extends Component {
           </div>
         }
         </Col>
-        <Col xs={6} sm={6} md={3} lg={3}>
+        <Col xs={4} sm={4} md={2} lg={2}>
         {
           <div>
             <ul>
-            <h1>Filler Data 01</h1>
+            <h1>Rank</h1>
             {top10Rank}
             </ul>
           </div>
         }
         </Col>
-                <Col xs={6} sm={6} md={3} lg={3}>
+        <Col xs={4} sm={4} md={2} lg={2}>
         {
           <div>
             <ul>
-            <h1>Filler Data 02</h1>
-            {fillerData2}
+            <h1>Name</h1>
+            {top10Name}
+            </ul>
+          </div>
+        }
+        </Col>
+        <Col xs={4} sm={4} md={2} lg={2}>
+        {
+          <div>
+            <ul>
+            <h1>USD</h1>
+            {top10USD}
             </ul>
           </div>
         }
