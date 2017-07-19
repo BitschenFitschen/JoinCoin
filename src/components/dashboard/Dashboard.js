@@ -47,7 +47,7 @@ class Dashboard extends Component {
           perChange1h: response.data[0].percent_change_1h,
           perChange24h: response.data[0].percent_change_24h,
           perChange7d: response.data[0].percent_change_7d
-
+asdasdsda
         })
 
       })
