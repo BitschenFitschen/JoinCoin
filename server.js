@@ -12,7 +12,8 @@ var passport = require('passport');
 var promisify = require('es6-promisify');
 var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
-var request = require("request");
+var request = require('request');
+var cheerio = require('cheerio');
 
 // Import environment variables from our .env file
 require('dotenv').config();
