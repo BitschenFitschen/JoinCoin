@@ -98,34 +98,45 @@ class ProfitCalculator extends Component {
     }
 
     return (
-      <div className='container'>
-        <h1>ProfitCalculator</h1>
-        <h3>Currency</h3>
-        <p>So, you're thinking about getting some </p>
-        <select onChange={this.onChange}>
-          <option value='null'></option>
-          <option value='BTC'>Bitcoin</option>
-          <option value='ETH'>Ethereum</option>
-        </select>
-        <h3>Buy-In</h3>
-        <p>Today, if you buy $</p>
-        <input type='text' onChange={this.buyIn} />
-        <p>worth of {this.state.coin}</p>
-        {/* <input type='text' value={this.state.coin} disabled /> */}
-        <p>or {coinCount}</p>
-        {/* <input type='text' value={coinCount} disabled /> */}
-        <h3>Pay-Off</h3>
-        <p>Current Price: {currentPrice}</p>
-        <button className='btn btn-default' onClick={() => this.payOff(3000)}>$3,000</button>
-        <button className='btn btn-default' onClick={() => this.payOff(5000)}>$5,000</button>
-        <button className='btn btn-default' onClick={() => this.payOff(10000)}>$10,000</button>
-        <button className='btn btn-default' onClick={() => this.payOff(100000)}>$100,000</button>
-        <button className='btn btn-default' onClick={() => this.payOff(1000000)}>$1,000,000</button>
-        <h2>You will have made a before-tax profit of ${profit}</h2>
-        <h2>That's a {roi}% Return on Investment!</h2>
-        <p>Hop aboard the crypto-train before it is too late!</p>
-        <p>List of reputable companies / individuals</p>
-        <button className='btn btn-default'>I'm Ready</button>
+      <div className='container-fluid'>
+        <h1>Profit Calculator</h1>
+        <div className="row text-center">
+          <div className="col-md-6">
+            <h3>Currency</h3>
+            <p>So, you're thinking about getting some </p>
+            <select onChange={this.onChange}>
+              <option value='null'></option>
+              <option value='BTC'>Bitcoin</option>
+              <option value='ETH'>Ethereum</option>
+            </select>
+          </div>
+          <div className="col-md-6">
+            <h3>Buy-In</h3>
+            <p>Today, if you buy $</p>
+            <input type='text' onChange={this.buyIn} />
+            <p>worth of {this.state.coin}</p>
+            {/* <input type='text' value={this.state.coin} disabled /> */}
+            <p>or {coinCount}</p>
+            {/* <input type='text' value={coinCount} disabled /> */}
+          </div>
+        </div>
+        <hr />
+        <div className="row text-center">
+          <div className="col-md-12">
+            <h3>Pay-Off</h3>
+            <p>Current Price: {currentPrice}</p>
+            <div className="btn-group" role="group">
+              <button className='btn btn-default' onClick={() => this.payOff(3000)}>$3,000</button>
+              <button className='btn btn-default' onClick={() => this.payOff(5000)}>$5,000</button>
+              <button className='btn btn-default' onClick={() => this.payOff(10000)}>$10,000</button>
+              <button className='btn btn-default' onClick={() => this.payOff(100000)}>$100,000</button>
+              <button className='btn btn-default' onClick={() => this.payOff(1000000)}>$1,000,000</button>
+            </div>
+
+            <h2>You will have made a pre-tax profit of ${profit}</h2>
+            <h2>That's a {roi}% Return on Investment!</h2>
+          </div>
+        </div>
       </div>
     );
   }
