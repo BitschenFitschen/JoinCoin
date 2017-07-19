@@ -80,7 +80,10 @@ class Dashboard extends Component {
     let r7 = this.state.perChange7d
     let fillerData1 = this.state.fillerData1
     let fillerData2 = this.state.fillerData2
-    // let render2 = this.state.price
+    let top10Name = this.state.top10Name
+    let top10USD = this.state.top10USD
+    let top10Rank = this.state.top10Rank
+
     return (
       <div className="dashboard">
         <Col xs={12} sm={12} md={6} lg={6}>
@@ -102,7 +105,7 @@ class Dashboard extends Component {
           <div>
             <ul>
             <h1>Filler Data 01</h1>
-            {fillerData1}
+            {top10Rank}
             </ul>
           </div>
         }
