@@ -1,14 +1,24 @@
 import React, { Component } from 'react';
 import {Col} from 'react-bootstrap';
-import './header.css';
+import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 class Header extends Component {
   render () {
     return (
+<<<<<<< HEAD
       <div className='header'>
-        <Col xs={12} sm={12} md={12} lg={12} xl={12}>
-          <h1>JoinCoin</h1>
-          <h3>..the junction for all cryptocurrency</h3>
+        <Col xs={12} sm={12} md={12} lg={12}>
+          <h1 id="banner">
+            <span id="animated-example" className="animated rollIn j">J</span>
+            <span id="animated-example" className="animated rollIn o">o</span>
+            <span id="animated-example" className="animated rollIn o">i</span>
+            <span id="animated-example" className="animated rollIn o">n</span>
+            <span id="animated-example" className="animated rollIn c">¢</span>
+            <span id="animated-example" className="animated rollIn o">o</span>
+            <span id="animated-example" className="animated rollIn o">i</span>
+            <span id="animated-example" className="animated rollIn o">n</span>
+          </h1>
+          <h3 id="animated-example2" className="animated2 pulse">..the top resource for new and experienced cryptocurrency users</h3>
         </Col>
       </div>
     );
