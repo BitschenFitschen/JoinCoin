@@ -4,9 +4,21 @@
 .education-panel {
   height: 500px;
   /*border: 2px solid #000;*/
-  background-color: #2eb7ff;
+  /*background-color: #2eb7ff;*/
 }
 
 .slick-next:before, .slick-prev:before {
   color: #000;
+}
+
+.panel-title a:hover {
+  color:#fff;
+}
+
+.panel-default>.panel-heading {
+  background-color:#2eb7ff;
+}
+
+.animation {
+  padding: 20px 0 0 10px;
 }
