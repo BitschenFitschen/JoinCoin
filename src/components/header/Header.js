@@ -5,10 +5,10 @@ import CSSTransitionGroup from 'react-addons-css-transition-group';
 class Header extends Component {
   render () {
     return (
-<<<<<<< HEAD
       <div className='header'>
         <Col xs={12} sm={12} md={12} lg={12}>
           <h1 id="banner">
+            <span id="animated-example" className="animated rollIn" src='JC-logo-final-lincoln.png' alt='joinCoinImage'></span>
             <span id="animated-example" className="animated rollIn j">J</span>
             <span id="animated-example" className="animated rollIn o">o</span>
             <span id="animated-example" className="animated rollIn o">i</span>

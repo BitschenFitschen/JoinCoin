@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-import {Col, Row} from 'react-bootstrap';
-=======
 import { Link } from 'react-router';
 import {Col} from 'react-bootstrap';
 import './main.css';
 import BeginnerImg from './img/CC-beginner.jpg';
->>>>>>> master
+
 
 class Beginner extends Component {
   goToEducation(event) {
@@ -15,9 +12,8 @@ class Beginner extends Component {
   }
   render() {
     return (
-<<<<<<< HEAD
         <div className="Row sideSection">
-            <Col classname="col-xs-pull-12" xs={12} sm={3} md={3} lg={3}>
+            <Col className="col-xs-offset" xs={12} sm={3} md={3} lg={3}>
               <div className="upperSideBarFringe">
               </div>
               <div className="middleSideBarFringe">
