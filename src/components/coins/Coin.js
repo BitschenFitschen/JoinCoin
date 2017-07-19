@@ -40,8 +40,12 @@ class Coin extends Component {
 
     let coinSupply = null;
 
-    if (this.props.coin.TotalCoinSupply !== '0' && this.props.coin.TotalCoinSupply !== 'N/A') {
-      coinSupply = <div className='coin-supply'>{this.parseNum(this.props.coin.TotalCoinSupply)}</div>
+    if (this.props.coin.TotalCoinSupply.indexOf(',') !== -1) {
+      coinSupply = <div className='coin-supply'>{this.parseNum(this.props.coin.TotalCoinSupply.replace(/,/g, ''))}</div>
+    } else {
+      if (this.props.coin.TotalCoinSupply !== '0' && this.props.coin.TotalCoinSupply !== 'N/A') {
+        coinSupply = <div className='coin-supply'>{this.parseNum(this.props.coin.TotalCoinSupply)}</div>
+      }
     }
 
     let algo = null;
