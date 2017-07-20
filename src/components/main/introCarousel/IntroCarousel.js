@@ -94,11 +94,11 @@ class IntroCarousel extends Component {
 			    </Carousel.Item>
 
 			    <Carousel.Item>
-			      <div>
-			      	<img onClick={this.goToReddit.bind(this)}alt="" id="animated-example" src="http://az616578.vo.msecnd.net/files/2016/07/01/636029417935340699-58088307_reddit.jpg"/>
+			      <div onClick={this.goToReddit.bind(this)}>
+			      	<img alt="" id="animated-example" src="http://az616578.vo.msecnd.net/files/2016/07/01/636029417935340699-58088307_reddit.jpg"/>
 			      </div>
 			      <Carousel.Caption className="innerCaptionReddit">
-			        <h3 id="animated-example" className="innerCaptionRedditText">Get the latest in cryptocurrency with.. </h3>
+			        <h3 id="animated-example" className="innerCaptionRedditText">Get the latest.. </h3>
 				      </Carousel.Caption>
 			      <Carousel.Caption>
 			      	<a href={this.state.result[1] ? this.state.result[1].link.indexOf('/r/') !== -1 ? `https://www.reddit.com${this.state.result[1].link}`: this.state.result[1].link : 'https://www.reddit.com/r/CryptoCurrency/'}>
@@ -110,25 +110,6 @@ class IntroCarousel extends Component {
 			  		
 			      </Carousel.Caption>
 			    </Carousel.Item>
-
-			    <Carousel.Item onClick={this.goToDashboard.bind(this)}>
-			      <div>
-			      	<img alt="" id="animated-example" src="http://cryptocurrencybitcoinnews.com/wp-content/uploads/2016/06/Cryptocurrency-The-Truth-about-It.jpg"/>
-			      </div>
-			      <Carousel.Caption>
-			        <h3>Dashboard</h3>
-			      </Carousel.Caption>
-			    </Carousel.Item>
-			    
-			    <Carousel.Item onClick={this.goToProfitCalculator.bind(this)}>
-			      	<div>
-			      		<img alt="" id="animated-example" src="http://1.bp.blogspot.com/-3kJKsoL02h8/Uo-YY2CchVI/AAAAAAAABvw/2AUKiGPMFZs/s1600/altcoins.png"/>
-			      	</div>
-			      	<Carousel.Caption>
-			        	<h3>Profit Calculator</h3>
-			      	</Carousel.Caption>
-			    </Carousel.Item>
-			    
 			</Carousel>
 		)
 	}

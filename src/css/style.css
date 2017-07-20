@@ -52,7 +52,7 @@
 }
 
 #beginner-banner {  
-    height: 70px; 
+    height: 85px; 
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
@@ -60,7 +60,7 @@
 }
 
 .middleSideBarFringe {
-	height: 150px;
+	height: 170px;
 	/*border: 2px solid black;*/
 	border-radius: 20%;
 	background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
@@ -74,7 +74,7 @@
 
 .innerCaptionBeginner {
 	position: absolute;
-	top: 50%;
+	top: 45%;
     transform: translateY(0%);
     right: 50%;
     transform: translateX(50%);
