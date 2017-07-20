@@ -169,42 +169,47 @@ class ProfitCalculator extends Component {
     return (
       <div className='container'>
         <h1>Profit Calculator</h1>
-        <div className="row text-center">
-          <div className="col-md-6">
-            <h3>1. Choose Cryptocurrency</h3>
+        <div className="row text-left">
+          <div className="col-md-6 p-l-md p-r-md">
+            <h3><span className="numCircle">1</span>Choose Cryptocurrency</h3>
             <p>So, you're thinking about getting some</p>
             <select className='custom-select' onChange={(e) => this.onChange(e)}>
-              <option value='null'>Select Cryptocurrency</option>
+              <option value='null'>Choose Cryptocurrency</option>
               {
                 this.state.top10.map(i => 
                   <option key={i.symbol} value={i.symbol}>{i.name}</option>
                 )
               }
             </select>
-
           </div>
-          <div className="col-md-6">
-            <h3>2. Invest Now</h3>
+          <div className="hidden-md hidden-lg">
+            <hr />
+          </div>
+          <div className="col-md-6 p-l-md p-r-md">
+            <h3><span className="numCircle">2</span>Invest Now</h3>
             <p>Today, if you invest</p>
-            <form className="form-inline">
+            <form className="form-group">
               <label className="sr-only" htmlFor="buyin-amount">Enter Investment Amount</label>
-              <div className="input-group mb-2 mr-sm-2 mb-sm-0">
+              <div className="input-group">
                 <div className="input-group-addon">$</div>
                 <input type="text" className="form-control" id="buyin-amount" placeholder="0.00" onChange={this.buyIn} />
               </div>
             </form>
-            {
-              this.state.hideConversionAlert ? null : (<div className="alert alert-info m-t-md conversionAlert" role="alert">
-              = {coinCount} <span className='coin-span'>{this.state.coin}</span> / ${this.state.currentPrice.toFixed(2)} <span className='coin-span'> per 1 {this.state.coin}</span>
-            </div>)
-            }
-            
+          </div>
+          <div className="row text-center">
+            <div className="col-md-12 p-l-md p-r-md">
+              {
+                this.state.hideConversionAlert ? null : (<div className="alert alert-info m-t-md conversionAlert" role="alert">
+                = {coinCount} <span className='coin-span'>{this.state.coin}</span> / ${this.state.currentPrice.toFixed(2)} <span className='coin-span'> per 1 {this.state.coin}</span>
+              </div>)
+              }
+            </div>
           </div>
         </div>
         <hr />
         <div className="row text-center">
-          <div className="col-md-12">
-            <h3>3. Profit</h3>
+          <div className="col-md-12 p-l-md p-r-md p-b-sm">
+            <h3 className="row text-left"><span className="numCircle">3</span>Profit</h3>
             {
                 this.state.hideConversionAlert ? null :
                 (
