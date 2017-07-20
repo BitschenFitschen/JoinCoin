@@ -35,11 +35,12 @@
     "react": "15.3.2",
     "react-addons-css-transition-group": "15.3.2",
     "react-bootstrap": "^0.31.0",
+    "react-bootstrap-table": "^3.4.6",
     "react-dom": "15.3.2",
+    "react-ga": "^2.2.0",
     "react-image-responsive": "^1.0.18",
     "react-motion": "^0.5.0",
     "react-router": "4.0.0-alpha.4",
-    "react-ga": "^2.2.0",
     "react-slick": "^0.14.11"
   },
   "scripts": {

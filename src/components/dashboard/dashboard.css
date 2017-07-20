@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,500');
+
+
 .queryresult {
     padding: 10px;
 }
@@ -15,4 +18,38 @@
 	padding: 10px;
 	background-color: #2eb7ff;
 
+}
+
+.table-bordered {
+    border: 0px;
+    background-color: #2eb7ff;
+}
+
+h7 {
+	font-size: 30px;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: bold;
+	color:#3b6488;
+
+}
+
+td p {
+	color: #fff;
+}
+
+#headerdash {
+	font-size: 42px;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: bold;
+	text-align: center;
+
+}
+
+#headerdash a {
+	text-decoration: none;
+	color: #3b6488;
+}
+
+#headerdash a:hover {
+	color: #fff;
 }

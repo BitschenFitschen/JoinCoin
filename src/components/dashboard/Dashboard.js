@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import {Col} from 'react-bootstrap';
 import axios from 'axios';
 
+
+// import ReactBsTable, {BootstrapTable, TableHeaderColumn} from'react-bootstrap-table';
+
+
 import './dashboard.css';
 
 class Dashboard extends Component {
@@ -88,58 +92,60 @@ class Dashboard extends Component {
     // let render2 = this.state.price
     return (
       <div className="dashboard">
-        <Col xs={12} sm={12} md={6} lg={6}>
-        {
-          <div className="queryresult">
-            <h1 className="queryheader">Search Query Results [BTC as Example]</h1>
-            <div className="querybody">
-              <p>ID: {r1}</p>
-              <p>Name: {r2}</p>
-              <p>Symbol: {r3}</p>
-              <p>Price (USD): {r4}</p>
-              <p>Percent Change 1 HR: {r5}</p>
-              <p>Percent Change 24 HR: {r6}</p>
-              <p>Percent Change 7 D: {r7}</p>
-            </div>
-          </div>
-        }
-        </Col>
-        <Col xs={4} sm={4} md={2} lg={2}>
-          {
-            <div>
-              <ul>
-              <h1 className="queryheader">Rank</h1>
-                <div className="querybody">{top10Rank}</div>
-              </ul>
-            </div>
-          }
-        </Col>
-        <Col xs={4} sm={4} md={2} lg={2}>
-          {
-            <div>
-              <ul>
-              <h1 className="queryheader">Name</h1>
-              <div className="querybody">{top10Name}</div>
-              </ul>
-            </div>
-          }
-        </Col>
-        <Col xs={4} sm={4} md={2} lg={2}>
-          {
-            <div>
-              <ul>
-              <h1 className="queryheader">USD</h1>
-              <div className="querybody">{top10USD}</div>
-              </ul>
-            </div>
-          }
-        </Col>
+
+        <header id="headerdash"><a href="/">Join¢oin</a></header>
+
+        {/* <Col xs={12} sm={12} md={6} lg={6}>*/}
+        <table className="table-bordered">
+          <thead>
+            <tr>
+              <tbody>
+                <Col xs={12} sm={12} md={6} lg={3}>
+                  <tr className="info">
+                    <td>
+                      <h7>Search Query Results [BTC as Example]</h7>
+                      <p>ID: {r1}</p>
+                      <p>Name: {r2}</p>
+                      <p>Symbol: {r3}</p>
+                      <p>Price (USD): {r4}</p>
+                      <p>Percent Change 1 HR: {r5}</p>
+                      <p>Percent Change 24 HR: {r6}</p>
+                      <p>Percent Change 7 D: {r7}</p>
+                    </td>
+                  </tr>
+                </Col>
+                <Col xs={12} sm={12} md={6} lg={3}>
+                  <tr className="info">
+                    <td>
+                      <h7>Rank</h7>
+                      {top10Rank}
+                    </td>
+                  </tr>
+                </Col>
+                <Col xs={12} sm={12} md={6} lg={3}>
+                  <tr className="info">
+                    <td>
+                      <h7>Name</h7>
+                      {top10Name}
+                    </td>
+                  </tr>
+                </Col>
+                <Col xs={12} sm={12} md={6} lg={3}>
+                  <tr className="info">
+                    <td>
+                      <h7>USD</h7>{top10USD}
+                    </td>
+                  </tr>
+                </Col>
+              </tbody>
+            </tr>
+          </thead>
+        </table>
       </div>
          // Testing Mapping to pull data from array of objects
          // render1.map((objMap, index) => {
          //  return <p key={index}>{objMap}</p>
          // })
-
     );
   }
 }
