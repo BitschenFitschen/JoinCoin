@@ -14,7 +14,11 @@ class IntroCarousel extends Component {
   		that.setState({result:response.data});
   	});
   }
-	goToEducation(event) {
+  goToEducation(event) {
+    event.preventDefault();
+    this.context.router.transitionTo(`/education`);
+  }
+  goToEducation2(event) {
     event.preventDefault();
     this.context.router.transitionTo(`/education`);
   }
@@ -42,21 +46,48 @@ class IntroCarousel extends Component {
 		return (
 			<Carousel>
 				<Carousel.Item>
-			      <div onClick={this.goToEducation.bind(this)}><img alt="" id="animated-example" src="https://i0.wp.com/upload.wikimedia.org/wikipedia/commons/3/35/Bitcoin_euro.png"/>
+			      <div onClick={this.goToCoins.bind(this)}><img alt="" id="animated-example" src={require('./JC-logo-final-lincoln.png')}/></div>
+			      <Carousel.Caption className="innerCaptionWelcome">
+			        <h3 id="innerCaptionWelcome">Welcome to Join<span id="welcomeC">¢</span>oin!</h3>
+			      </Carousel.Caption>
+			      <Carousel.Caption className="introCaptionWelcomeSubText">
+			      		<p onClick={this.goToEducation.bind(this)}>Answers for Beginners</p>
+			      		<p onClick={this.goToCoins.bind(this)}>Advanced Users -- Search Any Coin!</p>
+			      		<p onClick={this.goToDashboard.bind(this)}>Dashboard for all Users</p>
+			      </Carousel.Caption>
+			    </Carousel.Item>
+				<Carousel.Item onClick={this.goToEducation2.bind(this)}>
+			      <div><img alt="" id="animated-example" src="https://themerkle.com/wp-content/uploads/2017/02/crypto-questions-part-1.jpg"/>
 			      </div>
-			      <Carousel.Caption>
+			      <Carousel.Caption className="innerCaptionBeginner">
+			        <h3>JoinCoin for Beginners</h3>
+			      </Carousel.Caption>
+			      <Carousel.Caption className="introCaptionBeginnerSubText">
+			      	<p>Simply explained answers to all of your questions about cryptocurrency</p>
+			      </Carousel.Caption>
+			    </Carousel.Item>
+				<Carousel.Item onClick={this.goToEducation.bind(this)}>
+			      <div><img alt="" id="animated-example" src="https://i0.wp.com/upload.wikimedia.org/wikipedia/commons/3/35/Bitcoin_euro.png"/>
+			      </div>
+			      <Carousel.Caption className="innerCaption">
 			        <h3>JoinCoin for beginners -- education</h3>
 			      </Carousel.Caption>
 			    </Carousel.Item>
 			    <Carousel.Item>
-			      <div onClick={this.goToAdvanced.bind(this)}><img alt="" id="animated-example" src="https://crushthestreet.com/wp-content/uploads/2017/06/What-Does-The-Future-Hold-Where-Will-Cryptocurrencies-Be-in-Five-Years-750x331.jpg"/>
+			      <div><img alt="" id="animated-example" src="https://crushthestreet.com/wp-content/uploads/2017/06/What-Does-The-Future-Hold-Where-Will-Cryptocurrencies-Be-in-Five-Years-750x331.jpg"/>
 			      </div>
 			      <Carousel.Caption>
-			        <a href={this.state.result[2] ? this.state.result[2].link.indexOf('/r/') !== -1 ? `https://www.reddit.com${this.state.result[2].link}`: this.state.result[2].link : ''}><h3>{this.state.result[2] ? this.state.result[2].title : ''}</h3></a>
+			        <a href={this.state.result[0] ? this.state.result[0].link.indexOf('/r/') !== -1 ? `https://www.reddit.com${this.state.result[0].link}`: this.state.result[0].link : 'https://www.reddit.com/r/CryptoCurrency/'}><h3 id="redditText">Cryptocurrency on Reddit</h3><h6 id="redditText">{this.state.result[0] ? this.state.result[0].title : ''}</h6></a>
 			      </Carousel.Caption>
 			    </Carousel.Item>
 			    <Carousel.Item>
-			      <div onClick={this.goToDashboard.bind(this)}><img alt="" id="animated-example" src="http://cryptocurrencybitcoinnews.com/wp-content/uploads/2016/06/Cryptocurrency-The-Truth-about-It.jpg"/>
+			      <img id="animated-example"  alt="" src="https://19818-presscdn-pagely.netdna-ssl.com/wp-content/uploads/c54/98/36de34d29ae0c1bf5fdc8ff0cbbf7610.jpg"/>
+			      <Carousel.Caption>
+			        <h3 id="redditText">Cryptocurrency on Reddit</h3>
+			      </Carousel.Caption>
+			    </Carousel.Item>
+			    <Carousel.Item onClick={this.goToDashboard.bind(this)}>
+			      <div><img alt="" id="animated-example" src="http://cryptocurrencybitcoinnews.com/wp-content/uploads/2016/06/Cryptocurrency-The-Truth-about-It.jpg"/>
 			      </div>
 			      <Carousel.Caption>
 			        <h3>Dashboard</h3>
@@ -66,12 +97,6 @@ class IntroCarousel extends Component {
 			      	<div onClick={this.goToProfitCalculator.bind(this)}><img alt="" id="animated-example" src="http://1.bp.blogspot.com/-3kJKsoL02h8/Uo-YY2CchVI/AAAAAAAABvw/2AUKiGPMFZs/s1600/altcoins.png"/></div>
 			      <Carousel.Caption>
 			        <h3>Profit Calculator</h3>
-			      </Carousel.Caption>
-			    </Carousel.Item>
-			    <Carousel.Item>
-			      <div onClick={this.goToCoins.bind(this)}><img alt="" id="animated-example" src={require('./JC-logo-final-lincoln.png')}/></div>
-			      <Carousel.Caption>
-			        <h3>Coins</h3>
 			      </Carousel.Caption>
 			    </Carousel.Item>
 			    <Carousel.Item>
@@ -93,9 +118,9 @@ class IntroCarousel extends Component {
 			      </Carousel.Caption>
 			    </Carousel.Item>
 			    <Carousel.Item>
-			      <img id="animated-example"  alt="" src="http://asiainc500.com/wp-content/uploads/2017/05/What-is-Cryptocurrency.png"/>
+			      <img id="animated-example"  alt="" src="https://19818-presscdn-pagely.netdna-ssl.com/wp-content/uploads/c54/98/36de34d29ae0c1bf5fdc8ff0cbbf7610.jpg"/>
 			      <Carousel.Caption>
-			        <h3>JoinCoin Dashboard</h3>
+			        <h3 id="carouselSubHeader">JoinCoin Dashboard</h3>
 			      </Carousel.Caption>
 			    </Carousel.Item>
 			</Carousel>
