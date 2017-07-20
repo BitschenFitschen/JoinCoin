@@ -51,6 +51,35 @@
    /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
 }
 
+#beginner-banner {  
+    height: 70px; 
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
+}
+
+.middleSideBarFringe {
+	height: 150px;
+	/*border: 2px solid black;*/
+	border-radius: 20%;
+	background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
+	width: 100%;
+}
+
+#sideHeader {
+	text-align: center;
+	padding-top: 5%;
+}
+
+.innerCaptionBeginner {
+	position: absolute;
+	top: 50%;
+    transform: translateY(0%);
+    right: 50%;
+    transform: translateX(50%);
+}
+
 #welcomeLogo {
    position: absolute;
 	top: 0%;
@@ -149,16 +178,11 @@
 	border: 2px solid black;
 }*/
 
-#sideHeader {
-	padding-bottom: 10px;
-	margin-bottom: 20px;
-}
-
 #carouselSubHeader {
 	margin-top: 30px;
 }
 
-.beginner, .advanced, .introduction, .middleSideBarFringe {
+.beginner, .advanced, .introduction {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
@@ -265,13 +289,6 @@
 	color: white;
 }
 
-.innerCaptionBeginner {
-	position: absolute;
-	top: 25%;
-    transform: translateY(-25%);
-    color: white;
-}
-
 #innerCaptionBeginner {
 	color: white;
 	font-size: 2.4em;
@@ -303,25 +320,9 @@
 	height: 100px;
 }
 
-.middleSideBarFringe {
-	height: 150px;
-	display: flex;
-	justify-content: center;
-	/*border: 2px solid black;*/
-	border-radius: 20%;
-	background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
-	padding-left: 5px;
-	padding-right: 5px;
-	width: 80%;
-}
-
 .introCarouselImage {
 	max-width: 100%;
 	/*height: 400px;*/
-}
-
-.sideHeader {
-	margin-top: 30px;
 }
 
 .middleIntroBody {

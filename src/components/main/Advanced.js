@@ -14,7 +14,12 @@ class Advanced extends Component {
             <div className="upperSideBarFringe">
             </div>
             <div className="middleSideBarFringe">
-  				    <div onClick={this.goToCoins.bind(this)}><h3 id="sideHeader" className="sideHeader Row">Coins</h3></div>
+  				    <h3 id="sideHeader" className="sideHeader Row">Coins</h3>      
+                    <div className="innerCaptionBeginner" onClick={this.goToCoins.bind(this)}>                      
+                      <div>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZKpCx_BihU1tDXqIqOkxMqDCFn9h0rgtbZ0-vPfNJ9mwSNd_LKA" id="beginner-banner" className=""/>
+                      </div>
+                    </div>   
             </div>
             <div className="lowerSideBarFringe">
             </div>
