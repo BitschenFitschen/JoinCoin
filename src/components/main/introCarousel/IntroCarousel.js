@@ -42,6 +42,10 @@ class IntroCarousel extends Component {
   	event.preventDefault();
   	this.context.router.transitionTo(`/register`);
   }
+  goToReddit(event) {
+  	event.preventDefault();
+  	this.context.router.transitionTo(`/redditArticles`);
+  }
 	render(){
 		return (
 			<Carousel>
@@ -49,8 +53,6 @@ class IntroCarousel extends Component {
 				<Carousel.Item>
 			      	<div>
 			      		<img onClick={this.goToCoins.bind(this)} alt="" id="animated-example" src="https://i.stack.imgur.com/pMAiU.jpg"/>
-
-
 			      	</div>
 			      	<img alt="" id="welcomeLogo" src={require('./JC-logo-final-lincoln.png')}/>
 			      	<Carousel.Caption className="innerCaptionWelcome">
@@ -62,9 +64,7 @@ class IntroCarousel extends Component {
 				      		
 				      		<p className="centerIntroCaptionWelcomeSubText"onClick={this.goToDashboard.bind(this)}>Dashboard</p>
 				      		<p className="centerIntroCaptionWelcomeSubText"onClick={this.goToDashboard.bind(this)}>About</p>
-				      		
 				      </Carousel.Caption>
-
 				</Carousel.Item>
 
 				<Carousel.Item onClick={this.goToEducation2.bind(this)}>
@@ -90,6 +90,24 @@ class IntroCarousel extends Component {
 			        	<h3 id="innerCaptionCoinsText">Search and track any coin you want!</h3>
 			      	</Carousel.Caption>
 			      	<img alt="" id="coinsCarouselBanner2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-8XbnmLLkEp1Xsak2RJaQwvFIqMWFl82PjskI9oBuZmdedTFG"/>
+			    </Carousel.Item>
+
+			    <Carousel.Item>
+			      <div>
+			      	<img onClick={this.goToReddit.bind(this)}alt="" id="animated-example" src="http://az616578.vo.msecnd.net/files/2016/07/01/636029417935340699-58088307_reddit.jpg"/>
+			      </div>
+			      <Carousel.Caption className="innerCaptionReddit">
+			        <h3 id="animated-example" className="innerCaptionRedditText">Get the latest in cryptocurrency with.. </h3>
+				      </Carousel.Caption>
+			      <Carousel.Caption>
+			      	<a href={this.state.result[1] ? this.state.result[1].link.indexOf('/r/') !== -1 ? `https://www.reddit.com${this.state.result[1].link}`: this.state.result[1].link : 'https://www.reddit.com/r/CryptoCurrency/'}>
+			        	<p id="redditText2">{this.state.result[1] ? this.state.result[1].title : ''}</p>
+			        </a>
+			        <a href={this.state.result[2] ? this.state.result[2].link.indexOf('/r/') !== -1 ? `https://www.reddit.com${this.state.result[2].link}`: this.state.result[2].link : 'https://www.reddit.com/r/CryptoCurrency/'}>
+			        	<p id="redditText2">{this.state.result[2] ? this.state.result[2].title : ''}</p>
+			        </a>
+			  		
+			      </Carousel.Caption>
 			    </Carousel.Item>
 
 				<Carousel.Item onClick={this.goToEducation.bind(this)}>

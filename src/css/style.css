@@ -51,8 +51,6 @@
    /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
 }
 
-
-
 #welcomeLogo {
    position: absolute;
 	top: 0%;
@@ -179,8 +177,9 @@
 	/*opacity: .8;*/
 }
 
-#redditText {
-	color: white;
+#redditText,
+#redditText2 {
+	color: black;
 }
 
 .innerCaption {
@@ -193,6 +192,12 @@
 	position: absolute;
 	top: 22%;
     transform: translateY(-25%);
+}
+
+.innerCaptionReddit {
+	position: absolute;
+	top: 24%;
+    transform: translateY(-24%);
 }
 
 .innerCaptionCoins {
@@ -215,6 +220,12 @@
 
 #innerCaptionCoinsText {
 	font-size: 1.7em;
+	color: black;
+	padding: 0;
+}
+
+.innerCaptionRedditText {
+	font-size: 1.9em;
 	color: black;
 	padding: 0;
 }
