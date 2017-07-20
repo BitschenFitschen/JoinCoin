@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 // import {Col, Accordion, Panel} from 'react-bootstrap';
-import './reset.css'
 import './coins.css';
 import Coin from './Coin';
 import axios from 'axios';
@@ -15,10 +14,12 @@ class Coins extends Component {
     this.preminedOnly = this.preminedOnly.bind(this);
     this.notPreminedOnly = this.notPreminedOnly.bind(this);
     this.nullPremined = this.nullPremined.bind(this);
+    this.parseNum = this.parseNum.bind(this);
   }
 
   state = {
     coins: [],
+    global: {},
     selectedCoin: '',
     searchTerm: '',
     filterPremined: null
@@ -50,6 +51,23 @@ class Coins extends Component {
     }
   }
 
+  parseNum (value) {
+    // Nine Zeroes for Billions
+    return Math.abs(Number(value)) >= 1.0e+9
+
+    ? Math.abs(Number(value)) / 1.0e+9 + "B"
+    // Six Zeroes for Millions 
+    : Math.abs(Number(value)) >= 1.0e+6
+
+    ? Math.abs(Number(value)) / 1.0e+6 + "M"
+    // Three Zeroes for Thousands
+    : Math.abs(Number(value)) >= 1.0e+3
+
+    ? Math.abs(Number(value)) / 1.0e+3 + "K"
+
+    : Math.abs(Number(value));
+  }
+
   componentWillMount() {
     let that = this;
     // this runs right before rendered
@@ -68,6 +86,16 @@ class Coins extends Component {
         // console.log(arr);
 
         that.setState( { coins: arr } );
+
+        axios.get('https://api.coinmarketcap.com/v1/global/')
+          .then(function (response) {
+            console.log(response.data);
+
+            that.setState( { global: response.data } );
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
       })
       .catch(function (error) {
         console.log(error);
@@ -94,12 +122,23 @@ class Coins extends Component {
     // .filter( coin => `${coin.FullName}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase()) >= 0);
 
     return (
-      <div className="coins-pg">
-      
+      <div className="coins-pg container-fluid">
+        <h1 id="coins-title">Coins</h1>
+        <div className="col-md-5">
         <div className="search-panel">
-          <h1 id="coins-title">Coins</h1>
-          <input id="coin-search" onChange={this.handleSearchTermChange} type="text" value={this.state.searchTerm} placeholder="Search for coin" />
-          <Infinite className="infinite" containerHeight={window.innerHeight-48-24} elementHeight={80}>
+          
+          <input className="form-control" id="coin-search" onChange={this.handleSearchTermChange} type="text" value={this.state.searchTerm} placeholder="Search for coin" />
+          {/*
+            <div className="row headers">
+              <div className="header-rank">Rank</div>
+              <div className="header-coin">Coin</div>
+              <div className="header-ticker">Ticker Symbol</div>
+              <div className="header-supply">Total Supply</div>
+              <div className="header-algo">Algorithm</div>
+            </div>
+          */}
+
+          <Infinite className="infinite" containerHeight={window.innerHeight-114} elementHeight={80}>
             {
               this.state.coins
                 .sort( (a, b) => {
@@ -128,25 +167,124 @@ class Coins extends Component {
             }
           </Infinite>
         </div>
-        <div className="floatRight info-panel">
-          <h1>Popular Coins/Rising Coins</h1>
-          <ol>
-            <li><a href="#">Bitcoin</a></li>
-            <li><a href="#">Ethereum</a></li>
-            <li><a href="#">Ripple</a></li>
-            <li><a href="#">Litecoin</a></li>
-            <li><a href="#">Dogecoin</a></li>
-          </ol>
-
-          <h1>Explanation of Coin Stats</h1>
-          <p>Explanation of Coin Stats Like Market Cap, Premined/Mineable Coins, Algorithms, Ticker Symbols,ETC</p>
-          <br />
-          <h1>Pertinent Info</h1>
-          <p>Any other pertinent information that could be useful on the MULTIPLE COINS pg, displaying AGGREGATE DATA FOR ALL CRYPTOCURRENCIES COMBINED as an example, </p>
-          <br />
-          <h1>List of popular exchanges/wallets/resources</h1>
-          <p>List of popular wallets or exchanges, we can leave a FEATURED EXCHANGE placeholder for future AdSpace</p>
         </div>
+        <div className="col-md-7 text-center">
+          <div className="floatRight info-panel">
+            {/*
+              <h1>Popular Coins/Rising Coins</h1>
+              <ol>
+                <li><a href="#">Bitcoin</a></li>
+                <li><a href="#">Ethereum</a></li>
+                <li><a href="#">Ripple</a></li>
+                <li><a href="#">Litecoin</a></li>
+                <li><a href="#">Dogecoin</a></li>
+              </ol>
+              <hr />
+            */}
+
+            <h2>Classifying Cryptocurrencies</h2>
+            <h6>How coins differ from each other</h6>
+            <div className="row">
+              <div className="col-md-3">
+                <button type="button" className="btn btn-danger-outline explain-btn">Ticker Symbol</button>
+                <p>Like stocks, each cryptocurrency has a set of abbreviated letters that acts as a unique identifier</p>
+              </div>
+              <div className="col-md-3">
+                <button type="button" className="btn btn-warning-outline explain-btn">Total Coin Supply</button>
+                <p>Maximum number of coins that a particular cryptocurrency has available (usually set before launch)</p>
+              </div>
+              <div className="col-md-3">
+                <button type="button" className="btn btn-info-outline explain-btn">Premined Coins</button>
+                <p>If a coin is fully premined, there are no mining or miners involved, and is all done before launch</p>
+              </div>
+              <div className="col-md-3">
+                <button type="button" className="btn btn-success-outline explain-btn">Algorithms</button>
+                <p>Algorithms determine the security protocols and verification of transactions</p>
+              </div>
+            </div>
+            <hr />
+            <h2>Cryptocurrency Market</h2>
+            <h6 className="m-b-2">How the entire cryptocurrency market is doing</h6>
+            <div className="row">
+              <div className="col-md-3">
+                <div className="statcard statcard-primary p-a-md">
+                  <h3 className="statcard-number">
+                    {`$${this.parseNum(parseInt(this.state.global.total_market_cap_usd))}`}
+                  </h3>
+                  <span className="statcard-desc">Total Market Cap</span>
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="statcard statcard-primary p-a-md">
+                  <h3 className="statcard-number">
+                    {`$${this.parseNum(this.state.global.total_24h_volume_usd)}`}
+                  </h3>
+                  <span className="statcard-desc">24h Trading Volume</span>
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="statcard statcard-primary p-a-md">
+                  <h3 className="statcard-number">
+                    {this.state.global.active_currencies}
+                  </h3>
+                  <span className="statcard-desc">Active Currencies</span>
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="statcard statcard-primary p-a-md">
+                  <h3 className="statcard-number">
+                    {`${this.state.global.bitcoin_percentage_of_market_cap}%`}
+                  </h3>
+                  <span className="statcard-desc">BTC % of Market Cap</span>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div className="row">
+              <div className="col-md-12">
+                <h2><span className="icon icon-star"></span> Featured Exchange</h2>
+                <div className="statcard statcard-success p-a-md">
+                  <h3 className="statcard-number">
+                    Gemini
+                  </h3>
+                  <span className="statcard-desc">JoinCoin's pick for the best cryptocurrency exchange is Gemini!<br />Please contact us to for advertisement opportunities.</span>
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-3">
+                <h3>Exchanges</h3>
+                <ol className="text-left">
+                  <li>Gemini</li>
+                  <li>Coinbase</li>
+                  <li>GDAX</li>
+                  <li>Kraken</li>
+                  <li>Coinmama</li>
+                </ol>
+              </div>
+              <div className="col-md-3">
+                <h3>Wallets</h3>
+                <ol className="text-left">
+                  <li>Blockchain.info</li>
+                  <li>MyCelium</li>
+                  <li>Trezor</li>
+                  <li>Electrum</li>
+                  <li>Paper Wallet</li>
+                </ol>
+              </div>
+              <div className="col-md-6">
+                <h3>Resources</h3>
+                <ul className="text-left">
+                  <li><a href="#">imdb to Bitcoin documentary</a></li>
+                  <li><a href="#">Good explanation video</a></li>
+                  <li><a href="#">Wallet comparison</a></li>
+                  <li><a href="#">Awesome bitcoin article</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/*
         
         <Table
