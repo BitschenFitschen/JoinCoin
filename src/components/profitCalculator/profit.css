@@ -1,0 +1,13 @@
+@import "~react-bootstrap-slider/src/css/bootstrap-slider.min.css";
+
+.conversionAlert {
+  font-size: 2em;
+}
+
+.coin-span {
+  font-size: 0.7em;
+}
+
+.slider.slider-horizontal {
+  width: 80%;
+}
