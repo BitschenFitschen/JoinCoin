@@ -6,8 +6,8 @@
 	font-family: 'Amiri', serif;
 }
 
-.carouselTemplate {
-	/*background: #969696;*/
+/*.carouselTemplate {
+	/*background: #969696;
 	background-image: url("./JC-logo-final-lincoln.png");
 	overflow: auto;
 	width: 90%;
@@ -15,7 +15,7 @@
 	display: flex;
 	justify-content: center;
 	margin: auto;
-}
+}*/
 
 .header, .Ticker {
 	text-align: center;
@@ -34,13 +34,72 @@
 	font-size:135px;
 }
 
-#animated-example {  
-   height: 275px; 
-   margin: 20px auto; 
-   width: 300px; 
+.carouselTemplate {
+	background-image: url(https://i.stack.imgur.com/pMAiU.jpg);
+	height: 350px; 
+   margin: 20px auto;  
 	position: relative;
 	width: 80%;
-	opacity: ;
+}
+
+#animated-example {  
+   height: 350px; 
+   margin: 20px auto;  
+	position: relative;
+	width: 80%;
+	opacity: 1.9;
+   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
+}
+
+
+
+#welcomeLogo {
+   position: absolute;
+	top: 0%;
+	width: 100%;
+    height: 100%;
+    opacity: .8;
+	transform: translateY(0%);
+	transform: translateX(0%);
+	margin: auto;
+	padding: 3% 10% 3% 10%;
+	
+
+	
+   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
+}
+
+#coinsCarouselBanner {
+   position: absolute;
+	top: 0%;
+	width: 80%;
+    height: 33%;
+    margin: 0 auto 0 auto;
+    opacity: ;
+	transform: translateY(0%);
+	transform: translateX(12.5%);
+	display: flex;
+	justify-content: center;
+	
+
+	
+   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
+}
+
+#coinsCarouselBanner2 {
+   position: absolute;
+	bottom: 0%;
+	width: 80%;
+    height: 33%;
+    margin: 0 auto 0 auto;
+    opacity: ;
+	transform: translateY(0%);
+	transform: translateX(12.5%);
+	display: flex;
+	justify-content: center;
+	
+
+	
    /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
 }
 
@@ -108,13 +167,15 @@
 }
 
 .middleIntro {
-	width: 100%;
+	width: 600px;
 	display: flex;
 	justify-content: center;
 	/*border: 2px solid black;*/
 	border-radius: 5%;
-	height: 325px;
+	height: 475px;
 	background-image: no-repeat url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
+	margin-left: auto;
+	margin-right: auto;
 	/*opacity: .8;*/
 }
 
@@ -130,32 +191,79 @@
 
 .innerCaptionWelcome {
 	position: absolute;
-	top: 30%;
-    transform: translateY(-30%);
+	top: 22%;
+    transform: translateY(-25%);
 }
 
-#innerCaptionWelcome {
-	font-size: 2em;
+.innerCaptionCoins {
+	position: absolute;
+	top: 57%;
+    transform: translateY(-57%);
+}
+
+.innerWelcomeImage {
+	position: absolute;
+	top: 0%;
+	transform: translateY(0%);
+	height: 20px;
+}
+
+.innerCaptionWelcomeText {
+	font-size: 2.1em;
+	color: white;
+}
+
+#innerCaptionCoinsText {
+	font-size: 1.7em;
+	color: black;
+	padding: 0;
 }
 
 .introCaptionWelcomeSubText {
 	position: absolute;
-	top: 55%;
-    transform: translateY(-50%);
-    font-size: 1.4em;
+	top: 52%;
+    transform: translateY(-55%);
+    font-size: 1.7em;
+
     /*right: 20%;
     transform: translateX(90%);
     width: 30%;*/
 }
 
+/*.leftIntroCaptionWelcomeSubText {
+	text-align: left;
+}*/
+
+.centerIntroCaptionWelcomeSubText {
+	text-align: center;
+	font-size: 1em;
+}
+
+/*
+.rightIntroCaptionWelcomeSubText {
+	text-align: right;
+}*/
+
 #welcomeC {
 	font-size: 1.6em;
+	color: white;
+}
+
+#welcomeCWhite {
+	font-size: 1.6em;
+	color: white;
 }
 
 .innerCaptionBeginner {
 	position: absolute;
 	top: 25%;
     transform: translateY(-25%);
+    color: white;
+}
+
+#innerCaptionBeginner {
+	color: white;
+	font-size: 2.4em;
 }
 
 .introCaptionBeginnerSubText {
@@ -165,6 +273,7 @@
     right: 20%;
     transform: translateX(90%);
     width: 30%;
+    font-size: 1.7em;
 }
 
 /*.introFringeUpper {
