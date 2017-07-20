@@ -16,6 +16,7 @@ class Coins extends Component {
     this.handleCoinClick = this.handleCoinClick.bind(this);
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
+    this.setImageUrl = this.setImageUrl.bind(this);
   }
 
   state = {
@@ -24,7 +25,9 @@ class Coins extends Component {
     selectedCoin: {},
     searchTerm: '',
     loading: true,
-    show: false
+    show: false,
+    cryptocompare: null,
+    imageUrl: null
   };
 
   handleSearchTermChange (event) {
@@ -33,16 +36,24 @@ class Coins extends Component {
 
   handleCoinClick (coin, e) {
     this.setState({ selectedCoin: coin });
-
+    this.setImageUrl(coin.symbol);
     this.showModal();
   }
 
-  showModal () {
-    this.setState({show: true});
+  setImageUrl (symbol) {
+    if(this.state.cryptocompare[symbol] !== undefined) {
+      this.setState({ imageUrl: `https://www.cryptocompare.com${this.state.cryptocompare[symbol].ImageUrl}` });
+    } else {
+      this.setState({ imageUrl: null });
+    }
   }
 
-  hideModal () {
-    this.setState({show: false});
+  showModal() {
+    this.setState({ show: true });
+  }
+
+  hideModal() {
+    this.setState({ show: false });
   }
 
   parseNum (number) {
@@ -61,7 +72,28 @@ class Coins extends Component {
   componentDidMount(){
     setTimeout(() => { 
       this.setState({ loading: false })
-    },2000)
+    }, 2000)
+
+    let that = this;
+
+    axios.get('https://www.cryptocompare.com/api/data/coinlist/')
+      .then(function (response) {
+        that.setState( { cryptocompare: response.data.Data } );
+
+        // const ccid = response.data.Data[coin.symbol].Id;
+
+        // axios.get(`https://www.cryptocompare.com/api/data/socialstats/?id=${ccid}`)
+        //   .then(function (response) {
+        //     console.log(response);
+        //     // that.setState( {  } );
+        //   })
+        //   .catch(function (error) {
+        //     console.log(error);
+        //   });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   } // simulate loading
 
   componentWillMount() {
@@ -94,13 +126,48 @@ class Coins extends Component {
       height: window.innerHeight-114
     };
 
+    let modalStyle = null;
+
+    if(this.state.imageUrl !== null) {
+      modalStyle = {
+        background: `url(${this.state.imageUrl})`
+      };
+    }
+
+    let hour, day, week = null;
+
+    if(this.state.selectedCoin.percent_change_1h !== null) {
+      if(parseFloat(this.state.selectedCoin.percent_change_1h) >= 0.00) {
+        hour = <span className="delta-indicator delta-positive">{`${this.state.selectedCoin.percent_change_1h}%`}</span>
+      } else {
+        hour = <span className="delta-indicator delta-negative">{`${this.state.selectedCoin.percent_change_1h}%`}</span>
+      }
+    }
+
+    if(this.state.selectedCoin.percent_change_24h !== null) {
+      if(parseFloat(this.state.selectedCoin.percent_change_24h) >= 0.00) {
+        day = <span className="delta-indicator delta-positive">{`${this.state.selectedCoin.percent_change_24h}%`}</span>
+      } else {
+        day = <span className="delta-indicator delta-negative">{`${this.state.selectedCoin.percent_change_24h}%`}</span>
+      }
+    }
+
+    if(this.state.selectedCoin.percent_change_7d !== null) {
+      if(parseFloat(this.state.selectedCoin.percent_change_7d) >= 0.00) {
+        week = <span className="delta-indicator delta-positive">{`${this.state.selectedCoin.percent_change_7d}%`}</span>
+      } else {
+        week = <span className="delta-indicator delta-negative">{`${this.state.selectedCoin.percent_change_7d}%`}</span>
+      }
+    }
+
+
     return (
       <div className="coins-pg container-fluid">
         <Modal
-          {...this.props}
           show={this.state.show}
           onHide={this.hideModal}
           dialogClassName="custom-modal"
+          style={modalStyle}
         >
           <Modal.Header closeButton>
             <Modal.Title id="contained-modal-title-lg">
@@ -111,11 +178,44 @@ class Coins extends Component {
           <Modal.Body>
             
             <div className="single-coin-container">
-              <h3>Price</h3>
-              <p>{`$${parseFloat(this.state.selectedCoin.price_usd)} per 1 ${this.state.selectedCoin.symbol}`}</p>
-              <p>{`Change in 1 Hour: ${this.state.selectedCoin.percent_change_1h}%`}</p>
-              <p>{`Change in 1 Day: ${this.state.selectedCoin.percent_change_24h}%`}</p>
-              <p>{`Change in 1 Week: ${this.state.selectedCoin.percent_change_7d}%`}</p>
+              <div className="row">
+                <div className="col-md-6">
+                  <h2>{`$${parseFloat(this.state.selectedCoin.price_usd)}`}<span className="per-symbol">{`/ 1 ${this.state.selectedCoin.symbol}`}</span>
+                  </h2>
+
+                  <div className="statcard">
+                    <span className="statcard-desc">1 Hour Change</span>
+                    {
+                      hour
+                    }
+                  </div>
+
+                  <div className="statcard">
+                    <span className="statcard-desc">1 Day Change</span>
+                    {
+                      day
+                    }
+                  </div>
+
+                  <div className="statcard">
+                    <span className="statcard-desc">1 Week Change</span>
+                    {
+                      week
+                    }
+                  </div>
+                </div>
+
+                <div className="col-md-6">
+                  {
+                    this.state.imageUrl === null
+                    ?
+                    (null)
+                    :
+                    (<img className="coin-pic" src={`${this.state.imageUrl}`} alt="coin-pic" />)
+                  }
+                </div>
+              </div>
+              
             </div>
 
           </Modal.Body>
@@ -195,7 +295,7 @@ class Coins extends Component {
                   <h3 className="statcard-number">
                     {this.state.loading ? (<PulseLoader color="#fff" size="6px" margin="4px"/>) : `$${this.parseNum(parseInt(this.state.global.total_market_cap_usd, 10))}`}
                   </h3>
-                  <span className="statcard-desc">Total Market Cap</span>
+                  <span className="statcard-desc">Total Mkt Cap</span>
                 </div>
               </div>
               <div className="col-md-3">

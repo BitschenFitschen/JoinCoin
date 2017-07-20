@@ -50,5 +50,16 @@
 }
 
 .custom-modal {
-  width: 90%;
+  width: 80%;
+}
+
+.per-symbol {
+  margin-left: 0.5em;
+  font-size: 0.7em;
+  font-weight: lighter; 
+  letter-spacing: 1.5px;
+}
+
+.single-coin-container {
+  padding: 1em 2em 1em 2em;
 }
