@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {Col} from 'react-bootstrap';
 import axios from 'axios';
 
+import './dashboard.css';
+
 class Dashboard extends Component {
 
 
@@ -88,15 +90,15 @@ class Dashboard extends Component {
       <div className="dashboard">
         <Col xs={12} sm={12} md={6} lg={6}>
         {
-          <div>
-          <h1>Search Query Results [BTC as Example]</h1>
-          <p>ID: {r1}</p>
-          <p>Name: {r2}</p>
-          <p>Symbol: {r3}</p>
-          <p>Price (USD): {r4}</p>
-          <p>Percent Change 1 HR: {r5}</p>
-          <p>Percent Change 24 HR: {r6}</p>
-          <p>Percent Change 7 D: {r7}</p>
+          <div className="queryresult">
+            <h1>Search Query Results [BTC as Example]</h1>
+            <p>ID: {r1}</p>
+            <p>Name: {r2}</p>
+            <p>Symbol: {r3}</p>
+            <p>Price (USD): {r4}</p>
+            <p>Percent Change 1 HR: {r5}</p>
+            <p>Percent Change 24 HR: {r6}</p>
+            <p>Percent Change 7 D: {r7}</p>
           </div>
         }
         </Col>
