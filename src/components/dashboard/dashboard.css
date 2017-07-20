@@ -1,3 +1,18 @@
 .queryresult {
-	background-color: #1e9bf4;
+    padding: 10px;
+}
+
+.queryheader {
+    background-color:#3b6488;
+    padding: 10px;
+    font-size: 28px;
+
+
+}
+
+.querybody {
+	color: #fff;
+	padding: 10px;
+	background-color: #2eb7ff;
+
 }

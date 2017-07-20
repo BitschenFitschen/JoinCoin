@@ -91,46 +91,48 @@ class Dashboard extends Component {
         <Col xs={12} sm={12} md={6} lg={6}>
         {
           <div className="queryresult">
-            <h1>Search Query Results [BTC as Example]</h1>
-            <p>ID: {r1}</p>
-            <p>Name: {r2}</p>
-            <p>Symbol: {r3}</p>
-            <p>Price (USD): {r4}</p>
-            <p>Percent Change 1 HR: {r5}</p>
-            <p>Percent Change 24 HR: {r6}</p>
-            <p>Percent Change 7 D: {r7}</p>
+            <h1 className="queryheader">Search Query Results [BTC as Example]</h1>
+            <div className="querybody">
+              <p>ID: {r1}</p>
+              <p>Name: {r2}</p>
+              <p>Symbol: {r3}</p>
+              <p>Price (USD): {r4}</p>
+              <p>Percent Change 1 HR: {r5}</p>
+              <p>Percent Change 24 HR: {r6}</p>
+              <p>Percent Change 7 D: {r7}</p>
+            </div>
           </div>
         }
         </Col>
         <Col xs={4} sm={4} md={2} lg={2}>
-        {
-          <div>
-            <ul>
-            <h1>Rank</h1>
-            {top10Rank}
-            </ul>
-          </div>
-        }
+          {
+            <div>
+              <ul>
+              <h1 className="queryheader">Rank</h1>
+                <div className="querybody">{top10Rank}</div>
+              </ul>
+            </div>
+          }
         </Col>
         <Col xs={4} sm={4} md={2} lg={2}>
-        {
-          <div>
-            <ul>
-            <h1>Name</h1>
-            {top10Name}
-            </ul>
-          </div>
-        }
+          {
+            <div>
+              <ul>
+              <h1 className="queryheader">Name</h1>
+              <div className="querybody">{top10Name}</div>
+              </ul>
+            </div>
+          }
         </Col>
         <Col xs={4} sm={4} md={2} lg={2}>
-        {
-          <div>
-            <ul>
-            <h1>USD</h1>
-            {top10USD}
-            </ul>
-          </div>
-        }
+          {
+            <div>
+              <ul>
+              <h1 className="queryheader">USD</h1>
+              <div className="querybody">{top10USD}</div>
+              </ul>
+            </div>
+          }
         </Col>
       </div>
          // Testing Mapping to pull data from array of objects

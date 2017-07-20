@@ -7,7 +7,9 @@ import './assets/css/toolkit-startup.css';
 import './assets/css/application-startup.css';
 import bgIMG from './assets/img/startup-0.svg';
 import bgIMG02 from './assets/img/jc-1.jpg';
-// import './assets/js/author';
+
+import preload from './educationdata.json';
+
 
 
 
@@ -51,12 +53,20 @@ class EducationHeader extends Component {
                     <a href="">Abe Lincoin<small className="delta-indicator delta-positive">1000.2%</small></a>
                   </li>
                    <nav>
-                    <div class="nested" id="sidebar">
+                   {
+                        preload.slides.map(
+                          (slide) =>
+                          <div className="nested">
+                            <a href={`#section${slide.index + 1}`}>{`${slide.title}`}</a>
+                          </div>
+                        )
+                      }
+                    {/* <div class="nested" id="sidebar">
                       <a href="#section1" class="chosen">Section 1</a>
                       <a href="#section2">Section 2</a>
                       <a href="#section3">Section 3</a>
                       <a href="#section4">Section 4</a>
-                    </div>
+                    </div>*/}
                   </nav>
                 </ul>
               </div>
