@@ -1,15 +1,15 @@
 .coins-pg {
-  display: flex;
+/*  display: flex;*/
 
 }
 
 .coins-container {
-  display: flex;
-  flex-wrap: wrap;
+/*  display: flex;
+  flex-wrap: wrap;*/
 }
 
 #coins-title, h1 {
-  font-size: 3em;
+/*  font-size: 3em;*/
 /*  width: 50%;*/
 }
 
@@ -19,20 +19,26 @@
 }
 
 #coin-search {
-  width: 100%;
+/*  width: 100%;*/
 }
 
 .floatRight {
-  float:right;
+/*  float:right;*/
 }
 
 .search-panel {
 /*  border: 1px solid black;*/
-  width: 50%;
+/*  width: 50%;*/
 }
 
 .info-panel {
 /*  border: 1px solid black;*/
-  width: 50%;
-  margin: 3em;
+/*  width: 50%;
+  margin: 3em;*/
+/*  height: 800px;
+  overflow: hidden;*/
+}
+
+.explain-btn {
+  margin: 1em;
 }
