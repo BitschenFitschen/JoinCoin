@@ -71,13 +71,13 @@ class IntroCarousel extends Component {
 			      <div>
 			      	<img alt="" id="animated-example" src="https://themerkle.com/wp-content/uploads/2017/02/crypto-questions-part-1.jpg"/>
 			      </div>
-			      <Carousel.Caption className="innerCaptionBeginner">
+			      <Carousel.Caption className="innerCaptionBeginner2">
 			        <h3 id="innerCaptionBeginner">Join
 			        	<span id="welcomeCWhite">¢</span>oin for Beginners
 			        </h3>
 			      </Carousel.Caption>
 			      <Carousel.Caption className="introCaptionBeginnerSubText">
-			      	<p>Simply explained answers to all of your questions about cryptocurrency</p>
+			      	<p>Simple answers for your questions on cryptocurrency</p>
 			      </Carousel.Caption>
 			    </Carousel.Item>
 
@@ -87,7 +87,8 @@ class IntroCarousel extends Component {
 			      	</div>
 			      	<img alt="" id="coinsCarouselBanner" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-8XbnmLLkEp1Xsak2RJaQwvFIqMWFl82PjskI9oBuZmdedTFG"/>
 			      	<Carousel.Caption className="innerCaptionCoins">
-			        	<h3 id="innerCaptionCoinsText">Search and track any coin you want!</h3>
+			        	<h3 id="innerCaptionCoinsText">Search | Monitor | Forecast</h3>
+			        	<h3 id="innerCaptionCoinsText2"> any coin </h3>
 			      	</Carousel.Caption>
 			      	<img alt="" id="coinsCarouselBanner2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-8XbnmLLkEp1Xsak2RJaQwvFIqMWFl82PjskI9oBuZmdedTFG"/>
 			    </Carousel.Item>
