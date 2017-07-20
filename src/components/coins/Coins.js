@@ -1,74 +1,61 @@
 import React, { Component } from 'react';
-// import {Col, Accordion, Panel} from 'react-bootstrap';
 import './coins.css';
 import Coin from './Coin';
 import axios from 'axios';
-import Infinite from 'react-infinite';
-// import { Column, Table } from 'react-virtualized';
-// import 'react-virtualized/styles.css';
+import Infinite from 'react-infinite';;
 import PulseLoader from 'halogen/PulseLoader';
 import BounceLoader from 'halogen/BounceLoader';
+import { Button, Modal } from 'react-bootstrap';
+
 
 class Coins extends Component {
   constructor(props) {
     super(props);
     this.handleSearchTermChange = this.handleSearchTermChange.bind(this);
-    this.preminedOnly = this.preminedOnly.bind(this);
-    this.notPreminedOnly = this.notPreminedOnly.bind(this);
-    this.nullPremined = this.nullPremined.bind(this);
     this.parseNum = this.parseNum.bind(this);
+    this.handleCoinClick = this.handleCoinClick.bind(this);
+    this.showModal = this.showModal.bind(this);
+    this.hideModal = this.hideModal.bind(this);
   }
 
   state = {
     coins: [],
     global: {},
-    selectedCoin: '',
+    selectedCoin: {},
     searchTerm: '',
-    filterPremined: null,
-    loading: true
+    loading: true,
+    show: false
   };
 
   handleSearchTermChange (event) {
     this.setState({ searchTerm: event.target.value });
   }
 
-  preminedOnly (event) {
-    if(this.state.filterPremined === null) {
-      this.setState({ filterPremined: false });
-    } else if(this.state.filterPremined === true) {
-      this.setState({ filterPremined: false });
-    }
+  handleCoinClick (coin, e) {
+    this.setState({ selectedCoin: coin });
+
+    this.showModal();
   }
 
-  notPreminedOnly (event) {
-    if(this.state.filterPremined === null) {
-      this.setState({ filterPremined: true });
-    } else if(this.state.filterPremined === false) {
-      this.setState({ filterPremined: true });
-    }
+  showModal () {
+    this.setState({show: true});
   }
 
-  nullPremined (event) {
-    if(this.state.filterPremined === true || this.state.filterPremined === false) {
-      this.setState({ filterPremined: null });
-    }
+  hideModal () {
+    this.setState({show: false});
   }
 
-  parseNum (value) {
-    // Nine Zeroes for Billions
-    return Math.abs(Number(value)) >= 1.0e+9
-
-    ? Math.abs(Number(value)) / 1.0e+9 + "B"
-    // Six Zeroes for Millions 
-    : Math.abs(Number(value)) >= 1.0e+6
-
-    ? Math.abs(Number(value)) / 1.0e+6 + "M"
-    // Three Zeroes for Thousands
-    : Math.abs(Number(value)) >= 1.0e+3
-
-    ? Math.abs(Number(value)) / 1.0e+3 + "K"
-
-    : Math.abs(Number(value));
+  parseNum (number) {
+    var SI_POSTFIXES = ["", "k", "M", "B", "T", "P", "E"];
+    var tier = Math.log10(Math.abs(number)) / 3 | 0;
+    if(tier === 0) return number;
+    var postfix = SI_POSTFIXES[tier];
+    var scale = Math.pow(10, tier * 3);
+    var scaled = number / scale;
+    var formatted = scaled.toFixed(1) + '';
+    if (/\.0$/.test(formatted))
+      formatted = formatted.substr(0, formatted.length - 2);
+    return formatted + postfix;
   }
 
   componentDidMount(){
@@ -79,22 +66,13 @@ class Coins extends Component {
 
   componentWillMount() {
     let that = this;
+
     // this runs right before rendered
-    axios.get('https://www.cryptocompare.com/api/data/coinlist/')
+    axios.get('https://api.coinmarketcap.com/v1/ticker/')
       .then(function (response) {
-        console.log(response.data.Data);
-        let arr = [];
+        console.log(response.data);
 
-        for (var key in response.data.Data) {
-          // console.log(response.data.Data[key]);
-          if (Object.prototype.hasOwnProperty.call(response.data.Data, key)) {
-              arr.push(response.data.Data[key]);
-          }
-        }
-
-        // console.log(arr);
-
-        that.setState( { coins: arr } );
+        that.setState( { coins: response.data } );
 
         axios.get('https://api.coinmarketcap.com/v1/global/')
           .then(function (response) {
@@ -112,30 +90,39 @@ class Coins extends Component {
   }
 
   render () {
-    // console.log(Object.keys(this.state.coins));
-    // const list = this.state.coins
-    // .sort( (a, b) => {
-    //   var idA = a.SortOrder;
-    //   var idB = b.SortOrder;
-
-    //   if(idA < idB) {
-    //     return -1;
-    //   } 
-
-    //   if(idA > idB) {
-    //     return 1;
-    //   }
-
-    //   return 0;
-    // })
-    // .filter( coin => `${coin.FullName}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase()) >= 0);
-
     const divStyle = {
       height: window.innerHeight-114
     };
 
     return (
       <div className="coins-pg container-fluid">
+        <Modal
+          {...this.props}
+          show={this.state.show}
+          onHide={this.hideModal}
+          dialogClassName="custom-modal"
+        >
+          <Modal.Header closeButton>
+            <Modal.Title id="contained-modal-title-lg">
+              {`${this.state.selectedCoin.name}`}
+              <span>{` (${this.state.selectedCoin.symbol})`}</span>
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            
+            <div className="single-coin-container">
+              <h3>Price</h3>
+              <p>{`$${parseFloat(this.state.selectedCoin.price_usd)} per 1 ${this.state.selectedCoin.symbol}`}</p>
+              <p>{`Change in 1 Hour: ${this.state.selectedCoin.percent_change_1h}%`}</p>
+              <p>{`Change in 1 Day: ${this.state.selectedCoin.percent_change_24h}%`}</p>
+              <p>{`Change in 1 Week: ${this.state.selectedCoin.percent_change_7d}%`}</p>
+            </div>
+
+          </Modal.Body>
+          <Modal.Footer>
+            <Button onClick={this.hideModal}>Close</Button>
+          </Modal.Footer>
+        </Modal>
         <h1 id="coins-title">Coins</h1>
         <div className="col-md-5">
         <div className="search-panel">
@@ -163,65 +150,40 @@ class Coins extends Component {
               {
                 this.state.coins
                   .sort( (a, b) => {
-                    var idA = parseInt(a.SortOrder);
-                    var idB = parseInt(b.SortOrder);
+                    var rankA = parseInt(a.rank, 10);
+                    var rankB = parseInt(b.rank, 10);
 
-                    if(idA < idB) {
+                    if(rankA < rankB) {
                       return -1;
                     } 
 
-                    if(idA > idB) {
+                    if(rankA > rankB) {
                       return 1;
                     }
 
                     return 0;
                   })
-                  .filter( coin => `${coin.FullName}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase()) >= 0)
-                  .filter( coin =>
-                    ( ( coin.FullyPremined === "0" || coin.FullyPremined === "1" ) && this.state.filterPremined === null ) ||
-                    ( coin.FullyPremined === "0"  && this.state.filterPremined === true ) ||
-                    ( coin.FullyPremined === "1"  && this.state.filterPremined === false )
-                  )
+                  .filter( coin => `${coin.name} ${coin.symbol}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase()) >= 0)
                   .map( coin => (
-                  <Coin key={coin.Id} coin={coin} />
+                  <Coin key={coin.id} coin={coin} handleCoinClick={this.handleCoinClick} parseNum={this.parseNum} />
                 ))
               }
             </Infinite>
           }
         </div>
         </div>
-        <div className="col-md-7 text-center">
-          <div className="floatRight info-panel">
-            {/*
-              <h1>Popular Coins/Rising Coins</h1>
-              <ol>
-                <li><a href="#">Bitcoin</a></li>
-                <li><a href="#">Ethereum</a></li>
-                <li><a href="#">Ripple</a></li>
-                <li><a href="#">Litecoin</a></li>
-                <li><a href="#">Dogecoin</a></li>
-              </ol>
-              <hr />
-            */}
-
+        <div className="col-md-7 text-center p-l-lg p-r-lg">
+          <div className="info-panel">
             <h2>Classifying Cryptocurrencies</h2>
             <h6>How coins differ from each other</h6>
             <div className="row">
-              <div className="col-md-3">
+              <div className="col-md-6">
                 <button type="button" className="btn btn-danger-outline explain-btn">Ticker Symbol</button>
                 <p>Like stocks, each cryptocurrency has a set of abbreviated letters that acts as a unique identifier</p>
               </div>
-              <div className="col-md-3">
+              <div className="col-md-6">
                 <button type="button" className="btn btn-warning-outline explain-btn">Total Coin Supply</button>
                 <p>Maximum number of coins that a particular cryptocurrency has available (usually set before launch)</p>
-              </div>
-              <div className="col-md-3">
-                <button type="button" className="btn btn-info-outline explain-btn">Premined Coins</button>
-                <p>If a coin is fully premined, there are no mining or miners involved, and is all done before launch</p>
-              </div>
-              <div className="col-md-3">
-                <button type="button" className="btn btn-success-outline explain-btn">Algorithms</button>
-                <p>Algorithms determine the security protocols and verification of transactions</p>
               </div>
             </div>
             <hr />
@@ -231,7 +193,7 @@ class Coins extends Component {
               <div className="col-md-3">
                 <div className="statcard statcard-primary p-a-md">
                   <h3 className="statcard-number">
-                    {this.state.loading ? (<PulseLoader color="#fff" size="6px" margin="4px"/>) : `$${this.parseNum(parseInt(this.state.global.total_market_cap_usd))}`}
+                    {this.state.loading ? (<PulseLoader color="#fff" size="6px" margin="4px"/>) : `$${this.parseNum(parseInt(this.state.global.total_market_cap_usd, 10))}`}
                   </h3>
                   <span className="statcard-desc">Total Market Cap</span>
                 </div>
@@ -241,7 +203,7 @@ class Coins extends Component {
                   <h3 className="statcard-number">
                     {this.state.loading ? (<PulseLoader color="#fff" size="6px" margin="4px"/>) : `$${this.parseNum(this.state.global.total_24h_volume_usd)}`}
                   </h3>
-                  <span className="statcard-desc">24h Trading Volume</span>
+                  <span className="statcard-desc">24h Trading Vol</span>
                 </div>
               </div>
               <div className="col-md-3">
@@ -249,25 +211,23 @@ class Coins extends Component {
                   <h3 className="statcard-number">
                     {this.state.loading ? (<PulseLoader color="#fff" size="6px" margin="4px"/>) : this.state.global.active_currencies}
                   </h3>
-                  <span className="statcard-desc">Active Currencies</span>
+                  <span className="statcard-desc">Cryptocurrencies</span>
                 </div>
               </div>
               <div className="col-md-3">
                 <div className="statcard statcard-primary p-a-md">
                   <h3 className="statcard-number">
-                    {this.state.loading ? (<PulseLoader color="#fff" size="6px" margin="4px"/>) : `${this.state.global.bitcoin_percentage_of_market_cap}%`}
+                    {this.state.loading ? (<PulseLoader color="#fff" size="6px" margin="4px"/>) : `${this.parseNum(this.state.global.bitcoin_percentage_of_market_cap)}%`}
                   </h3>
-                  <span className="statcard-desc">BTC % of Market Cap</span>
+                  <span className="statcard-desc">BTC % of Mkt Cap</span>
                 </div>
               </div>
             </div>
-            <hr />
-            <div className="row">
+            <div className="row m-t-md">
               <div className="col-md-12">
-                <h2><span className="icon icon-star"></span> Featured Exchange</h2>
                 <div className="statcard statcard-success p-a-md">
                   <h3 className="statcard-number">
-                    Gemini
+                    <span className="icon icon-star"></span> Featured Exchange
                   </h3>
                   <span className="statcard-desc">JoinCoin's pick for the best cryptocurrency exchange is Gemini!<br />Please contact us to for advertisement opportunities.</span>
                 </div>
@@ -306,79 +266,6 @@ class Coins extends Component {
             </div>
           </div>
         </div>
-
-        {/*
-        
-        <Table
-          width={1000}
-          height={800}
-          headerHeight={20}
-          rowHeight={30}
-          rowCount={list.length}
-          rowGetter={({ index }) => list[index]}
-        >
-
-          <Column
-            label='Coin Name'
-            dataKey='CoinName'
-            width={250}
-          />
-          <Column
-            width={100}
-            label='Symbol'
-            dataKey='Name'
-          />
-          <Column
-            width={100}
-            label='Premined?'
-            dataKey='FullyPremined'
-          />
-          <Column
-            width={100}
-            label='Algo'
-            dataKey='Algorithm'
-          />
-          <Column
-            width={200}
-            label='Total Coin Supply'
-            dataKey='TotalCoinSupply'
-          />
-        </Table>
-      */}
-      {/* 
-
-        <button onClick={(e) => this.preminedOnly(e)}>Premined Coins</button>
-        <button onClick={(e) => this.notPreminedOnly(e)}>Mineable Coins</button>
-        <button onClick={(e) => this.nullPremined(e)}>All Coins</button>
-        <div className="coins-container">
-          { 
-            this.state.coins
-              .sort( (a, b) => {
-                var idA = a.SortOrder;
-                var idB = b.SortOrder;
-
-                if(idA < idB) {
-                  return -1;
-                } 
-
-                if(idA > idB) {
-                  return 1;
-                }
-
-                return 0;
-              })
-              .filter( coin => `${coin.FullName}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase()) >= 0)
-              .filter( coin =>
-                ( ( coin.FullyPremined === "0" || coin.FullyPremined === "1" ) && this.state.filterPremined === null ) ||
-                ( coin.FullyPremined === "0"  && this.state.filterPremined === true ) ||
-                ( coin.FullyPremined === "1"  && this.state.filterPremined === false )
-              )
-              .map( coin => (
-              <Coin key={coin.Id} coin={coin} />
-            ))
-          }
-        </div>
-      */}
       </div>
     );
   }
