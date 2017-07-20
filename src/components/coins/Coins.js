@@ -6,6 +6,8 @@ import axios from 'axios';
 import Infinite from 'react-infinite';
 // import { Column, Table } from 'react-virtualized';
 // import 'react-virtualized/styles.css';
+import PulseLoader from 'halogen/PulseLoader';
+import BounceLoader from 'halogen/BounceLoader';
 
 class Coins extends Component {
   constructor(props) {
@@ -22,7 +24,8 @@ class Coins extends Component {
     global: {},
     selectedCoin: '',
     searchTerm: '',
-    filterPremined: null
+    filterPremined: null,
+    loading: true
   };
 
   handleSearchTermChange (event) {
@@ -67,6 +70,12 @@ class Coins extends Component {
 
     : Math.abs(Number(value));
   }
+
+  componentDidMount(){
+    setTimeout(() => { 
+      this.setState({ loading: false })
+    },2000)
+  } // simulate loading
 
   componentWillMount() {
     let that = this;
@@ -121,6 +130,10 @@ class Coins extends Component {
     // })
     // .filter( coin => `${coin.FullName}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase()) >= 0);
 
+    const divStyle = {
+      height: window.innerHeight-114
+    };
+
     return (
       <div className="coins-pg container-fluid">
         <h1 id="coins-title">Coins</h1>
@@ -137,35 +150,44 @@ class Coins extends Component {
               <div className="header-algo">Algorithm</div>
             </div>
           */}
+          {
+            this.state.loading
+            ?
+            (
+              <div style={divStyle} className="loader-container">
+                <BounceLoader color="#2595FF" size="100px" margin="4px"/>
+              </div>
+            )
+            :
+            <Infinite className="infinite" containerHeight={window.innerHeight-114} elementHeight={80}>
+              {
+                this.state.coins
+                  .sort( (a, b) => {
+                    var idA = parseInt(a.SortOrder);
+                    var idB = parseInt(b.SortOrder);
 
-          <Infinite className="infinite" containerHeight={window.innerHeight-114} elementHeight={80}>
-            {
-              this.state.coins
-                .sort( (a, b) => {
-                  var idA = parseInt(a.SortOrder);
-                  var idB = parseInt(b.SortOrder);
+                    if(idA < idB) {
+                      return -1;
+                    } 
 
-                  if(idA < idB) {
-                    return -1;
-                  } 
+                    if(idA > idB) {
+                      return 1;
+                    }
 
-                  if(idA > idB) {
-                    return 1;
-                  }
-
-                  return 0;
-                })
-                .filter( coin => `${coin.FullName}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase()) >= 0)
-                .filter( coin =>
-                  ( ( coin.FullyPremined === "0" || coin.FullyPremined === "1" ) && this.state.filterPremined === null ) ||
-                  ( coin.FullyPremined === "0"  && this.state.filterPremined === true ) ||
-                  ( coin.FullyPremined === "1"  && this.state.filterPremined === false )
-                )
-                .map( coin => (
-                <Coin key={coin.Id} coin={coin} />
-              ))
-            }
-          </Infinite>
+                    return 0;
+                  })
+                  .filter( coin => `${coin.FullName}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase()) >= 0)
+                  .filter( coin =>
+                    ( ( coin.FullyPremined === "0" || coin.FullyPremined === "1" ) && this.state.filterPremined === null ) ||
+                    ( coin.FullyPremined === "0"  && this.state.filterPremined === true ) ||
+                    ( coin.FullyPremined === "1"  && this.state.filterPremined === false )
+                  )
+                  .map( coin => (
+                  <Coin key={coin.Id} coin={coin} />
+                ))
+              }
+            </Infinite>
+          }
         </div>
         </div>
         <div className="col-md-7 text-center">
@@ -209,7 +231,7 @@ class Coins extends Component {
               <div className="col-md-3">
                 <div className="statcard statcard-primary p-a-md">
                   <h3 className="statcard-number">
-                    {`$${this.parseNum(parseInt(this.state.global.total_market_cap_usd))}`}
+                    {this.state.loading ? (<PulseLoader color="#fff" size="6px" margin="4px"/>) : `$${this.parseNum(parseInt(this.state.global.total_market_cap_usd))}`}
                   </h3>
                   <span className="statcard-desc">Total Market Cap</span>
                 </div>
@@ -217,7 +239,7 @@ class Coins extends Component {
               <div className="col-md-3">
                 <div className="statcard statcard-primary p-a-md">
                   <h3 className="statcard-number">
-                    {`$${this.parseNum(this.state.global.total_24h_volume_usd)}`}
+                    {this.state.loading ? (<PulseLoader color="#fff" size="6px" margin="4px"/>) : `$${this.parseNum(this.state.global.total_24h_volume_usd)}`}
                   </h3>
                   <span className="statcard-desc">24h Trading Volume</span>
                 </div>
@@ -225,7 +247,7 @@ class Coins extends Component {
               <div className="col-md-3">
                 <div className="statcard statcard-primary p-a-md">
                   <h3 className="statcard-number">
-                    {this.state.global.active_currencies}
+                    {this.state.loading ? (<PulseLoader color="#fff" size="6px" margin="4px"/>) : this.state.global.active_currencies}
                   </h3>
                   <span className="statcard-desc">Active Currencies</span>
                 </div>
@@ -233,7 +255,7 @@ class Coins extends Component {
               <div className="col-md-3">
                 <div className="statcard statcard-primary p-a-md">
                   <h3 className="statcard-number">
-                    {`${this.state.global.bitcoin_percentage_of_market_cap}%`}
+                    {this.state.loading ? (<PulseLoader color="#fff" size="6px" margin="4px"/>) : `${this.state.global.bitcoin_percentage_of_market_cap}%`}
                   </h3>
                   <span className="statcard-desc">BTC % of Market Cap</span>
                 </div>

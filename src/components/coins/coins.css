@@ -42,3 +42,9 @@
 .explain-btn {
   margin: 1em;
 }
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
