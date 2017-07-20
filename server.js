@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-
+var cheerio = require('cheerio');
 var cookieParser = require('cookie-parser');
 var expressValidator = require('express-validator');
 var flash = require('connect-flash');
@@ -12,6 +12,8 @@ var passport = require('passport');
 var promisify = require('es6-promisify');
 var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
+var request = require('request');
+var cheerio = require('cheerio');
 
 // Import environment variables from our .env file
 require('dotenv').config();
@@ -92,6 +94,58 @@ db.once('open', function () {
 });
 
 // Routes
+app.get('/redditResult', function (req, res) {
+   console.log("\n***********************************\n" +
+            "Grabbing every thread name and link\n" +
+            "from reddit's webdev board:" +
+            "\n***********************************\n");
+  // Making a request call for reddit's "CryptoCurrency" board. The page's HTML is saved as the callback's third argument
+  request("https://www.reddit.com/r/CryptoCurrency", function(error, response, html) {
+    // Load the HTML into cheerio and save it to a variable
+    // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
+    var $ = cheerio.load(html);
+
+    // An empty array to save the data that we'll scrape
+    var result = [];
+    // With cheerio, find each p-tag with the "title" class
+    // (i: iterator. element: the current element)
+    $("p.title").each(function(i, element) {
+      // Save the text of the element (this) in a "title" variable
+      var title = $(this).text();
+      // In the currently selected element, look at its child elements (i.e., its a-tags),
+      // then save the values for any "href" attributes that the child elements may have
+      var link = $(this).children('a').attr("href");
+      console.log("console logging this", $(this).children('a').attr("href"));
+
+      // Save these results in an object that we'll push into the result array we defined earlier
+      result.push({
+        title: title,
+        link: link
+      });
+    });
+    res.send(result);
+  });
+});
+
+app.get('/goldScrape', function (req, res) {
+
+  request("http://www.kitco.com/charts/livegold.html", function(error, response, html) {
+    // Load the HTML into cheerio and save it to a variable
+    // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
+    var $ = cheerio.load(html);
+
+    var result;
+
+    result = $('#sp-ask').text();
+
+    // console.log(result);
+    // // With cheerio, find each p-tag with the "title" class
+    // // (i: iterator. element: the current element)
+
+    res.send(result);
+  });
+});
+
 app.use('/users', users);
 
 app.get('*', function (req, res) {

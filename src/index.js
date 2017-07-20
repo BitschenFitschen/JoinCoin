@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Match, Miss } from 'react-router';
+import './css/toolkit-startup.css';
+import './css/application-startup.css';
 import './css/style.css';
 import App from './components/App';
 import Education from './components/education/Education';
@@ -13,6 +15,7 @@ import Login from './components/login/Login';
 import EditProfile from './components/editProfile/EditProfile';
 import NotFound from './components/NotFound';
 import registerServiceWorker from './registerServiceWorker';
+import redditArticles from './components/redditScrape/redditArticles';
 
 const Root = () => {
   return (
@@ -27,6 +30,7 @@ const Root = () => {
         <Match pattern='/users/register' component={Register} />
         <Match pattern='/users/login' component={Login} />
         <Match pattern='/users/profile' component={EditProfile} />
+        <Match pattern='/redditArticles' component={redditArticles} />
         <Miss component={NotFound} />
       </div>
     </BrowserRouter>
