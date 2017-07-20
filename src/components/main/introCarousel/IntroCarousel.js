@@ -63,7 +63,7 @@ class IntroCarousel extends Component {
 				      		<p className="centerIntroCaptionWelcomeSubText" onClick={this.goToCoins.bind(this)}>Search Any Coin!</p>
 				      		
 				      		<p className="centerIntroCaptionWelcomeSubText"onClick={this.goToDashboard.bind(this)}>Dashboard</p>
-				      		<p className="centerIntroCaptionWelcomeSubText"onClick={this.goToDashboard.bind(this)}>About</p>
+				      		<p className="centerIntroCaptionWelcomeSubText2"onClick={this.goToDashboard.bind(this)}>About</p>
 				      </Carousel.Caption>
 				</Carousel.Item>
 
@@ -94,8 +94,8 @@ class IntroCarousel extends Component {
 			    </Carousel.Item>
 
 			    <Carousel.Item>
-			      <div onClick={this.goToReddit.bind(this)}>
-			      	<img alt="" id="animated-example" src="http://az616578.vo.msecnd.net/files/2016/07/01/636029417935340699-58088307_reddit.jpg"/>
+			      <div>
+			      	<img onClick={this.goToReddit.bind(this)} alt="" id="animated-example" src="http://az616578.vo.msecnd.net/files/2016/07/01/636029417935340699-58088307_reddit.jpg"/>
 			      </div>
 			      <Carousel.Caption className="innerCaptionReddit">
 			        <h3 id="animated-example" className="innerCaptionRedditText">Get the latest.. </h3>
@@ -106,8 +106,7 @@ class IntroCarousel extends Component {
 			        </a>
 			        <a href={this.state.result[2] ? this.state.result[2].link.indexOf('/r/') !== -1 ? `https://www.reddit.com${this.state.result[2].link}`: this.state.result[2].link : 'https://www.reddit.com/r/CryptoCurrency/'}>
 			        	<p id="redditText2">{this.state.result[2] ? this.state.result[2].title : ''}</p>
-			        </a>
-			  		
+			        </a>			  		
 			      </Carousel.Caption>
 			    </Carousel.Item>
 			</Carousel>
