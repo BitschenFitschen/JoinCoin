@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
+import {Col, Row} from 'react-bootstrap';
+
 import { Link } from 'react-router';
-import {Col} from 'react-bootstrap';
 import './main.css';
 import BeginnerImg from './img/CC-beginner.jpg';
 
@@ -15,12 +16,16 @@ class Beginner extends Component {
     return (
 
         <div className="Row sideSection">
-            <Col classname="col-xs-pull-12" xs={12} sm={3} md={3} lg={3}>
+            <Col className="col-xs-offset" xs={12} sm={3} md={3} lg={3}>
               <div className="upperSideBarFringe">
               </div>
-              <div className="middleSideBarFringe">
-
-                  <div onClick={this.goToEducation.bind(this)}><h3 className="sideHeader Row">Beginner</h3></div>
+              <div className="middleSideBarFringe" onClick={this.goToEducation.bind(this)}>
+                    <h3 id="sideHeader" className="sideHeader Row">Beginner</h3>      
+                    <div className="innerCaptionBeginner">                      
+                      <div>
+                        <img src="https://cdn.pixabay.com/photo/2014/06/14/10/02/road-368719_1280.jpg" id="beginner-banner" className=""/>
+                      </div>
+                    </div>                                     
               </div>
               <div className="lowerSideBarFringe">
               </div>
