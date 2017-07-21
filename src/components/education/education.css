@@ -1,17 +1,41 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-h5 {
+.education {
+  padding: 0;
+}
+
+.education-container {
+  padding: 0;
+}
+
+.slide-title {
   text-align: center;
   text-transform: uppercase;
   font-size: 30px;
   padding: 15px;
+/*  padding: 0;*/
+  margin: 0;
+}
+
+#edu-title {
+  margin: 0;
+  padding: 14.5px 10px;
+  font-size: 24px;
+  line-height: 21px;
+  display: inline-block;
 }
 
 .education-panel {
   height: 500px;
   /*border: 2px solid #000;*/
   background-color: #2eb7ff;
+  border: 3px solid black;
+
+}
+
+.panel-0 {
+  height: 100vh - 70px;
 }
 
 .slick-next:before, .slick-prev:before {

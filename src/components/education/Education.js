@@ -3,6 +3,7 @@ import {Col, Accordion, Panel} from 'react-bootstrap';
 // import Slider from 'react-slick';
 import './education.css';
 import preload from './educationdata.json';
+import ProfitCalculator from '../profitCalculator/ProfitCalculator';
 
 // import CCAnimate from './img/CC-Intro.gif';
 
@@ -14,19 +15,22 @@ class Education extends Component {
 
     return (
       <div className='education container-fluid'>
-        <Col xs={12} sm={12} md={12} lg={12}>
-          <h1>Education</h1>
+        <div className="topbar">
+          <a href="#"><span className="icon icon-chevron-with-circle-left back-arrow"></span></a>
+          <h1 id="edu-title">JoinCoin</h1>
+        </div>
+        <Col className="education-container" xs={12} sm={12} md={12} lg={12}>
           {/* <Slider {...settings}> */}
 
             {
               preload.slides.map(
                 (slide) =>
-                  <div className='education-panel'>
+                  <div className={`education-panel panel-${slide.index}`}>
                     {/* <Col md={3}>
                       <h4>{slide.leftSidePanelTitle}</h4>
                       <small>{slide.leftSidePanelDescription}</small>
                     </Col> */}
-                    <h5>{slide.title}</h5>
+                    <h5 className='slide-title'>{slide.title}</h5>
                     <Col md={6}>
                       {/* <p>{slide.description}</p> */}
 
@@ -52,6 +56,9 @@ class Education extends Component {
                   </div>
               )
             }
+            
+            <ProfitCalculator />
+
             {/* FAQ */}
             <div className='education-panel'>
               <Col md={3} />
