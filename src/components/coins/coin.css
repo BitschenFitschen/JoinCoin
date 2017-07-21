@@ -6,7 +6,8 @@ body {
 }
 
 .coin-container {
-  color: #2D3238;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.15);
   text-decoration: none !important; 
 }
 
@@ -21,13 +22,16 @@ body {
 
 .coin-container:hover, .coin-container:active, .coin-container:focus {
 /*  border: 2px solid black;*/
-  background: #d9edf7;
+  background: rgba(255, 255, 255, 0.08);;
   text-decoration: none !important; 
   cursor: pointer;
 }
 
 .ranking {
-  width: 50px;
+  padding-left: 10px;
+  margin-right: 10px;
+  width: 45px;
+  text-align: right;
 /*  border: 1px solid black;*/
 }
 
@@ -37,29 +41,29 @@ body {
 }
 
 .coin-sym {
-  padding: 0 0.5em 0 0.5em;
-  font-size: 0.9em;
+  padding: 0.5em 0.8em 0.5em 0.8em;
+  font-size: 0.95em;
   background: #ff3167;
-  color: #fff;
-  padding: 0.5em;
-  margin-right: 0.5em;
+  color: #000;
+  margin-left: 0.9em;
+  margin-right: 0.9em;
+  font-weight: bold;
 }
 
 .algo {
-  padding: 0 0.5em 0 0.5em;
-  font-size: 0.9em;
+  padding: 0.5em 0.8em 0.5em 0.8em;
+  font-size: 0.95em;
   background: #5cb85c;
   color: #fff;
-  padding: 0.5em;
 }
 
 .coin-supply {
-  padding: 0 0.5em 0 0.5em;
-  font-size: 0.9em;
+  padding: 0.5em 0.8em 0.5em 0.8em;
+  font-size: 0.95em;
   background: #f0ad4e;
-  color: #fff;
-  padding: 0.5em;
-  margin-right: 0.5em;
+  color: #000;
+  margin-right: 0.9em;
+  font-weight: bold;
 }
 
 .premined {

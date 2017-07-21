@@ -7,7 +7,8 @@ import PulseLoader from 'halogen/PulseLoader';
 import BounceLoader from 'halogen/BounceLoader';
 import { Button, Modal } from 'react-bootstrap';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-
+import bg1 from './assets/img/jc-2.jpg';
+import magGlass from './assets/img/magGlass.png';
 
 class Coins extends Component {
   constructor(props) {
@@ -129,6 +130,13 @@ class Coins extends Component {
       height: window.innerHeight-114
     };
 
+    const bgStyle = {
+      backgroundImage: `url(${bg1})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    };
+
     let modalStyle = null;
 
     if(this.state.imageUrl !== null) {
@@ -136,6 +144,14 @@ class Coins extends Component {
         background: `url(${this.state.imageUrl})`
       };
     }
+
+    const inputStyle = {
+      backgroundImage: `url(${magGlass})`,
+      backgroundSize: '4%',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: '94% 50%',
+      paddingRight: '1.35em'
+    };
 
     let hour, day, week = null;
 
@@ -192,13 +208,14 @@ class Coins extends Component {
     }
 
     return (
-      <div className="coins-pg container-fluid">
+      <div
+        className="coins-pg container-fluid"
+        style={bgStyle}>
         <Modal
           show={this.state.show}
           onHide={this.hideModal}
           dialogClassName="custom-modal"
-          style={modalStyle}
-        >
+          style={modalStyle}>
           <Modal.Header closeButton>
             <Modal.Title id="contained-modal-title-lg">
               {
@@ -291,9 +308,12 @@ class Coins extends Component {
             <button className='btn btn-info' onClick={this.hideModal}>Close</button>
           </Modal.Footer>
         </Modal>
-        <h1 id="coins-title">Coins</h1>
-        <div className="col-md-8 text-center p-l-lg p-r-lg">
+        <div className="col-md-8 left-col">
           <div className="info-panel">
+          <div className="topbar">
+            <a href="#"><span className="icon icon-chevron-with-circle-left back-arrow"></span></a>
+            <h1 id="coins-title">JoinCoin</h1>
+          </div>
             {/*
               <h2>Classifying Cryptocurrencies</h2>
               <h6>How coins differ from each other</h6>
@@ -310,8 +330,7 @@ class Coins extends Component {
               <hr />
             */}
             
-            <h2 className="m-b-md">Cryptocurrency Market</h2>
-            <h6 className="m-b-md">How the entire cryptocurrency market is doing</h6>
+            <h2 className="m-b-md">The Cryptocurrency Market</h2>
             <div className="row">
               <div className="col-md-4">
                 <div className="statcard statcard-primary p-a-md m-b-md">
@@ -397,10 +416,12 @@ class Coins extends Component {
             </div>
           </div>
         </div>
-                <div className="col-md-4">
+        <div className="col-md-4 right-col">
           <div className="search-panel">
-            
-            <input className="form-control" id="coin-search" onChange={this.handleSearchTermChange} type="text" value={this.state.searchTerm} placeholder="Search for coin" />
+            <div className="topbar">
+              <h1 id="list-title">List of Cryptocurrencies</h1>
+            </div>
+            <input className="form-control" id="coin-search" onChange={this.handleSearchTermChange} type="text" value={this.state.searchTerm} placeholder="Search coins" style={inputStyle} />
             {/*
               <div className="row headers">
                 <div className="header-rank">Rank</div>
@@ -419,7 +440,7 @@ class Coins extends Component {
                 </div>
               )
               :
-              <Infinite className="infinite" containerHeight={window.innerHeight-147} elementHeight={70}>
+              <Infinite className="infinite" containerHeight={window.innerHeight-140} elementHeight={70}>
                 {
                   this.state.coins
                     .sort( (a, b) => {
