@@ -292,106 +292,64 @@ class Coins extends Component {
           </Modal.Footer>
         </Modal>
         <h1 id="coins-title">Coins</h1>
-        <div className="col-md-5">
-        <div className="search-panel">
-          
-          <input className="form-control" id="coin-search" onChange={this.handleSearchTermChange} type="text" value={this.state.searchTerm} placeholder="Search for coin" />
-          {/*
-            <div className="row headers">
-              <div className="header-rank">Rank</div>
-              <div className="header-coin">Coin</div>
-              <div className="header-ticker">Ticker Symbol</div>
-              <div className="header-supply">Total Supply</div>
-              <div className="header-algo">Algorithm</div>
-            </div>
-          */}
-          {
-            this.state.loading
-            ?
-            (
-              <div style={divStyle} className="loader-container">
-                <BounceLoader color="#2595FF" size="100px" margin="4px"/>
-              </div>
-            )
-            :
-            <Infinite className="infinite" containerHeight={window.innerHeight-114} elementHeight={80}>
-              {
-                this.state.coins
-                  .sort( (a, b) => {
-                    var rankA = parseInt(a.rank, 10);
-                    var rankB = parseInt(b.rank, 10);
-
-                    if(rankA < rankB) {
-                      return -1;
-                    } 
-
-                    if(rankA > rankB) {
-                      return 1;
-                    }
-
-                    return 0;
-                  })
-                  .filter( coin => `${coin.name} ${coin.symbol}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase()) >= 0)
-                  .map( coin => (
-                  <Coin key={coin.id} coin={coin} handleCoinClick={this.handleCoinClick} parseNum={this.parseNum} />
-                ))
-              }
-            </Infinite>
-          }
-        </div>
-        </div>
-        <div className="col-md-7 text-center p-l-lg p-r-lg">
+        <div className="col-md-8 text-center p-l-lg p-r-lg">
           <div className="info-panel">
-            <h2>Classifying Cryptocurrencies</h2>
-            <h6>How coins differ from each other</h6>
-            <div className="row">
-              <div className="col-md-6">
-                <button type="button" className="btn btn-danger-outline explain-btn">Ticker Symbol</button>
-                <p>Like stocks, each cryptocurrency has a set of abbreviated letters that acts as a unique identifier</p>
+            {/*
+              <h2>Classifying Cryptocurrencies</h2>
+              <h6>How coins differ from each other</h6>
+              <div className="row">
+                <div className="col-md-6">
+                  <button type="button" className="btn btn-danger-outline explain-btn">Ticker Symbol</button>
+                  <p>Like stocks, each cryptocurrency has a set of abbreviated letters that acts as a unique identifier</p>
+                </div>
+                <div className="col-md-6">
+                  <button type="button" className="btn btn-warning-outline explain-btn">Total Coin Supply</button>
+                  <p>Maximum number of coins that a particular cryptocurrency has available (usually set before launch)</p>
+                </div>
               </div>
-              <div className="col-md-6">
-                <button type="button" className="btn btn-warning-outline explain-btn">Total Coin Supply</button>
-                <p>Maximum number of coins that a particular cryptocurrency has available (usually set before launch)</p>
-              </div>
-            </div>
-            <hr />
-            <h2>Cryptocurrency Market</h2>
-            <h6 className="m-b-2">How the entire cryptocurrency market is doing</h6>
+              <hr />
+            */}
+            
+            <h2 className="m-b-md">Cryptocurrency Market</h2>
+            <h6 className="m-b-md">How the entire cryptocurrency market is doing</h6>
             <div className="row">
-              <div className="col-md-3">
-                <div className="statcard statcard-primary p-a-md">
+              <div className="col-md-4">
+                <div className="statcard statcard-primary p-a-md m-b-md">
                   <h3 className="statcard-number">
                     {this.state.loading ? (<PulseLoader color="#fff" size="6px" margin="4px"/>) : `$${this.parseNum(parseInt(this.state.global.total_market_cap_usd, 10))}`}
                   </h3>
-                  <span className="statcard-desc">Total Mkt Cap</span>
+                  <span className="statcard-desc">Total Market Cap</span>
                 </div>
               </div>
-              <div className="col-md-3">
-                <div className="statcard statcard-primary p-a-md">
+              <div className="col-md-4">
+                <div className="statcard statcard-primary p-a-md m-b-md">
                   <h3 className="statcard-number">
                     {this.state.loading ? (<PulseLoader color="#fff" size="6px" margin="4px"/>) : `$${this.parseNum(this.state.global.total_24h_volume_usd)}`}
                   </h3>
-                  <span className="statcard-desc">24h Trading Vol</span>
+                  <span className="statcard-desc">24-Hour Trade Vol</span>
                 </div>
               </div>
-              <div className="col-md-3">
-                <div className="statcard statcard-primary p-a-md">
+              <div className="col-md-4">
+                <div className="statcard statcard-primary p-a-md m-b-md">
                   <h3 className="statcard-number">
                     {this.state.loading ? (<PulseLoader color="#fff" size="6px" margin="4px"/>) : this.state.global.active_currencies}
                   </h3>
                   <span className="statcard-desc">Cryptocurrencies</span>
                 </div>
               </div>
+            {/*
               <div className="col-md-3">
                 <div className="statcard statcard-primary p-a-md">
                   <h3 className="statcard-number">
-                    {this.state.loading ? (<PulseLoader color="#fff" size="6px" margin="4px"/>) : `${this.parseNum(this.state.global.bitcoin_percentage_of_market_cap)}%`}
+                    {this.state.loading ? (<PulseLoader color="#fff" size="6px" margin="4px"/>) : `${parseFloat(this.state.global.bitcoin_percentage_of_market_cap).toFixed(1)}%`}
                   </h3>
-                  <span className="statcard-desc">BTC % of Mkt Cap</span>
+                  <span className="statcard-desc">BTC Share<br /> of Mkt Cap</span>
                 </div>
               </div>
+            */}
+
             </div>
-            <div className="row m-t-md">
+            <div className="row">
               <div className="col-md-12">
                 <div className="statcard statcard-success p-a-md">
                   <h3 className="statcard-number">
@@ -401,37 +359,90 @@ class Coins extends Component {
                 </div>
               </div>
             </div>
-            <div className="row">
-              <div className="col-md-3">
-                <h3>Exchanges</h3>
-                <ol className="text-left">
-                  <li>Gemini</li>
-                  <li>Coinbase</li>
-                  <li>GDAX</li>
-                  <li>Kraken</li>
-                  <li>Coinmama</li>
-                </ol>
-              </div>
-              <div className="col-md-3">
-                <h3>Wallets</h3>
-                <ol className="text-left">
-                  <li>Blockchain.info</li>
-                  <li>MyCelium</li>
-                  <li>Trezor</li>
-                  <li>Electrum</li>
-                  <li>Paper Wallet</li>
+            <div className="row text-left">
+              <div className="col-md-6">
+                <h3 className="text-center">Exchanges</h3>
+                <h6 className="text-center m-b-md">Buy Cryptocurrencies</h6>
+                <ol>
+                  <li><a href="https://gemini.com/">Gemini</a></li>
+                  <li><a href="https://localbitcoins.com/">LocalBitcoins</a></li>
+                  <li><a href="https://www.coinbase.com/">Coinbase</a></li>
+                  <li><a href="https://www.kraken.com/">Kraken</a></li>
+                  <li><a href="https://cex.io/">CEX.IO</a></li>
                 </ol>
               </div>
               <div className="col-md-6">
+                <h3 className="text-center">Wallets</h3>
+                <h6 className="text-center m-b-md">Store Cryptocurrencies</h6>
+                <ol>
+                  <li><a href="https://blockchain.info/wallet/">Blockchain.info</a></li>
+                  <li><a href="https://jaxx.io/">Jaxx</a></li>
+                  <li><a href="https://wallet.mycelium.com/">MyCelium (Mobile)</a></li>
+                  <li><a href="https://trezor.io/">Trezor (Hardware)</a></li>
+                  <li><a href="https://electrum.org/">Electrum (Mobile)</a></li>
+                </ol>
+              </div>
+            {/*
+              <div className="col-md-6">
                 <h3>Resources</h3>
-                <ul className="text-left">
+                  <ul>
                   <li><a href="#">imdb to Bitcoin documentary</a></li>
                   <li><a href="#">Good explanation video</a></li>
                   <li><a href="#">Wallet comparison</a></li>
                   <li><a href="#">Awesome bitcoin article</a></li>
                 </ul>
               </div>
+            */}
+
             </div>
+          </div>
+        </div>
+                <div className="col-md-4">
+          <div className="search-panel">
+            
+            <input className="form-control" id="coin-search" onChange={this.handleSearchTermChange} type="text" value={this.state.searchTerm} placeholder="Search for coin" />
+            {/*
+              <div className="row headers">
+                <div className="header-rank">Rank</div>
+                <div className="header-coin">Coin</div>
+                <div className="header-ticker">Ticker Symbol</div>
+                <div className="header-supply">Total Supply</div>
+                <div className="header-algo">Algorithm</div>
+              </div>
+            */}
+            {
+              this.state.loading
+              ?
+              (
+                <div style={divStyle} className="loader-container">
+                  <BounceLoader color="#2595FF" size="100px" margin="4px"/>
+                </div>
+              )
+              :
+              <Infinite className="infinite" containerHeight={window.innerHeight-147} elementHeight={70}>
+                {
+                  this.state.coins
+                    .sort( (a, b) => {
+                      var rankA = parseInt(a.rank, 10);
+                      var rankB = parseInt(b.rank, 10);
+
+                      if(rankA < rankB) {
+                        return -1;
+                      } 
+
+                      if(rankA > rankB) {
+                        return 1;
+                      }
+
+                      return 0;
+                    })
+                    .filter( coin => `${coin.name} ${coin.symbol}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase()) >= 0)
+                    .map( coin => (
+                    <Coin key={coin.id} coin={coin} handleCoinClick={this.handleCoinClick} parseNum={this.parseNum} />
+                  ))
+                }
+              </Infinite>
+            }
           </div>
         </div>
       </div>

@@ -16,10 +16,12 @@
 .infinite {
 /*  float: right;*/
 /*  width: 50%;*/
+/*  z-index: -9999;*/
 }
 
 #coin-search {
-/*  width: 100%;*/
+  height: 70px;
+  font-size: 1.5em;
 }
 
 .floatRight {
@@ -100,5 +102,5 @@
 
 .example-appear.example-appear-active {
   opacity: 1;
-  transition: opacity .5s ease-in;
+  transition: opacity 0.5s ease-in;
 }
