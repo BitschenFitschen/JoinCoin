@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Match, Miss } from 'react-router';
+import './css/style.css';
 import './css/toolkit-startup.css';
 import './css/application-startup.css';
-import './css/style.css';
+
 import App from './components/App';
 import Education from './components/education/Education';
 import AdvancedUserTools from './components/advancedUserTools/AdvancedUserTools';

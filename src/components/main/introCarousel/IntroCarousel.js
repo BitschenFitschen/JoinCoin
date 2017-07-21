@@ -56,15 +56,15 @@ class IntroCarousel extends Component {
 			      	</div>
 			      	<img alt="" id="welcomeLogo" src={require('./JC-logo-final-lincoln.png')}/>
 			      	<Carousel.Caption className="innerCaptionWelcome">
-			        <h3 id="animated-example" className="innerCaptionWelcomeText">Welcome to Join<span id="welcomeC">¢</span>oin!</h3>
+			        <h3 id="animated-example" id="innerCaptionWelcomeText" className="innerCaptionWelcomeText">Welcome to Join<span id="welcomeC">¢</span>oin!</h3>
 				      </Carousel.Caption>
 				      <Carousel.Caption className="introCaptionWelcomeSubText">
-				      		<p className="leftIntroCaptionWelcomeSubText" onClick={this.goToEducation.bind(this)}>Beginners</p>
-				      		<p className="centerIntroCaptionWelcomeSubText" onClick={this.goToCoins.bind(this)}>Search Any Coin!</p>
+				      		<p className="leftIntroCaptionWelcomeSubText" id="leftIntroCaptionWelcomeSubText" onClick={this.goToEducation.bind(this)}>Beginners</p>
+				      		<p className="centerIntroCaptionWelcomeSubText" id="centerIntroCaptionWelcomeSubText" onClick={this.goToCoins.bind(this)}>Search Any Coin!</p>
 				      		
-				      		<p className="centerIntroCaptionWelcomeSubText"onClick={this.goToDashboard.bind(this)}>Dashboard</p>
-				      		<p className="centerIntroCaptionWelcomeSubText2"onClick={this.goToProfitCalculator.bind(this)}>Profit Calculator</p>
-				      		<p className="centerIntroCaptionWelcomeSubText2"onClick={this.goToReddit.bind(this)}>Reddit</p>
+				      		<p className="centerIntroCaptionWelcomeSubText" id="centerIntroCaptionWelcomeSubText" onClick={this.goToDashboard.bind(this)}>Dashboard</p>
+				      		<p className="centerIntroCaptionWelcomeSubText2" id="centerIntroCaptionWelcomeSubText2" onClick={this.goToProfitCalculator.bind(this)}>Profit Calculator</p>
+				      		<p className="centerIntroCaptionWelcomeSubText2" id="centerIntroCaptionWelcomeSubText2" onClick={this.goToReddit.bind(this)}>Reddit</p>
 				      </Carousel.Caption>
 				</Carousel.Item>
 
@@ -98,10 +98,10 @@ class IntroCarousel extends Component {
 			      <div>
 			      	<img onClick={this.goToReddit.bind(this)} alt="" id="animated-example" src="http://az616578.vo.msecnd.net/files/2016/07/01/636029417935340699-58088307_reddit.jpg"/>
 			      </div>
-			      <Carousel.Caption className="innerCaptionReddit">
+			      <Carousel.Caption className="innerCaptionReddit" id="innerCaptionReddit">
 			        <h3 id="animated-example" className="innerCaptionRedditText">Get the latest.. </h3>
 				  </Carousel.Caption>
-			      <Carousel.Caption className="innerCaptionReddit2">
+			      <Carousel.Caption className="innerCaptionReddit2" id="innerCaptionReddit2">
 			      	<a href={this.state.result[1] ? this.state.result[1].link.indexOf('/r/') !== -1 ? `https://www.reddit.com${this.state.result[1].link}`: this.state.result[1].link : 'https://www.reddit.com/r/CryptoCurrency/'}>
 			        	<p id="redditText2">{this.state.result[1] ? this.state.result[1].title : 'Cryptocurrency topics on Reddit'}</p>
 			        </a>
