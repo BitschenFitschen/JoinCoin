@@ -370,7 +370,7 @@ class Coins extends Component {
             <div className="row text-center">
               <div className="col-md-6">
                 <div className="exchange-panel">
-                  <h3 className="action-title"><span className="ctaction">Buy</span> in Exchanges</h3>
+                  <h3 className="action-title"><span className="ctaction">Buy</span> at Exchanges</h3>
                   <ol className="coin-list">
                     <li><a href="https://gemini.com/">Gemini</a></li>
                     <li><a href="https://localbitcoins.com/">LocalBitcoins</a></li>
