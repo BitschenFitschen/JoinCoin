@@ -92,7 +92,7 @@
 
 .info-panel {
 /*  border: 3px solid white;*/
-  margin: 6em 8em 5em 8em;
+  margin: 1.8em;
 /*  display: flex;
   align-items: stretch;
   flex-direction: column;*/
@@ -223,4 +223,233 @@
 .example-appear.example-appear-active {
   opacity: 1;
   transition: opacity 0.5s ease-in;
+}
+
+@media (min-width: 768px) {
+  .coins-pg {
+  /*  width: 100%;
+    height: 100vh;*/
+    overflow: auto;
+  }
+
+  .topbar {
+    background: #fff;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding-left: 1.5em;
+    padding-right: 1em;
+  }
+
+  .container-fluid {
+    padding: 0;
+  }
+
+  .left-col {
+    padding: 0;
+  }
+
+  .right-col {
+    padding: 0;
+  }
+
+  .coins-container {
+  /*  display: flex;
+    flex-wrap: wrap;*/
+  }
+
+  .back-arrow {
+    font-size: 24px;
+  }
+
+  #coins-title {
+    margin: 0;
+    padding: 14.5px 10px;
+    font-size: 24px;
+    line-height: 21px;
+    display: inline-block;
+  }
+
+  #list-title {
+    margin: 0;
+    padding: 14.5px 10px;
+    font-size: 24px;
+    line-height: 21px;
+    display: inline-block;
+    color: #fff;
+  }
+
+  .topbar-right {
+    background: #1A2980; /* For browsers that do not support gradients */
+  /*  background: -webkit-linear-gradient(left top, #1A2980, #26D0CE); 
+    background: -o-linear-gradient(bottom right, #1A2980, #26D0CE);
+    background: -moz-linear-gradient(bottom right, #1A2980, #26D0CE);
+    background: linear-gradient(to bottom right, #1A2980, #26D0CE);*/
+  /*  border: 1px solid rgba(255, 255, 255, 0.05);*/
+  }
+
+  .infinite {
+  /*  float: right;*/
+  /*  width: 50%;*/
+  /*  z-index: -9999;*/
+    background: #1A2980; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#1A2980, #26D0CE); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#1A2980, #26D0CE); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#1A2980, #26D0CE); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#1A2980, #26D0CE); /* Standard syntax */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  #coin-search {
+    height: 70px;
+    font-size: 24px;
+    padding-left: 1.35em;
+    border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    background: rgba(255, 255, 255, 0.75);
+  }
+
+  .floatRight {
+  /*  float:right;*/
+  }
+
+  .search-panel {
+  /*  border: 1px solid black;*/
+  /*  width: 50%;*/
+  }
+
+  .info-panel {
+  /*  border: 3px solid white;*/
+    margin: 6em 8em 5em 8em;
+  /*  display: flex;
+    align-items: stretch;
+    flex-direction: column;*/
+  }
+
+  .stat-panel {
+    background: rgba(255, 255, 255, 1.0);
+    padding-bottom: 0.8em;
+  }
+
+  .statcard {
+    margin-bottom: 1.4em;
+  }
+
+  .statcard-number {
+    font-size: 3em;
+    padding-bottom: 0.1em;
+  }
+
+  .statcard-desc {
+  /*  font-family: serif;*/
+    text-transform: lowercase;
+    letter-spacing: initial;
+  }
+
+  .exchange-panel {
+    background: rgba(255, 255, 255, 1.0);
+    margin-top: 1.25em;
+  }
+
+  .wallet-panel {
+    background: rgba(255, 255, 255, 1.0);
+    margin-top: 1.25em;
+  }
+
+  .action-title {
+    margin: 0;
+    padding: 1.2em 0.7em 0.7em 0.7em;
+  }
+
+  .ctaction {
+  /*  display: block;*/
+  /*  font-size: 1.2em;
+    font-style: italic;
+    font-family: serif;
+    text-transform: lowercase;*/
+  /*  color: #054982;*/
+  }
+
+  .coin-list {
+    list-style-type: none;
+    padding: 0 0 1em 0;
+    margin: 0;
+    font-size: 1.4em;
+    line-height: 2;
+  }
+
+  #the {
+    text-transform: lowercase;
+    font-style: italic;
+    font-family: serif;
+  }
+
+  .cmarket-title {
+    margin: 0;
+    padding: 0.7em;
+  }
+
+  .explain-btn {
+    margin: 1em;
+  }
+
+  .loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .custom-modal {
+    width: 60%;
+  }
+
+  .per-symbol {
+    margin-left: 0.5em;
+    font-size: 0.5em;
+    font-weight: lighter; 
+    letter-spacing: 1.5px;
+  }
+
+  .symbol-header {
+    margin-left: 0.4em;
+    font-size: 0.7em;
+    font-weight: lighter; 
+    letter-spacing: 1.5px;
+  }
+
+  .single-coin-container {
+    padding: 0.2em 2em 0.2em 2em;
+  }
+
+  .coin-pic {
+    width: auto;
+    height: 40px;
+    margin-right: 0.5em;
+  }
+
+  .statcard-change {
+    height: 30px;
+  }
+
+  .modal-title {
+    font-size: 2em;
+  }
+
+  .modal-price {
+    font-size: 3em;
+  }
+
+  .statcard-change, .stats-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .example-appear {
+    opacity: 0.01;
+  }
+
+  .example-appear.example-appear-active {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+  }
 }
