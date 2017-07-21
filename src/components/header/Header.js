@@ -5,7 +5,7 @@ import CSSTransitionGroup from 'react-addons-css-transition-group';
 class Header extends Component {
   render () {
     return (
-<<<<<<< HEAD
+
       <div className='header'>
         <Col xs={12} sm={12} md={12} lg={12}>
           <h1 id="banner">
