@@ -1,5 +1,4 @@
 .landingPage {
-	/*background: #969696;*/
 	background-image: url("./QhXgUi.jpg");
 	overflow: auto;
 	color: #ddd;
@@ -23,13 +22,104 @@
 	font-size:135px;
 }
 
-#animated-example {  
-   height: 275px; 
-   margin: 20px auto; 
-   width: 300px; 
+.carouselTemplate {
+	background-image: url(https://i.stack.imgur.com/pMAiU.jpg);
+	height: 350px; 
+   margin: 20px auto;  
 	position: relative;
 	width: 80%;
-   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
+}
+
+#animated-example {  
+   height: 350px; 
+   margin: 20px auto;  
+	position: relative;
+	width: 80%;
+	opacity: 1.9;
+}
+
+#beginner-banner {  
+    height: 85px; 
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.middleSideBarFringe {
+	height: 170px;
+	border-radius: 20%;
+	background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
+	width: 100%;
+}
+
+#sideHeader {
+	text-align: center;
+	padding-top: 5%;
+}
+
+.innerCaptionBeginner {
+	position: absolute;
+	top: 45%;
+    transform: translateY(0%);
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.innerCaptionBeginner2 {
+	position: absolute;
+	top: 7%;
+    transform: translateY(0%);
+    right: -50%;
+    transform: translateX(-20%);
+    width: 100%;
+}
+
+.introCaptionBeginnerSubText {
+	position: absolute;
+	top: 35%;
+    transform: translateY(-35%);
+    right: 20%;
+    transform: translateX(90%);
+    width: 30%;
+    font-size: 1.6em;
+}
+
+#welcomeLogo {
+   position: absolute;
+	top: 0%;
+	width: 100%;
+    height: 100%;
+    opacity: .8;
+	transform: translateY(0%);
+	transform: translateX(0%);
+	margin: auto;
+	padding: 3% 10% 3% 10%;
+}
+
+#coinsCarouselBanner {
+   position: absolute;
+	top: 0%;
+	width: 80%;
+    height: 33%;
+    margin: 0 auto 0 auto;
+    opacity: ;
+	transform: translateY(0%);
+	transform: translateX(12.5%);
+	display: flex;
+	justify-content: center;
+}
+
+#coinsCarouselBanner2 {
+   position: absolute;
+	bottom: 0%;
+	width: 80%;
+    height: 33%;
+    margin: 0 auto 0 auto;
+    opacity: ;
+	transform: translateY(0%);
+	transform: translateX(12.5%);
+	display: flex;
+	justify-content: center;
 }
 
 .animated { 
@@ -55,6 +145,7 @@
    font-size: 25px;
 
    /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7);*/ 
+
 }
 
 .animated2 { 
@@ -64,7 +155,7 @@
 
 @keyframes pulse { 
     0% { transform: scale(1); } 
-    50% { transform: scale(2); } 
+    50% { transform: scale(1.7); } 
     100% { transform: scale(1); } 
 } 
 .pulse { 
@@ -79,16 +170,11 @@
 	font-size:100px;
 }
 
-/*h1, p, h3, .innerIntro, .upperLowerSideBarFringe, .middleSideBarFringe {
-	border: 2px solid black;
-}*/
-
-h3 {
-	padding-bottom: 10px;
-	margin-bottom: 20px;
+#carouselSubHeader {
+	margin-top: 30px;
 }
 
-.beginner, .advanced, .introduction, .middleSideBarFringe {
+.beginner, .advanced, .introduction {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
@@ -98,18 +184,103 @@ h3 {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	/*border: 2px solid black;*/
 	border-radius: 5%;
+	height: 475px;
+	background-image: no-repeat url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
+	margin-left: auto;
+	margin-right: auto;
 	height: 325px;
 	background-color:#3b6488;
-
 	/*background-image: url("https://www.trade-secret.co.uk/wp-content/uploads/2015/08/Dark-Grey-Background-Best-Wallpaper-Gallery-dji6x-Free.jpeg");*/
 	/*opacity: .8;*/
+
 }
 
-/*.introFringeUpper {
-	height: 50px;
-}*/
+#redditText,
+#redditText2 {
+	color: black;
+}
+
+.innerCaption {
+	position: absolute;
+	top: 50%;
+    transform: translateY(-50%);
+}
+
+.innerCaptionWelcome {
+	position: absolute;
+	top: 22%;
+    transform: translateY(-25%);
+}
+
+.innerCaptionReddit {
+	position: absolute;
+	top: 24%;
+    transform: translateY(-24%);
+}
+
+.innerCaptionCoins {
+	position: absolute;
+	top: 56%;
+    transform: translateY(-56%);
+}
+
+#innerCaptionCoinsText {
+	font-size: 1.7em;
+	color: #000000;
+	padding: 0;
+}
+
+#innerCaptionCoinsText2 {
+	font-size: 1.7em;
+	color: #fff;
+	padding: 0;
+}
+
+.innerWelcomeImage {
+	position: absolute;
+	top: 0%;
+	transform: translateY(0%);
+	height: 20px;
+}
+
+.innerCaptionWelcomeText {
+	font-size: 2.1em;
+	color: white;
+}
+
+.innerCaptionRedditText {
+	font-size: 1.9em;
+	color: black;
+	padding: 0;
+}
+
+.introCaptionWelcomeSubText {
+	position: absolute;
+	top: 52%;
+    transform: translateY(-55%);
+    font-size: 1.7em;
+}
+
+.centerIntroCaptionWelcomeSubText {
+	text-align: center;
+	font-size: 1em;
+}
+
+#welcomeC {
+	font-size: 1.6em;
+	color: white;
+}
+
+#welcomeCWhite {
+	font-size: 1.6em;
+	color: white;
+}
+
+#innerCaptionBeginner {
+	color: white;
+	font-size: 2.8em;
+}
 
 .introFringeLower {
 	height: 25px;
@@ -123,27 +294,8 @@ h3 {
 	height: 100px;
 }
 
-.middleSideBarFringe {
-	height: 150px;
-	display: flex;
-	justify-content: center;
-	/*border: 2px solid black;*/
-	border-radius: 20%;
-	background-color:#3b6488;
-	/*background-image: url("https://www.trade-secret.co.uk/wp-content/uploads/2015/08/Dark-Grey-Background-Best-Wallpaper-Gallery-dji6x-Free.jpeg");*/
-	padding-left: 5px;
-	padding-right: 5px;
-	width: 80%;
-}
-
 .introCarouselImage {
 	max-width: 100%;
-	/*height: 400px;*/
-}
-
-.sideHeader {
-	color:#fff;
-	margin-top: 30px;
 }
 
 .middleIntroBody {
@@ -151,8 +303,159 @@ h3 {
 	border: solid 2px white;
 	width: 200px;
 }
-@media screen and (min-width: 0px) and (max-width: 640px) {
-	#banner {
+@media screen and (min-width: 0px) and (max-width: 411.9px) {
+
+.innerCaptionCoins {
+	position: absolute;
+	top: 46%;
+    transform: translateY(-46%);
+}
+
+#innerCaptionCoinsText {
+	font-size: 1.3em;
+	color: #000000;
+	padding: 0;
+}
+
+#innerCaptionCoinsText2 {
+	font-size: 1.3em;
+	color: #000000;
+	padding: 0;
+}
+#animated-example {  
+   height: 350px; 
+   margin: ;  
+   position: relative;
+   width: 100%;
+}
+
+#coinsCarouselBanner {
+   position: absolute;
+	top: 0%;
+	width: 100%;
+    height: 33%;
+    margin: 0 auto 0 auto;
+    opacity: ;
+	transform: translateY(0%);
+	transform: translateX(0%);
+	display: flex;
+	justify-content: center;
+}
+
+#coinsCarouselBanner2 {
+   position: absolute;
+	bottom: 0%;
+	width: 100%;
+    height: 33%;
+    margin: 0 auto 0 auto;
+    opacity: ;
+	transform: translateY(0%);
+	transform: translateX(0%);
+	display: flex;
+	justify-content: center;
+}
+
+#welcomeCWhite {
+	font-size: 1.4em;
+	color: white;
+}
+
+.innerCaption {
+	position: absolute;
+	top: 50%;
+    transform: translateY(-50%);
+}
+
+.innerCaptionWelcome {
+	position: absolute;
+	top: 25%;
+    transform: translateY(-25%);
+}
+
+.innerCaptionWelcomeText {
+	font-size: 1.4em;
+	color: white;
+}
+.introCaptionWelcomeSubText {
+	position: absolute;
+	top: 53%;
+    transform: translateY(-53%);
+    font-size: 1.2em;
+}
+
+.centerIntroCaptionWelcomeSubText {
+	text-align: center;
+	font-size: 1em;
+}
+
+.centerIntroCaptionWelcomeSubText2 {
+	display: none;
+}
+
+#welcomeC {
+	font-size: 1.6em;
+	color: white;
+}
+
+	#beginner-banner {  
+	display: none;
+}
+
+.middleSideBarFringe {
+	height: 170px;
+	border-radius: 20%;
+	background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
+	width: 100%;
+	background-color:#3b6488;
+	/*background-image: url("https://www.trade-secret.co.uk/wp-content/uploads/2015/08/Dark-Grey-Background-Best-Wallpaper-Gallery-dji6x-Free.jpeg");*/
+	padding-left: 5px;
+	padding-right: 5px;
+	width: 80%;
+}
+
+#sideHeader {
+	text-align: center;
+	padding-top: 0%;
+}
+
+
+.innerCaptionBeginner {
+	position: absolute;
+	top: 45%;
+    transform: translateY(0%);
+    right: 50%;
+    transform: translateX(50%);
+  }
+  
+.sideHeader {
+	color:#fff;
+	margin-top: 30px;
+}
+
+#innerCaptionBeginner {
+	font-size: 1.7em;
+}
+
+.innerCaptionBeginner2 {
+	position: absolute;
+	top: 0%;
+    transform: translateY(0%);
+    right: -50%;
+    transform: translateX(-20%);
+    width: 100%;
+}
+
+.introCaptionBeginnerSubText {
+	position: absolute;
+	top: 30%;
+    transform: translateY(-30%);
+    right: 0%;
+    transform: translateX(110%);
+    width: 30%;
+    font-size: 1.1em;
+}
+
+#banner {
 		margin-top: -10px;
 		margin-bottom: -10px;
 	}
@@ -165,7 +468,6 @@ h3 {
 	   height: 220px; 
 	   margin: 10px auto; 
 	   width: 95%;
-	   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
 	}
 
 	#animated-example2 {  
@@ -175,8 +477,6 @@ h3 {
 	   margin-bottom: 0px;
 	   width: 98%; 
 	   padding-bottom: 10px;
-
-	   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7);*/ 
 	}
 
 	@keyframes pulse { 
@@ -201,11 +501,9 @@ h3 {
 		width: 100%;
 		display: flex;
 		justify-content: center;
-		/*border: 2px solid black;*/
 		border-radius: 5%;
 		height: 250px;
-		background-image: url("https://www.trade-secret.co.uk/wp-content/uploads/2015/08/Dark-Grey-Background-Best-Wallpaper-Gallery-dji6x-Free.jpeg");
-		/*opacity: .8;*/
+		background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
 	}
 
 	.introFringeLower {
@@ -224,9 +522,8 @@ h3 {
 		height: 60px;
 		display: flex;
 		justify-content: center;
-		/*border: 2px solid black;*/
 		border-radius: 10%;
-		background-image: url("https://www.trade-secret.co.uk/wp-content/uploads/2015/08/Dark-Grey-Background-Best-Wallpaper-Gallery-dji6x-Free.jpeg");
+		background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
 		padding-left: 5px;
 		padding-right: 5px;
 		width: 100%;
@@ -235,11 +532,155 @@ h3 {
 	.sideHeader {
 		margin-top: 20px;
 	}
-
+	.innerCaptionReddit2 {
+	position: absolute;
+	bottom: 0%;
+    transform: translateY(15%);
+    font-size: .6em;
+}
 }
 
-@media (min-width: 640.1px) and (max-width: 767px) {
-	#banner {
+@media (min-width: 412px) and (max-width: 767px) {
+	.innerCaptionCoins {
+	position: absolute;
+	top: 46%;
+    transform: translateY(-46%);
+}
+
+#innerCaptionCoinsText {
+	font-size: 1.3em;
+	color: #000000;
+	padding: 0;
+}
+
+#innerCaptionCoinsText2 {
+	font-size: 1.3em;
+	color: #000000;
+	padding: 0;
+}
+#animated-example {  
+   height: 350px; 
+   margin: ;  
+   position: relative;
+   width: 100%;
+}
+
+#coinsCarouselBanner {
+   position: absolute;
+	top: 0%;
+	width: 100%;
+    height: 33%;
+    margin: 0 auto 0 auto;
+    opacity: ;
+	transform: translateY(0%);
+	transform: translateX(0%);
+	display: flex;
+	justify-content: center;
+}
+
+#coinsCarouselBanner2 {
+   position: absolute;
+	bottom: 0%;
+	width: 100%;
+    height: 33%;
+    margin: 0 auto 0 auto;
+    opacity: ;
+	transform: translateY(0%);
+	transform: translateX(0%);
+	display: flex;
+	justify-content: center;
+}
+
+#welcomeCWhite {
+	font-size: 1.4em;
+	color: white;
+}
+
+.innerCaption {
+	position: absolute;
+	top: 50%;
+    transform: translateY(-50%);
+}
+
+.innerCaptionWelcome {
+	position: absolute;
+	top: 25%;
+    transform: translateY(-25%);
+}
+
+.innerCaptionWelcomeText {
+	font-size: 1.4em;
+	color: white;
+}
+.introCaptionWelcomeSubText {
+	position: absolute;
+	top: 53%;
+    transform: translateY(-53%);
+    font-size: 1.2em;
+}
+
+.centerIntroCaptionWelcomeSubText {
+	text-align: center;
+	font-size: 1em;
+}
+
+.centerIntroCaptionWelcomeSubText2 {
+	display: none;
+}
+
+#welcomeC {
+	font-size: 1.6em;
+	color: white;
+}
+
+#beginner-banner {  
+	display: none;
+}
+
+.middleSideBarFringe {
+	height: 170px;
+	border-radius: 20%;
+	background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
+	width: 100%;
+}
+
+#sideHeader {
+	text-align: center;
+	padding-top: 0%;
+}
+
+.innerCaptionBeginner {
+	position: absolute;
+	top: 45%;
+    transform: translateY(0%);
+    right: 50%;
+    transform: translateX(50%);
+}
+
+#innerCaptionBeginner {
+	font-size: 1.7em;
+}
+
+.innerCaptionBeginner2 {
+	position: absolute;
+	top: 0%;
+    transform: translateY(0%);
+    right: -50%;
+    transform: translateX(-20%);
+    width: 100%;
+}
+
+.introCaptionBeginnerSubText {
+	position: absolute;
+	top: 30%;
+    transform: translateY(-30%);
+    right: 0%;
+    transform: translateX(110%);
+    width: 30%;
+    font-size: 1.1em;
+}
+
+#banner {
 		margin-top: -10px;
 		margin-bottom: -10px;
 	}
@@ -249,19 +690,18 @@ h3 {
 	}
 
 	#animated-example {  
-	   height: 250px; 
+	   height: 220px; 
 	   margin: 10px auto; 
-	   width: 100% 
-	   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
+	   width: 95%;
 	}
 
 	#animated-example2 {  
 	   height: 40px; 
+	   font-size: 1em;
 	   margin: 10px auto; 
 	   margin-bottom: 0px;
-	   width: 700px; 
+	   width: 98%; 
 	   padding-bottom: 10px;
-	   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7);*/ 
 	}
 
 	@keyframes pulse { 
@@ -286,11 +726,9 @@ h3 {
 		width: 100%;
 		display: flex;
 		justify-content: center;
-		/*border: 2px solid black;*/
-		border-radius: 0%;
-		height: 300px;
-		background-image: url("https://www.trade-secret.co.uk/wp-content/uploads/2015/08/Dark-Grey-Background-Best-Wallpaper-Gallery-dji6x-Free.jpeg");
-		/*opacity: .8;*/
+		border-radius: 5%;
+		height: 310px;
+		background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
 	}
 
 	.introFringeLower {
@@ -306,24 +744,200 @@ h3 {
 	}
 
 	.middleSideBarFringe {
-		height: 70px;
+		height: 80px;
 		display: flex;
 		justify-content: center;
-		/*border: 2px solid black;*/
-		border-radius: 0%;
-		background-image: url("https://www.trade-secret.co.uk/wp-content/uploads/2015/08/Dark-Grey-Background-Best-Wallpaper-Gallery-dji6x-Free.jpeg");
-		padding-left: 0px;
-		padding-right: 0px;
+		border-radius: 10%;
+		background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
+		padding-left: 5px;
+		padding-right: 5px;
+		width: 100%;
+	}
+
+	.sideHeader {
+		margin-top: 30px;
+	}
+
+	#animated-example2 {  
+	   height: 40px; 
+	   font-size: 1em;
+	   margin: 10px auto; 
+	   margin-bottom: 0px;
+	   width: 98%; 
+	   padding-bottom: 10px; 
+	}
+
+	@keyframes pulse { 
+	    0% { transform: scale(1); } 
+	    50% { transform: scale(1.4); } 
+	    100% { transform: scale(1); } 
+	} 
+	
+	.pulse { 
+	    animation-name: pulse; 
+	}
+
+	.j {
+		font-size:70px;
+	}
+
+	.o {
+		font-size:75px;
+	}
+
+	.middleIntro {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		border-radius: 5%;
+		height: 250px;
+		background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
+	}
+
+	.introFringeLower {
+		height: 0px;
+	}
+
+	.upperSideBarFringe {
+		height: 0px;
+	}
+
+	.lowerSideBarFringe {
+		height: 0px;
+	}
+
+	.middleSideBarFringe {
+		height: 60px;
+		display: flex;
+		justify-content: center;
+		border-radius: 10%;
+		background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
+		padding-left: 5px;
+		padding-right: 5px;
 		width: 100%;
 	}
 
 	.sideHeader {
 		margin-top: 20px;
 	}
+	.innerCaptionReddit2 {
+	position: absolute;
+	bottom: 0%;
+    transform: translateY(20%);
+    font-size: .8em;
+}
 
 }	
 
 @media (min-width: 767.1px) and (max-width: 980px) {
+.innerCaptionCoins {
+	position: absolute;
+	top: 46%;
+    transform: translateY(-46%);
+}
+
+#innerCaptionCoinsText {
+	font-size: 1.3em;
+	color: #000000;
+	padding: 0;
+}
+
+#innerCaptionCoinsText2 {
+	font-size: 1.3em;
+	color: #000000;
+	padding: 0;
+}
+#animated-example {  
+   height: 350px; 
+   margin: ;  
+   position: relative;
+   width: 100%;
+}
+
+#coinsCarouselBanner {
+   position: absolute;
+	top: 0%;
+	width: 100%;
+    height: 33%;
+    margin: 0 auto 0 auto;
+    opacity: ;
+	transform: translateY(0%);
+	transform: translateX(0%);
+	display: flex;
+	justify-content: center;
+}
+#coinsCarouselBanner2 {
+   position: absolute;
+	bottom: 0%;
+	width: 100%;
+    height: 33%;
+    margin: 0 auto 0 auto;
+    opacity: ;
+	transform: translateY(0%);
+	transform: translateX(0%);
+	display: flex;
+	justify-content: center;
+}
+.innerCaptionBeginner {
+	position: absolute;
+	top: 45%;
+    transform: translateY(0%);
+    right: 50%;
+    transform: translateX(50%);
+}
+
+#innerCaptionBeginner {
+	font-size: 1.7em;
+}
+
+.innerCaptionBeginner2 {
+	position: absolute;
+	top: 0%;
+    transform: translateY(0%);
+    right: -50%;
+    transform: translateX(-20%);
+    width: 100%;
+}
+
+.introCaptionBeginnerSubText {
+	position: absolute;
+	top: 30%;
+    transform: translateY(-30%);
+    right: 0%;
+    transform: translateX(110%);
+    width: 30%;
+    font-size: 1.1em;
+}
+
+#banner {
+		margin-top: -10px;
+		margin-bottom: -10px;
+	}
+
+	.c {
+		font-size:100px;
+	}
+
+	#animated-example {  
+	   height: 220px; 
+	   margin: 10px auto; 
+	   width: 95%;
+	}
+.introCaptionWelcomeSubText {
+	position: absolute;
+	top: 42%;
+    transform: translateY(-42%);
+    font-size: 1.2em;
+}
+.innerCaptionWelcome {
+	position: absolute;
+	top: 8%;
+    transform: translateY(-8%);
+}
+.innerCaptionWelcomeText {
+	font-size: 1.6em;
+	color: white;
+}
 	#banner {
 		margin-top: -10px;
 		margin-bottom: -10px;
@@ -337,7 +951,6 @@ h3 {
 	   height: 230px; 
 	   margin: 10px auto; 
 	   width: 95%; 
-	   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
 	}
 
 	#animated-example2 {  
@@ -345,8 +958,7 @@ h3 {
 	   margin: 10px auto; 
 	   margin-bottom: 0px;
 	   width: 700px; 
-	   padding-bottom: 10px;
-	   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7);*/ 
+	   padding-bottom: 10px; 
 	}
 
 	@keyframes pulse { 
@@ -371,19 +983,17 @@ h3 {
 		width: 100%;
 		display: flex;
 		justify-content: center;
-		/*border: 2px solid black;*/
 		border-radius: 5%;
 		height: 275px;
-		background-image: url("https://www.trade-secret.co.uk/wp-content/uploads/2015/08/Dark-Grey-Background-Best-Wallpaper-Gallery-dji6x-Free.jpeg");
-		/*opacity: .8;*/
+		background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
 	}
 
 	.introFringeLower {
-		height: 25px;
+		height: 0px;
 	}
 
 	.upperSideBarFringe {
-		height: 100px;
+		height: 75px;
 	}
 
 	.lowerSideBarFringe {
@@ -394,17 +1004,73 @@ h3 {
 		height: 100px;
 		display: flex;
 		justify-content: center;
-		/*border: 2px solid black;*/
 		border-radius: 20%;
-		background-image: url("https://www.trade-secret.co.uk/wp-content/uploads/2015/08/Dark-Grey-Background-Best-Wallpaper-Gallery-dji6x-Free.jpeg");
-		padding-left: 5px;
-		padding-right: 5px;
+		background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
+		padding-left: 0px;
+		padding-right: 0px;
 	}
 
 	.sideHeader {
 		margin-top: 20px;
 	}
+
+	#beginner-banner {  
+    height: 60px; 
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
 }
+
+.middleSideBarFringe {
+	height: 150px;
+	/*border: 2px solid black;*/
+	border-radius: 20%;
+	background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
+	width: 100%;
+}
+
+#sideHeader {
+	text-align: center;
+	padding-top: 2%;
+}
+
+.innerCaptionBeginner {
+	position: absolute;
+	top: 40%;
+    transform: translateY(0%);
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.innerCaptionReddit2 {
+	position: absolute;
+	bottom: 0%;
+    transform: translateY(25%);
+    font-size: .8em;
+}
+
+}
+
+@media (min-width: 980.1px) {
+	.innerCaptionWelcomeText {
+	font-size: 1.85em;
+	color: white;
+}
+.innerCaptionWelcome {
+	position: absolute;
+	top: 25%;
+    transform: translateY(-25%);
+}
+
+.introCaptionWelcomeSubText {
+	position: absolute;
+	top: 52%;
+    transform: translateY(-55%);
+    font-size: 1.7em;
+}
+
 .carousel-caption {
 	color:#fff;
 }
+
