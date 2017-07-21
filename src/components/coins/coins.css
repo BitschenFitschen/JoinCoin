@@ -50,7 +50,7 @@
 }
 
 .custom-modal {
-  width: 80%;
+  width: 60%;
 }
 
 .per-symbol {
@@ -87,6 +87,11 @@
 
 .modal-price {
   font-size: 3em;
+}
+
+.statcard-change, .stats-container {
+  display: flex;
+  align-items: center;
 }
 
 .example-appear {

@@ -133,7 +133,7 @@ class Coins extends Component {
 
     if(this.state.imageUrl !== null) {
       modalStyle = {
-        background: `url(${this.state.imageUrl}) no-repeat center`
+        background: `url(${this.state.imageUrl})`
       };
     }
 
@@ -288,7 +288,7 @@ class Coins extends Component {
 
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.hideModal}>Close</Button>
+            <button className='btn btn-info' onClick={this.hideModal}>Close</button>
           </Modal.Footer>
         </Modal>
         <h1 id="coins-title">Coins</h1>
