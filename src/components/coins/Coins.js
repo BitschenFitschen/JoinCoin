@@ -6,6 +6,7 @@ import Infinite from 'react-infinite';;
 import PulseLoader from 'halogen/PulseLoader';
 import BounceLoader from 'halogen/BounceLoader';
 import { Button, Modal } from 'react-bootstrap';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 
 class Coins extends Component {
@@ -27,6 +28,7 @@ class Coins extends Component {
     loading: true,
     show: false,
     cryptocompare: null,
+    ccSelectedCoin: {},
     imageUrl: null
   };
 
@@ -36,6 +38,7 @@ class Coins extends Component {
 
   handleCoinClick (coin, e) {
     this.setState({ selectedCoin: coin });
+    this.setState({ ccSelectedCoin: this.state.cryptocompare[coin.symbol] });
     this.setImageUrl(coin.symbol);
     this.showModal();
   }
@@ -130,7 +133,7 @@ class Coins extends Component {
 
     if(this.state.imageUrl !== null) {
       modalStyle = {
-        background: `url(${this.state.imageUrl})`
+        background: `url(${this.state.imageUrl}) no-repeat center`
       };
     }
 
@@ -138,9 +141,9 @@ class Coins extends Component {
 
     if(this.state.selectedCoin.percent_change_1h !== null) {
       if(parseFloat(this.state.selectedCoin.percent_change_1h) >= 0.00) {
-        hour = <span className="delta-indicator delta-positive">{`${this.state.selectedCoin.percent_change_1h}%`}</span>
+        hour = <span key="hour-pos" className="delta-indicator delta-positive">{`${this.state.selectedCoin.percent_change_1h}%`}</span>
       } else {
-        hour = <span className="delta-indicator delta-negative">{`${this.state.selectedCoin.percent_change_1h}%`}</span>
+        hour = <span key="hour-neg" className="delta-indicator delta-negative">{`${this.state.selectedCoin.percent_change_1h}%`}</span>
       }
     }
 
@@ -160,6 +163,33 @@ class Coins extends Component {
       }
     }
 
+    let premined = null;
+    let maxCoinSupply = null;
+    let availCoinSupply = null;
+
+    if(this.state.ccSelectedCoin !== null && this.state.ccSelectedCoin !== undefined) {
+      if(this.state.ccSelectedCoin.FullyPremined !== "0") {
+        premined = <div className="stats-container"><span className="coin-stat-headers">Fully Premined?</span><span className="coin-stats">Premined</span></div>
+      } else {
+        premined = <div className="stats-container"><span className="coin-stat-headers">Fully Premined?</span><span className="coin-stats">Mineable</span></div>
+      }
+
+      if(this.state.ccSelectedCoin.TotalCoinSupply === "0" || this.state.ccSelectedCoin.TotalCoinSupply === "N/A") {
+        maxCoinSupply = 'N/A'
+      } else {
+        maxCoinSupply = this.parseNum(parseFloat(this.state.ccSelectedCoin.TotalCoinSupply))
+      }
+      
+      // totalCoinSupply = this.parseNum(parseFloat(this.state.ccSelectedCoin.TotalCoinSupply.trim().replace(/,/g ,'')));
+    }
+
+    if(this.state.selectedCoin !== null && this.state.selectedCoin !== undefined) {
+      if(this.state.selectedCoin.available_supply === "0" || this.state.selectedCoin.available_supply === "N/A" || this.state.selectedCoin.available_supply === null) {
+        availCoinSupply = 'N/A'
+      } else {
+        availCoinSupply = this.parseNum(parseFloat(this.state.selectedCoin.available_supply).toFixed(0))
+      }
+    }
 
     return (
       <div className="coins-pg container-fluid">
@@ -171,8 +201,15 @@ class Coins extends Component {
         >
           <Modal.Header closeButton>
             <Modal.Title id="contained-modal-title-lg">
+              {
+                this.state.imageUrl === null
+                ?
+                (null)
+                :
+                (<img className="coin-pic" src={`${this.state.imageUrl}`} alt="coin-pic" />)
+              }
               {`${this.state.selectedCoin.name}`}
-              <span>{` (${this.state.selectedCoin.symbol})`}</span>
+              <span className="symbol-header">{` ${this.state.selectedCoin.symbol}`}</span>
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
@@ -180,39 +217,70 @@ class Coins extends Component {
             <div className="single-coin-container">
               <div className="row">
                 <div className="col-md-6">
-                  <h2>{`$${parseFloat(this.state.selectedCoin.price_usd)}`}<span className="per-symbol">{`/ 1 ${this.state.selectedCoin.symbol}`}</span>
+                  
+                  <h2 className="modal-price">{`$${parseFloat(this.state.selectedCoin.price_usd)}`}<span className="per-symbol">{`/ 1 ${this.state.selectedCoin.symbol}`}</span>
                   </h2>
 
-                  <div className="statcard">
+                  <div className="statcard statcard-change">
                     <span className="statcard-desc">1 Hour Change</span>
-                    {
-                      hour
-                    }
+                    <ReactCSSTransitionGroup
+                      transitionName="example"
+                      transitionAppear={true}
+                      transitionAppearTimeout={500}
+                      transitionEnter={false}
+                      transitionLeave={false}>
+                      {
+                        hour
+                      }
+                    </ReactCSSTransitionGroup>
                   </div>
 
-                  <div className="statcard">
+                  <div className="statcard statcard-change">
                     <span className="statcard-desc">1 Day Change</span>
+                    <ReactCSSTransitionGroup
+                      transitionName="example"
+                      transitionAppear={true}
+                      transitionAppearTimeout={500}
+                      transitionEnter={false}
+                      transitionLeave={false}>
                     {
                       day
                     }
+                    </ReactCSSTransitionGroup>
                   </div>
 
-                  <div className="statcard">
+                  <div className="statcard statcard-change">
                     <span className="statcard-desc">1 Week Change</span>
+                    <ReactCSSTransitionGroup
+                      transitionName="example"
+                      transitionAppear={true}
+                      transitionAppearTimeout={500}
+                      transitionEnter={false}
+                      transitionLeave={false}>
                     {
                       week
                     }
+                    </ReactCSSTransitionGroup>
                   </div>
+
+                  {
+                    this.state.ccSelectedCoin !== undefined
+                    ?
+                    (<div className="other-coin-stats">
+                      <div className="stats-container"><span className="coin-stat-headers">Algorithm</span><span className="coin-stats">{` ${this.state.ccSelectedCoin.Algorithm}`}</span></div>
+                      {premined}
+                      <div className="stats-container"><span className="coin-stat-headers">Available Coin Supply</span><span className="coin-stats">{` ${availCoinSupply}`}</span></div>
+                      <div className="stats-container"><span className="coin-stat-headers">Max Coin Supply</span><span className="coin-stats">{` ${maxCoinSupply}`}</span></div>
+                    </div>)
+                    :
+                    (<div className="other-coin-stats">
+                      <div className="stats-container"><span className="coin-stat-headers">Available Coin Supply</span><span className="coin-stats">{` ${availCoinSupply}`}</span></div>
+                    </div>)
+                  }
                 </div>
 
                 <div className="col-md-6">
-                  {
-                    this.state.imageUrl === null
-                    ?
-                    (null)
-                    :
-                    (<img className="coin-pic" src={`${this.state.imageUrl}`} alt="coin-pic" />)
-                  }
+
                 </div>
               </div>
               

@@ -74,6 +74,34 @@ body {
   text-decoration: none !important; 
 }
 
+.coin-stat-headers {
+  font-size: 85%;
+  letter-spacing: .15em;
+  color: #888888;
+  text-transform: uppercase;
+}
+
+.delta-indicator {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 0.6em;
+}
+
+.coin-stats {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 0.6em;
+}
+
+.stats-container {
+  height: 30px;
+  vertical-align: middle;
+}
+
+.other-coin-stats {
+  margin-top: 4px;
+}
+
 /*.headers {
   display: flex;
   padding: 1em;
