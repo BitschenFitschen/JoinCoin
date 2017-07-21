@@ -1,73 +1,74 @@
 .landingPage {
-	background-image: url("./QhXgUi.jpg");
-	overflow: auto;
-	color: #ddd;
-	font-family: 'Amiri', serif;
+    background-image: url("./QhXgUi.jpg");
+    overflow: auto;
+    color: #ddd;
+    font-family: 'Amiri', serif;
 }
 
-.header, .Ticker {
-	text-align: center;
+.header,
+.Ticker {
+    text-align: center;
 }
 
 .ticker-text {
-	font-size: 1em;
+    font-size: 1em;
 }
 
 #banner {
-	margin-top: -10px;
-	margin-bottom: -10px;
+    margin-top: -10px;
+    margin-bottom: -10px;
 }
 
 .c {
-	font-size:135px;
+    font-size: 135px;
 }
 
 .carouselTemplate {
-	background-image: url(https://i.stack.imgur.com/pMAiU.jpg);
-	height: 350px; 
-   margin: 20px auto;  
-	position: relative;
-	width: 80%;
+    background-image: url(https://i.stack.imgur.com/pMAiU.jpg);
+    height: 350px;
+    margin: 20px auto;
+    position: relative;
+    width: 80%;
 }
 
-#animated-example {  
-   height: 350px; 
-   margin: 20px auto;  
-	position: relative;
-	width: 80%;
-	opacity: 1.9;
+#animated-example {
+    height: 350px;
+    margin: 20px auto;
+    position: relative;
+    width: 80%;
+    opacity: 1.9;
 }
 
-#beginner-banner {  
-    height: 85px; 
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
+#beginner-banner {
+    height: 85px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .middleSideBarFringe {
-	height: 170px;
-	border-radius: 20%;
-	background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
-	width: 100%;
+    height: 170px;
+    border-radius: 20%;
+    background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
+    width: 100%;
 }
 
 #sideHeader {
-	text-align: center;
-	padding-top: 5%;
+    text-align: center;
+    padding-top: 5%;
 }
 
 .innerCaptionBeginner {
-	position: absolute;
-	top: 45%;
+    position: absolute;
+    top: 45%;
     transform: translateY(0%);
     right: 50%;
     transform: translateX(50%);
 }
 
 .innerCaptionBeginner2 {
-	position: absolute;
-	top: 7%;
+    position: absolute;
+    top: 7%;
     transform: translateY(0%);
     right: -50%;
     transform: translateX(-20%);
@@ -75,8 +76,8 @@
 }
 
 .introCaptionBeginnerSubText {
-	position: absolute;
-	top: 35%;
+    position: absolute;
+    top: 35%;
     transform: translateY(-35%);
     right: 20%;
     transform: translateX(90%);
@@ -85,993 +86,1009 @@
 }
 
 #welcomeLogo {
-   position: absolute;
-	top: 0%;
-	width: 100%;
+    position: absolute;
+    top: 0%;
+    width: 100%;
     height: 100%;
     opacity: .8;
-	transform: translateY(0%);
-	transform: translateX(0%);
-	margin: auto;
-	padding: 3% 10% 3% 10%;
+    transform: translateY(0%);
+    transform: translateX(0%);
+    margin: auto;
+    padding: 3% 10% 3% 10%;
 }
 
 #coinsCarouselBanner {
-   position: absolute;
-	top: 0%;
-	width: 80%;
+    position: absolute;
+    top: 0%;
+    width: 80%;
     height: 33%;
     margin: 0 auto 0 auto;
     opacity: ;
-	transform: translateY(0%);
-	transform: translateX(12.5%);
-	display: flex;
-	justify-content: center;
+    transform: translateY(0%);
+    transform: translateX(12.5%);
+    display: flex;
+    justify-content: center;
 }
 
 #coinsCarouselBanner2 {
-   position: absolute;
-	bottom: 0%;
-	width: 80%;
+    position: absolute;
+    bottom: 0%;
+    width: 80%;
     height: 33%;
     margin: 0 auto 0 auto;
     opacity: ;
-	transform: translateY(0%);
-	transform: translateX(12.5%);
-	display: flex;
-	justify-content: center;
+    transform: translateY(0%);
+    transform: translateX(12.5%);
+    display: flex;
+    justify-content: center;
 }
 
-.animated { 
-    animation-duration: 4s; 
-    animation-fill-mode: both; 
-    animation-timing-function: ease-in; 
-} 
-
-@keyframes rollIn { 
-    0% { opacity: 0; transform: translateX(-100%) rotate(-120deg); } 
-    100% { opacity: 1; transform: translateX(0px) rotate(0deg); } 
-} 
-.rollIn { 
-    animation-name: rollIn; 
+.animated {
+    animation-duration: 4s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in;
 }
 
-#animated-example2 {  
-   height: 70px; 
-   margin: 20px auto; 
-   margin-bottom: -20px;
-   width: 800px; 
-   color:#fff;
-   font-size: 25px;
-
-   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7);*/ 
-
+@keyframes rollIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) rotate(-120deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px) rotate(0deg);
+    }
 }
 
-.animated2 { 
-    animation-duration: 3s; 
-    animation-fill-mode: both; 
-} 
 
-@keyframes pulse { 
-    0% { transform: scale(1); } 
-    50% { transform: scale(1.7); } 
-    100% { transform: scale(1); } 
-} 
-.pulse { 
-    animation-name: pulse; 
+.rollIn {
+    animation-name: rollIn;
+}
+
+#animated-example2 {
+    height: 70px;
+    margin: 20px auto;
+    margin-bottom: -20px;
+    width: 800px;
+}
+
+.animated2 {
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.7);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation-name: pulse;
 }
 
 .j {
-	font-size:90px;
+    font-size: 90px;
 }
 
 .o {
-	font-size:100px;
+    font-size: 100px;
 }
 
 #carouselSubHeader {
-	margin-top: 30px;
+    margin-top: 30px;
 }
 
-.beginner, .advanced, .introduction {
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+.beginner,
+.advanced,
+.introduction {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .middleIntro {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	border-radius: 5%;
-	height: 475px;
-	background-image: no-repeat url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
-	margin-left: auto;
-	margin-right: auto;
-	height: 325px;
-	background-color:#3b6488;
-	/*background-image: url("https://www.trade-secret.co.uk/wp-content/uploads/2015/08/Dark-Grey-Background-Best-Wallpaper-Gallery-dji6x-Free.jpeg");*/
-	/*opacity: .8;*/
 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 5%;
+    height: 475px;
+    background-image: no-repeat url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #redditText,
 #redditText2 {
-	color: black;
+    color: black;
 }
 
 .innerCaption {
-	position: absolute;
-	top: 50%;
+    position: absolute;
+    top: 50%;
     transform: translateY(-50%);
 }
 
 .innerCaptionWelcome {
-	position: absolute;
-	top: 22%;
+    position: absolute;
+    top: 22%;
     transform: translateY(-25%);
 }
 
 .innerCaptionReddit {
-	position: absolute;
-	top: 24%;
+    position: absolute;
+    top: 24%;
     transform: translateY(-24%);
 }
 
 .innerCaptionCoins {
-	position: absolute;
-	top: 56%;
+    position: absolute;
+    top: 56%;
     transform: translateY(-56%);
 }
 
 #innerCaptionCoinsText {
-	font-size: 1.7em;
-	color: #000000;
-	padding: 0;
+    font-size: 1.7em;
+    color: #000000;
+    padding: 0;
 }
 
 #innerCaptionCoinsText2 {
-	font-size: 1.7em;
-	color: #fff;
-	padding: 0;
+    font-size: 1.7em;
+    color: #fff;
+    padding: 0;
 }
 
 .innerWelcomeImage {
-	position: absolute;
-	top: 0%;
-	transform: translateY(0%);
-	height: 20px;
+    position: absolute;
+    top: 0%;
+    transform: translateY(0%);
+    height: 20px;
 }
 
 .innerCaptionWelcomeText {
-	font-size: 2.1em;
-	color: white;
+    font-size: 2.1em;
+    color: white;
 }
 
 .innerCaptionRedditText {
-	font-size: 1.9em;
-	color: black;
-	padding: 0;
+    font-size: 1.9em;
+    color: black;
+    padding: 0;
 }
 
 .introCaptionWelcomeSubText {
-	position: absolute;
-	top: 52%;
+    position: absolute;
+    top: 52%;
     transform: translateY(-55%);
     font-size: 1.7em;
 }
 
 .centerIntroCaptionWelcomeSubText {
-	text-align: center;
-	font-size: 1em;
+    text-align: center;
+    font-size: 1em;
 }
 
 #welcomeC {
-	font-size: 1.6em;
-	color: white;
+    font-size: 1.6em;
+    color: white;
 }
 
 #welcomeCWhite {
-	font-size: 1.6em;
-	color: white;
+    font-size: 1.6em;
+    color: white;
 }
 
 #innerCaptionBeginner {
-	color: white;
-	font-size: 2.8em;
+    color: white;
+    font-size: 2.8em;
 }
 
 .introFringeLower {
-	height: 25px;
+    height: 25px;
 }
 
 .upperSideBarFringe {
-	height: 100px;
+    height: 100px;
 }
 
 .lowerSideBarFringe {
-	height: 100px;
+    height: 100px;
 }
 
 .introCarouselImage {
-	max-width: 100%;
+    max-width: 100%;
 }
 
 .middleIntroBody {
-	height: 200px;
-	border: solid 2px white;
-	width: 200px;
+    height: 200px;
+    border: solid 2px white;
+    width: 200px;
 }
+
 @media screen and (min-width: 0px) and (max-width: 411.9px) {
 
-.innerCaptionCoins {
-	position: absolute;
-	top: 46%;
-    transform: translateY(-46%);
-}
 
-#innerCaptionCoinsText {
-	font-size: 1.3em;
-	color: #000000;
-	padding: 0;
-}
+    .innerCaptionCoins {
+        position: absolute;
+        top: 46%;
+        transform: translateY(-46%);
+    }
 
-#innerCaptionCoinsText2 {
-	font-size: 1.3em;
-	color: #000000;
-	padding: 0;
-}
-#animated-example {  
-   height: 350px; 
-   margin: ;  
-   position: relative;
-   width: 100%;
-}
+    #innerCaptionCoinsText {
+        font-size: 1.3em;
+        color: #000000;
+        padding: 0;
+    }
 
-#coinsCarouselBanner {
-   position: absolute;
-	top: 0%;
-	width: 100%;
-    height: 33%;
-    margin: 0 auto 0 auto;
-    opacity: ;
-	transform: translateY(0%);
-	transform: translateX(0%);
-	display: flex;
-	justify-content: center;
-}
+    #innerCaptionCoinsText2 {
+        font-size: 1.3em;
+        color: #000000;
+        padding: 0;
+    }
+    #animated-example {
+        height: 350px;
+        margin: ;
+        position: relative;
+        width: 100%;
+    }
 
-#coinsCarouselBanner2 {
-   position: absolute;
-	bottom: 0%;
-	width: 100%;
-    height: 33%;
-    margin: 0 auto 0 auto;
-    opacity: ;
-	transform: translateY(0%);
-	transform: translateX(0%);
-	display: flex;
-	justify-content: center;
-}
+    #coinsCarouselBanner {
+        position: absolute;
+        top: 0%;
+        width: 100%;
+        height: 33%;
+        margin: 0 auto 0 auto;
+        opacity: ;
+        transform: translateY(0%);
+        transform: translateX(0%);
+        display: flex;
+        justify-content: center;
+    }
 
-#welcomeCWhite {
-	font-size: 1.4em;
-	color: white;
-}
+    #coinsCarouselBanner2 {
+        position: absolute;
+        bottom: 0%;
+        width: 100%;
+        height: 33%;
+        margin: 0 auto 0 auto;
+        opacity: ;
+        transform: translateY(0%);
+        transform: translateX(0%);
+        display: flex;
+        justify-content: center;
+    }
 
-.innerCaption {
-	position: absolute;
-	top: 50%;
-    transform: translateY(-50%);
-}
+    #welcomeCWhite {
+        font-size: 1.4em;
+        color: white;
+    }
 
-.innerCaptionWelcome {
-	position: absolute;
-	top: 25%;
-    transform: translateY(-25%);
-}
+    .innerCaption {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 
-.innerCaptionWelcomeText {
-	font-size: 1.4em;
-	color: white;
-}
-.introCaptionWelcomeSubText {
-	position: absolute;
-	top: 53%;
-    transform: translateY(-53%);
-    font-size: 1.2em;
-}
+    .innerCaptionWelcome {
+        position: absolute;
+        top: 25%;
+        transform: translateY(-25%);
+    }
 
-.centerIntroCaptionWelcomeSubText {
-	text-align: center;
-	font-size: 1em;
-}
+    .innerCaptionWelcomeText {
+        font-size: 1.4em;
+        color: white;
+    }
+    .introCaptionWelcomeSubText {
+        position: absolute;
+        top: 53%;
+        transform: translateY(-53%);
+        font-size: 1.2em;
+    }
 
-.centerIntroCaptionWelcomeSubText2 {
-	display: none;
-}
+    .centerIntroCaptionWelcomeSubText {
+        text-align: center;
+        font-size: 1em;
+    }
 
-#welcomeC {
-	font-size: 1.6em;
-	color: white;
-}
+    .centerIntroCaptionWelcomeSubText2 {
+        display: none;
+    }
 
-	#beginner-banner {  
-	display: none;
-}
+    #welcomeC {
+        font-size: 1.6em;
+        color: white;
+    }
 
-.middleSideBarFringe {
-	height: 170px;
-	border-radius: 20%;
-	background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
-	width: 100%;
-	background-color:#3b6488;
-	/*background-image: url("https://www.trade-secret.co.uk/wp-content/uploads/2015/08/Dark-Grey-Background-Best-Wallpaper-Gallery-dji6x-Free.jpeg");*/
-	padding-left: 5px;
-	padding-right: 5px;
-	width: 80%;
-}
+    #beginner-banner {
+        display: none;
+    }
 
-#sideHeader {
-	text-align: center;
-	padding-top: 0%;
-}
+    .middleSideBarFringe {
+        height: 170px;
+        border-radius: 20%;
+        background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
+        width: 100%;
+    }
 
+    #sideHeader {
+        text-align: center;
+        padding-top: 0%;
+    }
 
-.innerCaptionBeginner {
-	position: absolute;
-	top: 45%;
-    transform: translateY(0%);
-    right: 50%;
-    transform: translateX(50%);
-  }
-  
-.sideHeader {
-	color:#fff;
-	margin-top: 30px;
-}
+    .innerCaptionBeginner {
+        position: absolute;
+        top: 45%;
+        transform: translateY(0%);
+        right: 50%;
+        transform: translateX(50%);
+    }
 
-#innerCaptionBeginner {
-	font-size: 1.7em;
-}
+    #innerCaptionBeginner {
+        font-size: 1.7em;
+    }
 
-.innerCaptionBeginner2 {
-	position: absolute;
-	top: 0%;
-    transform: translateY(0%);
-    right: -50%;
-    transform: translateX(-20%);
-    width: 100%;
-}
+    .innerCaptionBeginner2 {
+        position: absolute;
+        top: 0%;
+        transform: translateY(0%);
+        right: -50%;
+        transform: translateX(-20%);
+        width: 100%;
+    }
 
-.introCaptionBeginnerSubText {
-	position: absolute;
-	top: 30%;
-    transform: translateY(-30%);
-    right: 0%;
-    transform: translateX(110%);
-    width: 30%;
-    font-size: 1.1em;
-}
+    .introCaptionBeginnerSubText {
+        position: absolute;
+        top: 30%;
+        transform: translateY(-30%);
+        right: 0%;
+        transform: translateX(110%);
+        width: 30%;
+        font-size: 1.1em;
+    }
 
-#banner {
-		margin-top: -10px;
-		margin-bottom: -10px;
-	}
+    #banner {
+        margin-top: -10px;
+        margin-bottom: -10px;
+    }
 
-	.c {
-		font-size:100px;
-	}
+    .c {
+        font-size: 100px;
+    }
 
-	#animated-example {  
-	   height: 220px; 
-	   margin: 10px auto; 
-	   width: 95%;
-	}
+    #animated-example {
+        height: 220px;
+        margin: 10px auto;
+        width: 95%;
+    }
 
-	#animated-example2 {  
-	   height: 40px; 
-	   font-size: 1em;
-	   margin: 10px auto; 
-	   margin-bottom: 0px;
-	   width: 98%; 
-	   padding-bottom: 10px;
-	}
+    #animated-example2 {
+        height: 40px;
+        font-size: 1em;
+        margin: 10px auto;
+        margin-bottom: 0px;
+        width: 98%;
+        padding-bottom: 10px;
+    }
 
-	@keyframes pulse { 
-	    0% { transform: scale(1); } 
-	    50% { transform: scale(1.4); } 
-	    100% { transform: scale(1); } 
-	} 
-	
-	.pulse { 
-	    animation-name: pulse; 
-	}
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.4);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
 
-	.j {
-		font-size:70px;
-	}
+    .pulse {
+        animation-name: pulse;
+    }
 
-	.o {
-		font-size:75px;
-	}
+    .j {
+        font-size: 70px;
+    }
 
-	.middleIntro {
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		border-radius: 5%;
-		height: 250px;
-		background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
-	}
+    .o {
+        font-size: 75px;
+    }
 
-	.introFringeLower {
-		height: 0px;
-	}
+    .middleIntro {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-radius: 5%;
+        height: 250px;
+        background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
+    }
 
-	.upperSideBarFringe {
-		height: 0px;
-	}
+    .introFringeLower {
+        height: 0px;
+    }
 
-	.lowerSideBarFringe {
-		height: 0px;
-	}
+    .upperSideBarFringe {
+        height: 0px;
+    }
 
-	.middleSideBarFringe {
-		height: 60px;
-		display: flex;
-		justify-content: center;
-		border-radius: 10%;
-		background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
-		padding-left: 5px;
-		padding-right: 5px;
-		width: 100%;
-	}
+    .lowerSideBarFringe {
+        height: 0px;
+    }
 
-	.sideHeader {
-		margin-top: 20px;
-	}
-	.innerCaptionReddit2 {
-	position: absolute;
-	bottom: 0%;
-    transform: translateY(15%);
-    font-size: .6em;
-}
+    .middleSideBarFringe {
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        border-radius: 10%;
+        background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 100%;
+    }
+
+    .sideHeader {
+        margin-top: 20px;
+    }
+    .innerCaptionReddit2 {
+        position: absolute;
+        bottom: 0%;
+        transform: translateY(15%);
+        font-size: .6em;
+    }
 }
 
 @media (min-width: 412px) and (max-width: 767px) {
-	.innerCaptionCoins {
-	position: absolute;
-	top: 46%;
-    transform: translateY(-46%);
+    .innerCaptionCoins {
+        position: absolute;
+        top: 46%;
+        transform: translateY(-46%);
+    }
+
+    #innerCaptionCoinsText {
+        font-size: 1.3em;
+        color: #000000;
+        padding: 0;
+    }
+
+    #innerCaptionCoinsText2 {
+        font-size: 1.3em;
+        color: #000000;
+        padding: 0;
+    }
+    #animated-example {
+        height: 350px;
+        margin: ;
+        position: relative;
+        width: 100%;
+    }
+
+    #coinsCarouselBanner {
+        position: absolute;
+        top: 0%;
+        width: 100%;
+        height: 33%;
+        margin: 0 auto 0 auto;
+        opacity: ;
+        transform: translateY(0%);
+        transform: translateX(0%);
+        display: flex;
+        justify-content: center;
+    }
+
+    #coinsCarouselBanner2 {
+        position: absolute;
+        bottom: 0%;
+        width: 100%;
+        height: 33%;
+        margin: 0 auto 0 auto;
+        opacity: ;
+        transform: translateY(0%);
+        transform: translateX(0%);
+        display: flex;
+        justify-content: center;
+    }
+
+    #welcomeCWhite {
+        font-size: 1.4em;
+        color: white;
+    }
+
+    .innerCaption {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .innerCaptionWelcome {
+        position: absolute;
+        top: 25%;
+        transform: translateY(-25%);
+    }
+
+    .innerCaptionWelcomeText {
+        font-size: 1.4em;
+        color: white;
+    }
+    .introCaptionWelcomeSubText {
+        position: absolute;
+        top: 53%;
+        transform: translateY(-53%);
+        font-size: 1.2em;
+    }
+
+    .centerIntroCaptionWelcomeSubText {
+        text-align: center;
+        font-size: 1em;
+    }
+
+    .centerIntroCaptionWelcomeSubText2 {
+        display: none;
+    }
+
+    #welcomeC {
+        font-size: 1.6em;
+        color: white;
+    }
+
+    #beginner-banner {
+        display: none;
+    }
+
+    .middleSideBarFringe {
+        height: 170px;
+        border-radius: 20%;
+        background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
+        width: 100%;
+    }
+
+    #sideHeader {
+        text-align: center;
+        padding-top: 0%;
+    }
+
+    .innerCaptionBeginner {
+        position: absolute;
+        top: 45%;
+        transform: translateY(0%);
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    #innerCaptionBeginner {
+        font-size: 1.7em;
+    }
+
+    .innerCaptionBeginner2 {
+        position: absolute;
+        top: 0%;
+        transform: translateY(0%);
+        right: -50%;
+        transform: translateX(-20%);
+        width: 100%;
+    }
+
+    .introCaptionBeginnerSubText {
+        position: absolute;
+        top: 30%;
+        transform: translateY(-30%);
+        right: 0%;
+        transform: translateX(110%);
+        width: 30%;
+        font-size: 1.1em;
+    }
+
+    #banner {
+        margin-top: -10px;
+        margin-bottom: -10px;
+    }
+
+    .c {
+        font-size: 100px;
+    }
+
+    #animated-example {
+        height: 220px;
+        margin: 10px auto;
+        width: 95%;
+    }
+
+    #animated-example2 {
+        height: 40px;
+        font-size: 1em;
+        margin: 10px auto;
+        margin-bottom: 0px;
+        width: 98%;
+        padding-bottom: 10px;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.4);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .pulse {
+        animation-name: pulse;
+    }
+
+    .j {
+        font-size: 70px;
+    }
+
+    .o {
+        font-size: 75px;
+    }
+
+    .middleIntro {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-radius: 5%;
+        height: 310px;
+        background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
+    }
+
+    .introFringeLower {
+        height: 0px;
+    }
+
+    .upperSideBarFringe {
+        height: 0px;
+    }
+
+    .lowerSideBarFringe {
+        height: 0px;
+    }
+
+    .middleSideBarFringe {
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        border-radius: 10%;
+        background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 100%;
+    }
+
+    .sideHeader {
+        margin-top: 30px;
+    }
+
+    #animated-example2 {
+        height: 40px;
+        font-size: 1em;
+        margin: 10px auto;
+        margin-bottom: 0px;
+        width: 98%;
+        padding-bottom: 10px;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.4);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .pulse {
+        animation-name: pulse;
+    }
+
+    .j {
+        font-size: 70px;
+    }
+
+    .o {
+        font-size: 75px;
+    }
+
+    .middleIntro {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-radius: 5%;
+        height: 250px;
+        background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
+    }
+
+    .introFringeLower {
+        height: 0px;
+    }
+
+    .upperSideBarFringe {
+        height: 0px;
+    }
+
+    .lowerSideBarFringe {
+        height: 0px;
+    }
+
+    .middleSideBarFringe {
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        border-radius: 10%;
+        background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 100%;
+    }
+
+    .sideHeader {
+        margin-top: 20px;
+    }
+    .innerCaptionReddit2 {
+        position: absolute;
+        bottom: 0%;
+        transform: translateY(20%);
+        font-size: .8em;
+    }
 }
-
-#innerCaptionCoinsText {
-	font-size: 1.3em;
-	color: #000000;
-	padding: 0;
-}
-
-#innerCaptionCoinsText2 {
-	font-size: 1.3em;
-	color: #000000;
-	padding: 0;
-}
-#animated-example {  
-   height: 350px; 
-   margin: ;  
-   position: relative;
-   width: 100%;
-}
-
-#coinsCarouselBanner {
-   position: absolute;
-	top: 0%;
-	width: 100%;
-    height: 33%;
-    margin: 0 auto 0 auto;
-    opacity: ;
-	transform: translateY(0%);
-	transform: translateX(0%);
-	display: flex;
-	justify-content: center;
-}
-
-#coinsCarouselBanner2 {
-   position: absolute;
-	bottom: 0%;
-	width: 100%;
-    height: 33%;
-    margin: 0 auto 0 auto;
-    opacity: ;
-	transform: translateY(0%);
-	transform: translateX(0%);
-	display: flex;
-	justify-content: center;
-}
-
-#welcomeCWhite {
-	font-size: 1.4em;
-	color: white;
-}
-
-.innerCaption {
-	position: absolute;
-	top: 50%;
-    transform: translateY(-50%);
-}
-
-.innerCaptionWelcome {
-	position: absolute;
-	top: 25%;
-    transform: translateY(-25%);
-}
-
-.innerCaptionWelcomeText {
-	font-size: 1.4em;
-	color: white;
-}
-.introCaptionWelcomeSubText {
-	position: absolute;
-	top: 53%;
-    transform: translateY(-53%);
-    font-size: 1.2em;
-}
-
-.centerIntroCaptionWelcomeSubText {
-	text-align: center;
-	font-size: 1em;
-}
-
-.centerIntroCaptionWelcomeSubText2 {
-	display: none;
-}
-
-#welcomeC {
-	font-size: 1.6em;
-	color: white;
-}
-
-#beginner-banner {  
-	display: none;
-}
-
-.middleSideBarFringe {
-	height: 170px;
-	border-radius: 20%;
-	background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
-	width: 100%;
-}
-
-#sideHeader {
-	text-align: center;
-	padding-top: 0%;
-}
-
-.innerCaptionBeginner {
-	position: absolute;
-	top: 45%;
-    transform: translateY(0%);
-    right: 50%;
-    transform: translateX(50%);
-}
-
-#innerCaptionBeginner {
-	font-size: 1.7em;
-}
-
-.innerCaptionBeginner2 {
-	position: absolute;
-	top: 0%;
-    transform: translateY(0%);
-    right: -50%;
-    transform: translateX(-20%);
-    width: 100%;
-}
-
-.introCaptionBeginnerSubText {
-	position: absolute;
-	top: 30%;
-    transform: translateY(-30%);
-    right: 0%;
-    transform: translateX(110%);
-    width: 30%;
-    font-size: 1.1em;
-}
-
-#banner {
-		margin-top: -10px;
-		margin-bottom: -10px;
-	}
-
-	.c {
-		font-size:100px;
-	}
-
-	#animated-example {  
-	   height: 220px; 
-	   margin: 10px auto; 
-	   width: 95%;
-	}
-
-	#animated-example2 {  
-	   height: 40px; 
-	   font-size: 1em;
-	   margin: 10px auto; 
-	   margin-bottom: 0px;
-	   width: 98%; 
-	   padding-bottom: 10px;
-	}
-
-	@keyframes pulse { 
-	    0% { transform: scale(1); } 
-	    50% { transform: scale(1.4); } 
-	    100% { transform: scale(1); } 
-	} 
-	
-	.pulse { 
-	    animation-name: pulse; 
-	}
-
-	.j {
-		font-size:70px;
-	}
-
-	.o {
-		font-size:75px;
-	}
-
-	.middleIntro {
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		border-radius: 5%;
-		height: 310px;
-		background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
-	}
-
-	.introFringeLower {
-		height: 0px;
-	}
-
-	.upperSideBarFringe {
-		height: 0px;
-	}
-
-	.lowerSideBarFringe {
-		height: 0px;
-	}
-
-	.middleSideBarFringe {
-		height: 80px;
-		display: flex;
-		justify-content: center;
-		border-radius: 10%;
-		background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
-		padding-left: 5px;
-		padding-right: 5px;
-		width: 100%;
-	}
-
-	.sideHeader {
-		margin-top: 30px;
-	}
-
-	#animated-example2 {  
-	   height: 40px; 
-	   font-size: 1em;
-	   margin: 10px auto; 
-	   margin-bottom: 0px;
-	   width: 98%; 
-	   padding-bottom: 10px; 
-	}
-
-	@keyframes pulse { 
-	    0% { transform: scale(1); } 
-	    50% { transform: scale(1.4); } 
-	    100% { transform: scale(1); } 
-	} 
-	
-	.pulse { 
-	    animation-name: pulse; 
-	}
-
-	.j {
-		font-size:70px;
-	}
-
-	.o {
-		font-size:75px;
-	}
-
-	.middleIntro {
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		border-radius: 5%;
-		height: 250px;
-		background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
-	}
-
-	.introFringeLower {
-		height: 0px;
-	}
-
-	.upperSideBarFringe {
-		height: 0px;
-	}
-
-	.lowerSideBarFringe {
-		height: 0px;
-	}
-
-	.middleSideBarFringe {
-		height: 60px;
-		display: flex;
-		justify-content: center;
-		border-radius: 10%;
-		background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
-		padding-left: 5px;
-		padding-right: 5px;
-		width: 100%;
-	}
-
-	.sideHeader {
-		margin-top: 20px;
-	}
-	.innerCaptionReddit2 {
-	position: absolute;
-	bottom: 0%;
-    transform: translateY(20%);
-    font-size: .8em;
-}
-
-}	
 
 @media (min-width: 767.1px) and (max-width: 980px) {
-.innerCaptionCoins {
-	position: absolute;
-	top: 46%;
-    transform: translateY(-46%);
+    .innerCaptionCoins {
+        position: absolute;
+        top: 46%;
+        transform: translateY(-46%);
+    }
+
+    #innerCaptionCoinsText {
+        font-size: 1.3em;
+        color: #000000;
+        padding: 0;
+    }
+
+    #innerCaptionCoinsText2 {
+        font-size: 1.3em;
+        color: #000000;
+        padding: 0;
+    }
+    #animated-example {
+        height: 350px;
+        margin: ;
+        position: relative;
+        width: 100%;
+    }
+
+    #coinsCarouselBanner {
+        position: absolute;
+        top: 0%;
+        width: 100%;
+        height: 33%;
+        margin: 0 auto 0 auto;
+        opacity: ;
+        transform: translateY(0%);
+        transform: translateX(0%);
+        display: flex;
+        justify-content: center;
+    }
+    #coinsCarouselBanner2 {
+        position: absolute;
+        bottom: 0%;
+        width: 100%;
+        height: 33%;
+        margin: 0 auto 0 auto;
+        opacity: ;
+        transform: translateY(0%);
+        transform: translateX(0%);
+        display: flex;
+        justify-content: center;
+    }
+    .innerCaptionBeginner {
+        position: absolute;
+        top: 45%;
+        transform: translateY(0%);
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    #innerCaptionBeginner {
+        font-size: 1.7em;
+    }
+
+    .innerCaptionBeginner2 {
+        position: absolute;
+        top: 0%;
+        transform: translateY(0%);
+        right: -50%;
+        transform: translateX(-20%);
+        width: 100%;
+    }
+
+    .introCaptionBeginnerSubText {
+        position: absolute;
+        top: 30%;
+        transform: translateY(-30%);
+        right: 0%;
+        transform: translateX(110%);
+        width: 30%;
+        font-size: 1.1em;
+    }
+
+    #banner {
+        margin-top: -10px;
+        margin-bottom: -10px;
+    }
+
+    .c {
+        font-size: 100px;
+    }
+
+    #animated-example {
+        height: 220px;
+        margin: 10px auto;
+        width: 95%;
+    }
+    .introCaptionWelcomeSubText {
+        position: absolute;
+        top: 42%;
+        transform: translateY(-42%);
+        font-size: 1.2em;
+    }
+    .innerCaptionWelcome {
+        position: absolute;
+        top: 8%;
+        transform: translateY(-8%);
+    }
+    .innerCaptionWelcomeText {
+        font-size: 1.6em;
+        color: white;
+    }
+    #banner {
+        margin-top: -10px;
+        margin-bottom: -10px;
+    }
+
+    .c {
+        font-size: 100px;
+    }
+
+    #animated-example {
+        height: 230px;
+        margin: 10px auto;
+        width: 95%;
+    }
+
+    #animated-example2 {
+        height: 40px;
+        margin: 10px auto;
+        margin-bottom: 0px;
+        width: 700px;
+        padding-bottom: 10px;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.4);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .pulse {
+        animation-name: pulse;
+    }
+
+    .j {
+        font-size: 70px;
+    }
+
+    .o {
+        font-size: 75px;
+    }
+
+    .middleIntro {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-radius: 5%;
+        height: 275px;
+        background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
+    }
+
+    .introFringeLower {
+        height: 0px;
+    }
+
+    .upperSideBarFringe {
+        height: 75px;
+    }
+
+    .lowerSideBarFringe {
+        height: 100px;
+    }
+
+    .middleSideBarFringe {
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        border-radius: 20%;
+        background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .sideHeader {
+        margin-top: 20px;
+    }
+    #beginner-banner {
+        height: 60px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
+    }
+
+    .middleSideBarFringe {
+        height: 150px;
+        /*border: 2px solid black;*/
+        border-radius: 20%;
+        background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
+        width: 100%;
+    }
+
+    #sideHeader {
+        text-align: center;
+        padding-top: 2%;
+    }
+
+    .innerCaptionBeginner {
+        position: absolute;
+        top: 40%;
+        transform: translateY(0%);
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .innerCaptionReddit2 {
+        position: absolute;
+        bottom: 0%;
+        transform: translateY(25%);
+        font-size: .8em;
+    }
 }
-
-#innerCaptionCoinsText {
-	font-size: 1.3em;
-	color: #000000;
-	padding: 0;
-}
-
-#innerCaptionCoinsText2 {
-	font-size: 1.3em;
-	color: #000000;
-	padding: 0;
-}
-#animated-example {  
-   height: 350px; 
-   margin: ;  
-   position: relative;
-   width: 100%;
-}
-
-#coinsCarouselBanner {
-   position: absolute;
-	top: 0%;
-	width: 100%;
-    height: 33%;
-    margin: 0 auto 0 auto;
-    opacity: ;
-	transform: translateY(0%);
-	transform: translateX(0%);
-	display: flex;
-	justify-content: center;
-}
-#coinsCarouselBanner2 {
-   position: absolute;
-	bottom: 0%;
-	width: 100%;
-    height: 33%;
-    margin: 0 auto 0 auto;
-    opacity: ;
-	transform: translateY(0%);
-	transform: translateX(0%);
-	display: flex;
-	justify-content: center;
-}
-.innerCaptionBeginner {
-	position: absolute;
-	top: 45%;
-    transform: translateY(0%);
-    right: 50%;
-    transform: translateX(50%);
-}
-
-#innerCaptionBeginner {
-	font-size: 1.7em;
-}
-
-.innerCaptionBeginner2 {
-	position: absolute;
-	top: 0%;
-    transform: translateY(0%);
-    right: -50%;
-    transform: translateX(-20%);
-    width: 100%;
-}
-
-.introCaptionBeginnerSubText {
-	position: absolute;
-	top: 30%;
-    transform: translateY(-30%);
-    right: 0%;
-    transform: translateX(110%);
-    width: 30%;
-    font-size: 1.1em;
-}
-
-#banner {
-		margin-top: -10px;
-		margin-bottom: -10px;
-	}
-
-	.c {
-		font-size:100px;
-	}
-
-	#animated-example {  
-	   height: 220px; 
-	   margin: 10px auto; 
-	   width: 95%;
-	}
-.introCaptionWelcomeSubText {
-	position: absolute;
-	top: 42%;
-    transform: translateY(-42%);
-    font-size: 1.2em;
-}
-.innerCaptionWelcome {
-	position: absolute;
-	top: 8%;
-    transform: translateY(-8%);
-}
-.innerCaptionWelcomeText {
-	font-size: 1.6em;
-	color: white;
-}
-	#banner {
-		margin-top: -10px;
-		margin-bottom: -10px;
-	}
-
-	.c {
-		font-size:100px;
-	}
-
-	#animated-example {  
-	   height: 230px; 
-	   margin: 10px auto; 
-	   width: 95%; 
-	}
-
-	#animated-example2 {  
-	   height: 40px; 
-	   margin: 10px auto; 
-	   margin-bottom: 0px;
-	   width: 700px; 
-	   padding-bottom: 10px; 
-	}
-
-	@keyframes pulse { 
-	    0% { transform: scale(1); } 
-	    50% { transform: scale(1.4); } 
-	    100% { transform: scale(1); } 
-	} 
-	
-	.pulse { 
-	    animation-name: pulse; 
-	}
-
-	.j {
-		font-size:70px;
-	}
-
-	.o {
-		font-size:75px;
-	}
-
-	.middleIntro {
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		border-radius: 5%;
-		height: 275px;
-		background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
-	}
-
-	.introFringeLower {
-		height: 0px;
-	}
-
-	.upperSideBarFringe {
-		height: 75px;
-	}
-
-	.lowerSideBarFringe {
-		height: 100px;
-	}
-
-	.middleSideBarFringe {
-		height: 100px;
-		display: flex;
-		justify-content: center;
-		border-radius: 20%;
-		background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-
-	.sideHeader {
-		margin-top: 20px;
-	}
-
-	#beginner-banner {  
-    height: 60px; 
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
-}
-
-.middleSideBarFringe {
-	height: 150px;
-	/*border: 2px solid black;*/
-	border-radius: 20%;
-	background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
-	width: 100%;
-}
-
-#sideHeader {
-	text-align: center;
-	padding-top: 2%;
-}
-
-.innerCaptionBeginner {
-	position: absolute;
-	top: 40%;
-    transform: translateY(0%);
-    right: 50%;
-    transform: translateX(50%);
-}
-
-.innerCaptionReddit2 {
-	position: absolute;
-	bottom: 0%;
-    transform: translateY(25%);
-    font-size: .8em;
-}
-
-}/*Media Query ends here*/
 
 @media (min-width: 980.1px) {
-	.innerCaptionWelcomeText {
-	font-size: 1.85em;
-	color: white;
-}
-.innerCaptionWelcome {
-	position: absolute;
-	top: 25%;
-    transform: translateY(-25%);
+    .innerCaptionWelcomeText {
+        font-size: 1.85em;
+        color: white;
+    }
+    .innerCaptionWelcome {
+        position: absolute;
+        top: 25%;
+        transform: translateY(-25%);
+    }
+
+    .introCaptionWelcomeSubText {
+        position: absolute;
+        top: 52%;
+        transform: translateY(-55%);
+        font-size: 1.7em;
+    }
 }
 
-.introCaptionWelcomeSubText {
-	position: absolute;
-	top: 52%;
-    transform: translateY(-55%);
-    font-size: 1.7em;
-}
-
-.carousel-caption {
-	color:#fff;
-}
-
-}/*End of Media Query here*/
