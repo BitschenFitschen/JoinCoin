@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import {Col, Row} from 'react-bootstrap';
 import { Link } from 'react-router';
-import {Col} from 'react-bootstrap';
 import './main.css';
 import BeginnerImg from './img/CC-beginner.jpg';
 

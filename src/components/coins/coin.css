@@ -1,4 +1,113 @@
-.coin-container {
-  border: 2px solid black;
-  width: 250px;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 
+      "Segoe UI", "Roboto", "Oxygen", 
+      "Ubuntu", "Cantarell", "Fira Sans", 
+      "Droid Sans", "Helvetica Neue", sans-serif;
 }
+
+.coin-container {
+  color: #2D3238;
+  text-decoration: none !important; 
+}
+
+.coin-container {
+/*  border: 2px solid black;*/
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+}
+
+.coin-container:hover, .coin-container:active, .coin-container:focus {
+/*  border: 2px solid black;*/
+  background: #d9edf7;
+  text-decoration: none !important; 
+}
+
+.ranking {
+  width: 50px;
+/*  border: 1px solid black;*/
+}
+
+.coin-name {
+  font-size: 1.8em;
+  padding: 0 0.5em 0 0.5em;
+}
+
+.coin-sym {
+  padding: 0 0.5em 0 0.5em;
+  font-size: 0.9em;
+  background: #ff3167;
+  color: #fff;
+  padding: 0.5em;
+  margin-right: 0.5em;
+}
+
+.algo {
+  padding: 0 0.5em 0 0.5em;
+  font-size: 0.9em;
+  background: #5cb85c;
+  color: #fff;
+  padding: 0.5em;
+}
+
+.coin-supply {
+  padding: 0 0.5em 0 0.5em;
+  font-size: 0.9em;
+  background: #f0ad4e;
+  color: #fff;
+  padding: 0.5em;
+  margin-right: 0.5em;
+}
+
+.premined {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  background: #2595FF;
+  color: #fff;
+  padding: 0.5em;
+  margin-right: 0.5em;
+}
+
+.coin-link:hover, .coin-link:active, .coin-link:focus {
+  text-decoration: none !important; 
+}
+
+.coin-stat-headers {
+  font-size: 85%;
+  letter-spacing: .15em;
+  color: #888888;
+  text-transform: uppercase;
+}
+
+.delta-indicator {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 0.6em;
+}
+
+.coin-stats {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 0.6em;
+}
+
+.stats-container {
+  height: 30px;
+  vertical-align: middle;
+}
+
+.other-coin-stats {
+  margin-top: 0.7em;
+}
+
+/*.headers {
+  display: flex;
+  padding: 1em;
+  text-align: center;
+}
+
+.header-rank {
+  width: 40px;
+}*/
