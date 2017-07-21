@@ -1,21 +1,9 @@
 .landingPage {
-	/*background: #969696;*/
 	background-image: url("./QhXgUi.jpg");
 	overflow: auto;
 	color: #ddd;
 	font-family: 'Amiri', serif;
 }
-
-/*.carouselTemplate {
-	/*background: #969696;
-	background-image: url("./JC-logo-final-lincoln.png");
-	overflow: auto;
-	width: 90%;
-	opacity: .5;
-	display: flex;
-	justify-content: center;
-	margin: auto;
-}*/
 
 .header, .Ticker {
 	text-align: center;
@@ -48,7 +36,6 @@
 	position: relative;
 	width: 80%;
 	opacity: 1.9;
-   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
 }
 
 #beginner-banner {  
@@ -56,12 +43,10 @@
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
 }
 
 .middleSideBarFringe {
 	height: 170px;
-	/*border: 2px solid black;*/
 	border-radius: 20%;
 	background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
 	width: 100%;
@@ -109,10 +94,6 @@
 	transform: translateX(0%);
 	margin: auto;
 	padding: 3% 10% 3% 10%;
-	
-
-	
-   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
 }
 
 #coinsCarouselBanner {
@@ -126,10 +107,6 @@
 	transform: translateX(12.5%);
 	display: flex;
 	justify-content: center;
-	
-
-	
-   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
 }
 
 #coinsCarouselBanner2 {
@@ -143,10 +120,6 @@
 	transform: translateX(12.5%);
 	display: flex;
 	justify-content: center;
-	
-
-	
-   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
 }
 
 .animated { 
@@ -167,8 +140,7 @@
    height: 70px; 
    margin: 20px auto; 
    margin-bottom: -20px;
-   width: 800px; 
-   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7);*/ 
+   width: 800px;  
 }
 
 .animated2 { 
@@ -193,10 +165,6 @@
 	font-size:100px;
 }
 
-/*h1, p, h3, .innerIntro, .upperLowerSideBarFringe, .middleSideBarFringe {
-	border: 2px solid black;
-}*/
-
 #carouselSubHeader {
 	margin-top: 30px;
 }
@@ -211,13 +179,11 @@
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	/*border: 2px solid black;*/
 	border-radius: 5%;
 	height: 475px;
 	background-image: no-repeat url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
 	margin-left: auto;
 	margin-right: auto;
-	/*opacity: .8;*/
 }
 
 #redditText,
@@ -284,25 +250,12 @@
 	top: 52%;
     transform: translateY(-55%);
     font-size: 1.7em;
-
-    /*right: 20%;
-    transform: translateX(90%);
-    width: 30%;*/
 }
-
-/*.leftIntroCaptionWelcomeSubText {
-	text-align: left;
-}*/
 
 .centerIntroCaptionWelcomeSubText {
 	text-align: center;
 	font-size: 1em;
 }
-
-/*
-.rightIntroCaptionWelcomeSubText {
-	text-align: right;
-}*/
 
 #welcomeC {
 	font-size: 1.6em;
@@ -319,10 +272,6 @@
 	font-size: 2.8em;
 }
 
-/*.introFringeUpper {
-	height: 50px;
-}*/
-
 .introFringeLower {
 	height: 25px;
 }
@@ -337,7 +286,6 @@
 
 .introCarouselImage {
 	max-width: 100%;
-	/*height: 400px;*/
 }
 
 .middleIntroBody {
@@ -369,7 +317,6 @@
    margin: ;  
    position: relative;
    width: 100%;
-   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
 }
 
 #coinsCarouselBanner {
@@ -383,10 +330,6 @@
 	transform: translateX(0%);
 	display: flex;
 	justify-content: center;
-	
-
-	
-   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
 }
 
 #coinsCarouselBanner2 {
@@ -400,10 +343,6 @@
 	transform: translateX(0%);
 	display: flex;
 	justify-content: center;
-	
-
-	
-   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
 }
 
 #welcomeCWhite {
@@ -432,15 +371,7 @@
 	top: 53%;
     transform: translateY(-53%);
     font-size: 1.2em;
-
-    /*right: 20%;
-    transform: translateX(90%);
-    width: 30%;*/
 }
-
-/*.leftIntroCaptionWelcomeSubText {
-	text-align: left;
-}*/
 
 .centerIntroCaptionWelcomeSubText {
 	text-align: center;
@@ -462,7 +393,6 @@
 
 .middleSideBarFringe {
 	height: 170px;
-	/*border: 2px solid black;*/
 	border-radius: 20%;
 	background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
 	width: 100%;
@@ -517,7 +447,6 @@
 	   height: 220px; 
 	   margin: 10px auto; 
 	   width: 95%;
-	   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
 	}
 
 	#animated-example2 {  
@@ -527,8 +456,6 @@
 	   margin-bottom: 0px;
 	   width: 98%; 
 	   padding-bottom: 10px;
-
-	   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7);*/ 
 	}
 
 	@keyframes pulse { 
@@ -553,11 +480,9 @@
 		width: 100%;
 		display: flex;
 		justify-content: center;
-		/*border: 2px solid black;*/
 		border-radius: 5%;
 		height: 250px;
 		background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
-		/*opacity: .8;*/
 	}
 
 	.introFringeLower {
@@ -576,7 +501,6 @@
 		height: 60px;
 		display: flex;
 		justify-content: center;
-		/*border: 2px solid black;*/
 		border-radius: 10%;
 		background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
 		padding-left: 5px;
@@ -587,6 +511,12 @@
 	.sideHeader {
 		margin-top: 20px;
 	}
+	.innerCaptionReddit2 {
+	position: absolute;
+	bottom: 0%;
+    transform: translateY(15%);
+    font-size: .6em;
+}
 }
 
 @media (min-width: 412px) and (max-width: 767px) {
@@ -612,7 +542,6 @@
    margin: ;  
    position: relative;
    width: 100%;
-   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
 }
 
 #coinsCarouselBanner {
@@ -626,10 +555,6 @@
 	transform: translateX(0%);
 	display: flex;
 	justify-content: center;
-	
-
-	
-   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
 }
 
 #coinsCarouselBanner2 {
@@ -643,10 +568,6 @@
 	transform: translateX(0%);
 	display: flex;
 	justify-content: center;
-	
-
-	
-   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
 }
 
 #welcomeCWhite {
@@ -675,15 +596,7 @@
 	top: 53%;
     transform: translateY(-53%);
     font-size: 1.2em;
-
-    /*right: 20%;
-    transform: translateX(90%);
-    width: 30%;*/
 }
-
-/*.leftIntroCaptionWelcomeSubText {
-	text-align: left;
-}*/
 
 .centerIntroCaptionWelcomeSubText {
 	text-align: center;
@@ -705,7 +618,6 @@
 
 .middleSideBarFringe {
 	height: 170px;
-	/*border: 2px solid black;*/
 	border-radius: 20%;
 	background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
 	width: 100%;
@@ -760,7 +672,6 @@
 	   height: 220px; 
 	   margin: 10px auto; 
 	   width: 95%;
-	   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
 	}
 
 	#animated-example2 {  
@@ -770,8 +681,6 @@
 	   margin-bottom: 0px;
 	   width: 98%; 
 	   padding-bottom: 10px;
-
-	   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7);*/ 
 	}
 
 	@keyframes pulse { 
@@ -796,11 +705,9 @@
 		width: 100%;
 		display: flex;
 		justify-content: center;
-		/*border: 2px solid black;*/
 		border-radius: 5%;
 		height: 310px;
 		background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
-		/*opacity: .8;*/
 	}
 
 	.introFringeLower {
@@ -819,7 +726,6 @@
 		height: 80px;
 		display: flex;
 		justify-content: center;
-		/*border: 2px solid black;*/
 		border-radius: 10%;
 		background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
 		padding-left: 5px;
@@ -837,9 +743,7 @@
 	   margin: 10px auto; 
 	   margin-bottom: 0px;
 	   width: 98%; 
-	   padding-bottom: 10px;
-
-	   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7);*/ 
+	   padding-bottom: 10px; 
 	}
 
 	@keyframes pulse { 
@@ -864,11 +768,9 @@
 		width: 100%;
 		display: flex;
 		justify-content: center;
-		/*border: 2px solid black;*/
 		border-radius: 5%;
 		height: 250px;
 		background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
-		/*opacity: .8;*/
 	}
 
 	.introFringeLower {
@@ -887,7 +789,6 @@
 		height: 60px;
 		display: flex;
 		justify-content: center;
-		/*border: 2px solid black;*/
 		border-radius: 10%;
 		background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
 		padding-left: 5px;
@@ -898,6 +799,12 @@
 	.sideHeader {
 		margin-top: 20px;
 	}
+	.innerCaptionReddit2 {
+	position: absolute;
+	bottom: 0%;
+    transform: translateY(20%);
+    font-size: .8em;
+}
 
 }	
 
@@ -924,7 +831,6 @@
    margin: ;  
    position: relative;
    width: 100%;
-   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
 }
 
 #coinsCarouselBanner {
@@ -938,10 +844,6 @@
 	transform: translateX(0%);
 	display: flex;
 	justify-content: center;
-	
-
-	
-   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
 }
 #coinsCarouselBanner2 {
    position: absolute;
@@ -954,10 +856,6 @@
 	transform: translateX(0%);
 	display: flex;
 	justify-content: center;
-	
-
-	
-   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
 }
 .innerCaptionBeginner {
 	position: absolute;
@@ -1003,7 +901,6 @@
 	   height: 220px; 
 	   margin: 10px auto; 
 	   width: 95%;
-	   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
 	}
 .introCaptionWelcomeSubText {
 	position: absolute;
@@ -1033,7 +930,6 @@
 	   height: 230px; 
 	   margin: 10px auto; 
 	   width: 95%; 
-	   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7); */
 	}
 
 	#animated-example2 {  
@@ -1041,8 +937,7 @@
 	   margin: 10px auto; 
 	   margin-bottom: 0px;
 	   width: 700px; 
-	   padding-bottom: 10px;
-	   /*box-shadow: inset 0 0 7px rgba(0,0,0,0.7);*/ 
+	   padding-bottom: 10px; 
 	}
 
 	@keyframes pulse { 
@@ -1067,11 +962,9 @@
 		width: 100%;
 		display: flex;
 		justify-content: center;
-		/*border: 2px solid black;*/
 		border-radius: 5%;
 		height: 275px;
 		background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
-		/*opacity: .8;*/
 	}
 
 	.introFringeLower {
@@ -1090,7 +983,6 @@
 		height: 100px;
 		display: flex;
 		justify-content: center;
-		/*border: 2px solid black;*/
 		border-radius: 20%;
 		background-image: url("./Dark-Grey-Background-Best-Wallpaper.jpeg");
 		padding-left: 0px;
@@ -1128,6 +1020,14 @@
     right: 50%;
     transform: translateX(50%);
 }
+
+.innerCaptionReddit2 {
+	position: absolute;
+	bottom: 0%;
+    transform: translateY(25%);
+    font-size: .8em;
+}
+
 }
 
 @media (min-width: 980.1px) {
