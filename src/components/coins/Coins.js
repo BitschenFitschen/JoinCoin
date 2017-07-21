@@ -308,98 +308,89 @@ class Coins extends Component {
             <button className='btn btn-info' onClick={this.hideModal}>Close</button>
           </Modal.Footer>
         </Modal>
+
         <div className="col-md-8 left-col">
-          <div className="info-panel">
           <div className="topbar">
             <a href="#"><span className="icon icon-chevron-with-circle-left back-arrow"></span></a>
             <h1 id="coins-title">JoinCoin</h1>
           </div>
-            {/*
-              <h2>Classifying Cryptocurrencies</h2>
-              <h6>How coins differ from each other</h6>
+          <div className="info-panel">
+            <div className="stat-panel">
+              <h1 className="text-center cmarket-title"><span id="the">The </span>Cryptocurrency Market</h1>
               <div className="row">
-                <div className="col-md-6">
-                  <button type="button" className="btn btn-danger-outline explain-btn">Ticker Symbol</button>
-                  <p>Like stocks, each cryptocurrency has a set of abbreviated letters that acts as a unique identifier</p>
+                <div className="col-md-4">
+                  <div className="statcard text-center">
+                    <h3 className="statcard-number">
+                      {this.state.loading ? (<PulseLoader color="#ccc" size="6px" margin="4px"/>) : this.state.global.active_currencies}
+                    </h3>
+                    <span className="statcard-desc">Cryptocurrencies</span>
+                  </div>
                 </div>
-                <div className="col-md-6">
-                  <button type="button" className="btn btn-warning-outline explain-btn">Total Coin Supply</button>
-                  <p>Maximum number of coins that a particular cryptocurrency has available (usually set before launch)</p>
+                <div className="col-md-4">
+                  <div className="statcard text-center">
+                    <h3 className="statcard-number">
+                      {this.state.loading ? (<PulseLoader color="#ccc" size="6px" margin="4px"/>) : `$${this.parseNum(parseInt(this.state.global.total_market_cap_usd, 10))}`}
+                    </h3>
+                    <span className="statcard-desc">Total Market Cap</span>
+                  </div>
                 </div>
+                <div className="col-md-4">
+                  <div className="statcard text-center">
+                    <h3 className="statcard-number">
+                      {this.state.loading ? (<PulseLoader color="#ccc" size="6px" margin="4px"/>) : `$${this.parseNum(this.state.global.total_24h_volume_usd)}`}
+                    </h3>
+                    <span className="statcard-desc">24-Hour Trade Volume</span>
+                  </div>
+                </div>
+                {/*
+                  <div className="col-md-3">
+                    <div className="statcard statcard-primary p-a-md">
+                      <h3 className="statcard-number">
+                        {this.state.loading ? (<PulseLoader color="#fff" size="6px" margin="4px"/>) : `${parseFloat(this.state.global.bitcoin_percentage_of_market_cap).toFixed(1)}%`}
+                      </h3>
+                      <span className="statcard-desc">BTC Share<br /> of Mkt Cap</span>
+                    </div>
+                  </div>
+                */}
               </div>
-              <hr />
-            */}
-            
-            <h2 className="m-b-md">The Cryptocurrency Market</h2>
-            <div className="row">
-              <div className="col-md-4">
-                <div className="statcard statcard-primary p-a-md m-b-md">
-                  <h3 className="statcard-number">
-                    {this.state.loading ? (<PulseLoader color="#fff" size="6px" margin="4px"/>) : `$${this.parseNum(parseInt(this.state.global.total_market_cap_usd, 10))}`}
-                  </h3>
-                  <span className="statcard-desc">Total Market Cap</span>
-                </div>
-              </div>
-              <div className="col-md-4">
-                <div className="statcard statcard-primary p-a-md m-b-md">
-                  <h3 className="statcard-number">
-                    {this.state.loading ? (<PulseLoader color="#fff" size="6px" margin="4px"/>) : `$${this.parseNum(this.state.global.total_24h_volume_usd)}`}
-                  </h3>
-                  <span className="statcard-desc">24-Hour Trade Vol</span>
-                </div>
-              </div>
-              <div className="col-md-4">
-                <div className="statcard statcard-primary p-a-md m-b-md">
-                  <h3 className="statcard-number">
-                    {this.state.loading ? (<PulseLoader color="#fff" size="6px" margin="4px"/>) : this.state.global.active_currencies}
-                  </h3>
-                  <span className="statcard-desc">Cryptocurrencies</span>
-                </div>
-              </div>
-            {/*
-              <div className="col-md-3">
-                <div className="statcard statcard-primary p-a-md">
-                  <h3 className="statcard-number">
-                    {this.state.loading ? (<PulseLoader color="#fff" size="6px" margin="4px"/>) : `${parseFloat(this.state.global.bitcoin_percentage_of_market_cap).toFixed(1)}%`}
-                  </h3>
-                  <span className="statcard-desc">BTC Share<br /> of Mkt Cap</span>
-                </div>
-              </div>
-            */}
+            </div>
 
-            </div>
-            <div className="row">
-              <div className="col-md-12">
-                <div className="statcard statcard-success p-a-md">
-                  <h3 className="statcard-number">
-                    <span className="icon icon-star"></span> Featured Exchange
-                  </h3>
-                  <span className="statcard-desc">JoinCoin's pick for the best cryptocurrency exchange is Gemini!<br />Please contact us to for advertisement opportunities.</span>
+              {/*  
+                <div className="row">
+                  <div className="col-md-12">
+                    <div className="statcard statcard-success p-a-md">
+                      <h3 className="statcard-number">
+                        <span className="icon icon-star"></span> Featured Exchange
+                      </h3>
+                      <span className="statcard-desc">JoinCoin's pick for the best cryptocurrency exchange is Gemini!<br />Please contact us to for advertisement opportunities.</span>
+                    </div>
+                  </div>
+                </div>
+              */}
+            <div className="row text-center">
+              <div className="col-md-6">
+                <div className="exchange-panel">
+                  <h3 className="action-title"><span className="ctaction">Buy</span> in Exchanges</h3>
+                  <ol className="coin-list">
+                    <li><a href="https://gemini.com/">Gemini</a></li>
+                    <li><a href="https://localbitcoins.com/">LocalBitcoins</a></li>
+                    <li><a href="https://www.coinbase.com/">Coinbase</a></li>
+                    <li><a href="https://www.kraken.com/">Kraken</a></li>
+                    <li><a href="https://cex.io/">CEX.IO</a></li>
+                  </ol>
                 </div>
               </div>
-            </div>
-            <div className="row text-left">
               <div className="col-md-6">
-                <h3 className="text-center">Exchanges</h3>
-                <h6 className="text-center m-b-md">Buy Cryptocurrencies</h6>
-                <ol>
-                  <li><a href="https://gemini.com/">Gemini</a></li>
-                  <li><a href="https://localbitcoins.com/">LocalBitcoins</a></li>
-                  <li><a href="https://www.coinbase.com/">Coinbase</a></li>
-                  <li><a href="https://www.kraken.com/">Kraken</a></li>
-                  <li><a href="https://cex.io/">CEX.IO</a></li>
-                </ol>
-              </div>
-              <div className="col-md-6">
-                <h3 className="text-center">Wallets</h3>
-                <h6 className="text-center m-b-md">Store Cryptocurrencies</h6>
-                <ol>
-                  <li><a href="https://blockchain.info/wallet/">Blockchain.info</a></li>
-                  <li><a href="https://jaxx.io/">Jaxx</a></li>
-                  <li><a href="https://wallet.mycelium.com/">MyCelium (Mobile)</a></li>
-                  <li><a href="https://trezor.io/">Trezor (Hardware)</a></li>
-                  <li><a href="https://electrum.org/">Electrum (Mobile)</a></li>
-                </ol>
+                <div className="wallet-panel">
+                  <h3 className="action-title"><span className="ctaction">Store</span> in Wallets</h3>
+                  <ol className="coin-list">
+                    <li><a href="https://trezor.io/">Trezor (Hardware)</a></li>
+                    <li><a href="https://blockchain.info/wallet/">Blockchain.info</a></li>
+                    <li><a href="https://jaxx.io/">Jaxx</a></li>
+                    <li><a href="https://wallet.mycelium.com/">MyCelium (Mobile)</a></li>
+                    <li><a href="https://electrum.org/">Electrum (Mobile)</a></li>
+                  </ol>
+                </div>
               </div>
             {/*
               <div className="col-md-6">
@@ -414,11 +405,12 @@ class Coins extends Component {
             */}
 
             </div>
-          </div>
+          </div>{/* end info-panel */}
         </div>
+
         <div className="col-md-4 right-col">
           <div className="search-panel">
-            <div className="topbar">
+            <div className="topbar topbar-right">
               <h1 id="list-title">List of Cryptocurrencies</h1>
             </div>
             <input className="form-control" id="coin-search" onChange={this.handleSearchTermChange} type="text" value={this.state.searchTerm} placeholder="Search coins" style={inputStyle} />
