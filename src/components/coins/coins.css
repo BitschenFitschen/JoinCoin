@@ -42,3 +42,63 @@
 .explain-btn {
   margin: 1em;
 }
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-modal {
+  width: 60%;
+}
+
+.per-symbol {
+  margin-left: 0.5em;
+  font-size: 0.5em;
+  font-weight: lighter; 
+  letter-spacing: 1.5px;
+}
+
+.symbol-header {
+  margin-left: 0.4em;
+  font-size: 0.7em;
+  font-weight: lighter; 
+  letter-spacing: 1.5px;
+}
+
+.single-coin-container {
+  padding: 0.2em 2em 0.2em 2em;
+}
+
+.coin-pic {
+  width: auto;
+  height: 40px;
+  margin-right: 0.5em;
+}
+
+.statcard-change {
+  height: 30px;
+}
+
+.modal-title {
+  font-size: 2em;
+}
+
+.modal-price {
+  font-size: 3em;
+}
+
+.statcard-change, .stats-container {
+  display: flex;
+  align-items: center;
+}
+
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}

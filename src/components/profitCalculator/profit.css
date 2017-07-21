@@ -11,3 +11,21 @@
 .slider.slider-horizontal {
   width: 80%;
 }
+
+.numCircle {
+  background: #bbb;
+  border-radius: 0.7em;
+  -moz-border-radius: 0.7em;
+  -webkit-border-radius: 0.7em;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.4em;
+  margin-right: 0.5em;
+  text-align: center;
+  width: 1.4em; 
+}
+
+.custom-select {
+  width: 100%;
+}

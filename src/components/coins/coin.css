@@ -5,12 +5,8 @@ body {
       "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
-a .coin-container {
+.coin-container {
   color: #2D3238;
-  text-decoration: none !important; 
-}
-
-a.coin-container:hover  {
   text-decoration: none !important; 
 }
 
@@ -23,7 +19,7 @@ a.coin-container:hover  {
   font-size: 1em;
 }
 
-.coin-container:hover, .coin-container:active {
+.coin-container:hover, .coin-container:active, .coin-container:focus {
 /*  border: 2px solid black;*/
   background: #d9edf7;
   text-decoration: none !important; 
@@ -74,12 +70,36 @@ a.coin-container:hover  {
   margin-right: 0.5em;
 }
 
-.infinite > a:hover {
+.coin-link:hover, .coin-link:active, .coin-link:focus {
   text-decoration: none !important; 
 }
 
-.coin-link:hover, .coin-link:active, .coin-link:focus {
-  text-decoration: none !important; 
+.coin-stat-headers {
+  font-size: 85%;
+  letter-spacing: .15em;
+  color: #888888;
+  text-transform: uppercase;
+}
+
+.delta-indicator {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 0.6em;
+}
+
+.coin-stats {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 0.6em;
+}
+
+.stats-container {
+  height: 30px;
+  vertical-align: middle;
+}
+
+.other-coin-stats {
+  margin-top: 0.7em;
 }
 
 /*.headers {
