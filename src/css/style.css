@@ -1050,7 +1050,7 @@
     font-size: .8em;
 }
 
-}
+}/*Media Query ends here*/
 
 @media (min-width: 980.1px) {
 	.innerCaptionWelcomeText {
@@ -1074,3 +1074,4 @@
 	color:#fff;
 }
 
+}/*End of Media Query here*/
