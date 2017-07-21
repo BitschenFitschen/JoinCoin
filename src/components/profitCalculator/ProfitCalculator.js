@@ -226,7 +226,7 @@ class ProfitCalculator extends Component {
                 null
                 :
                 (
-                  <div className="step-25">
+                  <div className="step-25 step-26">
                     <h3 className="calc-action-header"><span className="numCircle">i</span>So far...</h3>
                     <div className="prof-progress-text text-center">
                       After investing <strong className="prof-strong">${this.state.buyin}</strong>,<br />you have <strong className="prof-strong">{coinCount} <span className='coin-span'>{this.state.coin}</span></strong>
