@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import {Col, Accordion, Panel} from 'react-bootstrap';
+
+import EducationHeader from './Education-Header';
 // import Slider from 'react-slick';
 import './education.css';
 import preload from './educationdata.json';
+
 
 // import CCAnimate from './img/CC-Intro.gif';
 
@@ -15,18 +18,22 @@ class Education extends Component {
     return (
       <div className='education container-fluid'>
         <Col xs={12} sm={12} md={12} lg={12}>
-          <h1>Education</h1>
+          
+          <EducationHeader />
+
           {/* <Slider {...settings}> */}
 
             {
               preload.slides.map(
                 (slide) =>
+
                   <div className='education-panel'>
+
                     {/* <Col md={3}>
                       <h4>{slide.leftSidePanelTitle}</h4>
                       <small>{slide.leftSidePanelDescription}</small>
                     </Col> */}
-                    <h5>{slide.title}</h5>
+                    <h5 id="basics">{slide.title}</h5>
                     <Col md={6}>
                       {/* <p>{slide.description}</p> */}
 

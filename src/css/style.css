@@ -140,6 +140,7 @@
     }
 }
 
+
 .rollIn {
     animation-name: rollIn;
 }
@@ -193,6 +194,7 @@
 }
 
 .middleIntro {
+
     width: 100%;
     display: flex;
     justify-content: center;
@@ -312,6 +314,7 @@
 }
 
 @media screen and (min-width: 0px) and (max-width: 411.9px) {
+
 
     .innerCaptionCoins {
         position: absolute;
@@ -1088,3 +1091,4 @@
         font-size: 1.7em;
     }
 }
+
