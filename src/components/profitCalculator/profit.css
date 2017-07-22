@@ -1,11 +1,8 @@
 @import "~react-bootstrap-slider/src/css/bootstrap-slider.min.css";
 
-.conversionAlert {
-  font-size: 2em;
-}
-
 .coin-span {
   font-size: 0.7em;
+  margin-bottom: 1.4em;
 }
 
 .slider.slider-horizontal {
@@ -13,7 +10,7 @@
 }
 
 .numCircle {
-  background: #bbb;
+  background: #1A2980;
   border-radius: 0.7em;
   -moz-border-radius: 0.7em;
   -webkit-border-radius: 0.7em;
@@ -28,4 +25,331 @@
 
 .custom-select {
   width: 100%;
+  font-size: 1em;
+  color: #1A2980;
+  height: 50px;
+}
+
+.prof-calc {
+  background: #1A2980;
+}
+
+.prof-title {
+  margin-bottom: 0.7em;
+/*  padding: 1.5em 1.5em 15px 1.5em;*/
+  color: #fff;
+  font-size: 4em;
+}
+
+.prof-secondary-text {
+  color: #2eb7ff;
+}
+
+.step-1 {
+  background: #fff;
+  padding: 1.5em 3em 1.5em 3em;
+  height: 250px;
+  margin-bottom: 1.3em;
+}
+
+.step-2 {
+  background: #fff;
+  padding: 1.5em 3em 1.5em 3em;
+  height: 250px;
+  margin-bottom: 1.3em;
+}
+
+.step-25 {
+  background: #fff;
+  padding: 1.5em 3em 1.5em 3em;
+  height: 170px;
+  margin-bottom: 1.3em;
+}
+
+.step-26 {
+  height: 210px;
+}
+
+.step-3 {
+  background: #fff;
+  padding: 1.5em 3em 3em 3em;
+  margin-bottom: 1.3em;
+}
+
+.slider-tick-label {
+  font-size: 0.7em;
+}
+
+.calc-container {
+/*  border: 2px solid red;*/
+  padding: 1em 2em 1em 2em;
+}
+
+.calc-action-header {
+  color: #1A2980;
+  font-size: 1.3em;
+}
+
+.explanation-p {
+/*  color: #aaa;*/
+  margin-bottom: 1.5em;
+}
+
+#buyin-amount {
+  width: 100%;
+  font-size: 1em;
+  color: #1A2980;
+  height: 50px;
+}
+
+.projected-price {
+  margin-bottom: 1em;
+}
+#prof-slider-instruction {
+  font-size: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.prof-progress-text {
+  font-size: 1.8em;
+}
+
+.prof-strong {
+  color: #1A2980;
+}
+
+.profit-container {
+  background: #fff;
+  padding: 1.8em 3em 1.8em 3em;
+/*  height: 250px;*/
+  margin-bottom: 1.3em;
+}
+
+.profits {
+  font-size: 1.4em;
+}
+
+.buy-container {
+  height: 150px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.buy-quant {
+  font-size: 2em;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 0.4em 1em;
+}
+
+.buy-row {
+  margin-top: 3em;
+}
+
+.buy-desc {
+  margin-top: 1em;
+  font-size: 1.2em;
+}
+
+.you-can {
+  margin-bottom: 1em;
+}
+
+.actual-quote {
+  color: #000;
+}
+
+.quote-container {
+  padding: 1em 2em 3em 2em;
+/*  border: 2px solid red;*/
+  background: rgba(255, 255, 255, 1.0);
+}
+
+.quote-hr {
+  color: #000;
+  margin: 4em 0;
+}
+
+.pull-quote > cite {
+  color: #1A2980;
+}
+
+.pred-title {
+  color: #1A2980;
+}
+
+@media (min-width: 768px) {
+  .coin-span {
+    font-size: 0.7em;
+  }
+
+  .slider.slider-horizontal {
+    width: 80%;
+  }
+
+  .numCircle {
+    background: #1A2980;
+    border-radius: 0.7em;
+    -moz-border-radius: 0.7em;
+    -webkit-border-radius: 0.7em;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.4em;
+    margin-right: 0.5em;
+    text-align: center;
+    width: 1.4em; 
+  }
+
+  .custom-select {
+    width: 100%;
+    font-size: 1.4em;
+    color: #1A2980;
+    height: 50px;
+  }
+
+  .prof-calc {
+    background: #1A2980;
+  }
+
+  .prof-title {
+    margin-bottom: 0.7em;
+  /*  padding: 1.5em 1.5em 15px 1.5em;*/
+    color: #fff;
+    font-size: 4em;
+  }
+
+  .prof-secondary-text {
+    color: #2eb7ff;
+  }
+
+  .step-1 {
+    background: #fff;
+    padding: 1.5em 3em 1.5em 3em;
+    height: 250px;
+    margin-bottom: 1.3em;
+  }
+
+  .step-2 {
+    background: #fff;
+    padding: 1.5em 3em 1.5em 3em;
+    height: 250px;
+    margin-bottom: 1.3em;
+  }
+
+  .step-25 {
+    background: #fff;
+    padding: 1.5em 3em 1.5em 3em;
+    height: 230px;
+    margin-bottom: 1.3em;
+  }
+
+  .step-3 {
+    background: #fff;
+    padding: 1.5em 3em 3em 3em;
+    margin-bottom: 1.3em;
+  }
+
+  .calc-container {
+  /*  border: 2px solid red;*/
+    padding: 4em 8em 4em 8em;
+  }
+
+  .calc-action-header {
+    color: #1A2980;
+    font-size: 2.2em;
+  }
+
+  .explanation-p {
+  /*  color: #aaa;*/
+    margin-bottom: 1.5em;
+  }
+
+  #buyin-amount {
+    width: 100%;
+    font-size: 1.4em;
+    color: #1A2980;
+    height: 50px;
+  }
+
+  .projected-price {
+    margin-bottom: 1em;
+  }
+  #prof-slider-instruction {
+    font-size: 0.38em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .prof-progress-text {
+    font-size: 1.8em;
+
+  }
+
+  .prof-strong {
+    color: #1A2980;
+  }
+
+  .profit-container {
+    background: #fff;
+    padding: 1.8em 3em 1.8em 3em;
+  /*  height: 250px;*/
+    margin-bottom: 1.3em;
+  }
+
+  .profits {
+    font-size: 1.7em;
+  }
+
+  .buy-container {
+    height: 200px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  .buy-quant {
+    font-size: 2em;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 0.4em 1em;
+  }
+
+  .buy-row {
+    margin-top: 3em;
+  }
+
+  .buy-desc {
+    margin-top: 1em;
+    font-size: 1.2em;
+  }
+
+  .you-can {
+    margin-bottom: 1em;
+  }
+
+  .actual-quote {
+    color: #000;
+  }
+
+  .quote-container {
+    padding: 4em 8em 4em 8em;
+  /*  border: 2px solid red;*/
+    background: rgba(255, 255, 255, 1.0);
+  }
+
+  .quote-hr {
+    color: #000;
+    margin: 4em 0;
+  }
+
+  .pull-quote > cite {
+    color: #1A2980;
+  }
+
+  .pred-title {
+    color: #1A2980;
+  }
 }

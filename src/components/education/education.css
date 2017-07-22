@@ -2,13 +2,29 @@
 @import "~slick-carousel/slick/slick-theme.css";
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,500');
 
-h5 {
+.education {
+  padding: 0;
+}
+
+.education-container {
+  padding: 0;
+}
+
+.slide-title {
   text-align: center;
   text-transform: uppercase;
   font-size: 40px;
   padding: 15px;
-  margin: 0px;
-  color:#fff;
+/*  padding: 0;*/
+  margin: 0;
+}
+
+#edu-title {
+  margin: 0;
+  padding: 14.5px 10px;
+  font-size: 24px;
+  line-height: 21px;
+  display: inline-block;
 }
 
 .education-panel {
@@ -16,6 +32,12 @@ h5 {
   width: 97%;
   margin-left: 20px; 
   background-color: #2eb7ff;
+  border: 3px solid black;
+
+}
+
+.panel-0 {
+  height: 100vh - 70px;
 }
 
 .slick-next:before, .slick-prev:before {
