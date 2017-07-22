@@ -16,7 +16,7 @@ class Education extends Component {
     return (
       <div className='education container-fluid'>
         <div className="topbar">
-          <a href="#"><span className="icon icon-chevron-with-circle-left back-arrow"></span></a>
+          <a href="/"><span className="icon icon-chevron-with-circle-left back-arrow"></span></a>
           <h1 id="edu-title">JoinCoin</h1>
         </div>
         <Col className="education-container" xs={12} sm={12} md={12} lg={12}>

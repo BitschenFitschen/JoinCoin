@@ -311,7 +311,7 @@ class Coins extends Component {
 
         <div className="col-md-8 left-col">
           <div className="topbar">
-            <a href="#"><span className="icon icon-chevron-with-circle-left back-arrow"></span></a>
+            <a href="/"><span className="icon icon-chevron-with-circle-left back-arrow"></span></a>
             <h1 id="coins-title">JoinCoin</h1>
           </div>
           <div className="info-panel">
