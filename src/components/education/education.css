@@ -1,5 +1,6 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,500');
 
 .education {
   padding: 0;
@@ -12,7 +13,7 @@
 .slide-title {
   text-align: center;
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 40px;
   padding: 15px;
 /*  padding: 0;*/
   margin: 0;
@@ -28,7 +29,8 @@
 
 .education-panel {
   height: 500px;
-  /*border: 2px solid #000;*/
+  width: 97%;
+  margin-left: 20px; 
   background-color: #2eb7ff;
   border: 3px solid black;
 
@@ -42,12 +44,18 @@
   color: #000;
 }
 
+/*.panel-title {
+  font-size: 20px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: bold;
+}*/
+
 .panel-title a:hover {
   color:#fff;
 }
 
-.panel-default>.panel-heading {
-  background-color:#2eb7ff;
+.panel-default > .panel-heading {
+    background-color:#3b6488;
 }
 
 .animation {
@@ -55,17 +63,20 @@
 }
 
 .panel-default {
-     border-width: 0px; 
-     border-color:transparent;
+  border-width: 0px; 
+  border-color:transparent;
 }
 
 .panel {
-    -webkit-box-shadow: 0px transparent;
-    box-shadow: 0 0 0 transparent;
+  -webkit-box-shadow: 0px transparent;
+  box-shadow: 0 0 0 transparent;
 }
 
 .panel-collapse {
-  font-family: helvetica;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: lighter;
+  font-size: 15px;
   background-color: #2eb7ff;
 
 }
+

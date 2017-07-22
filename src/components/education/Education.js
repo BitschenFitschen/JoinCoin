@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import {Col, Accordion, Panel} from 'react-bootstrap';
+
+import EducationHeader from './Education-Header';
 // import Slider from 'react-slick';
 import './education.css';
 import preload from './educationdata.json';
 import ProfitCalculator from '../profitCalculator/ProfitCalculator';
+
 
 // import CCAnimate from './img/CC-Intro.gif';
 
@@ -26,6 +29,7 @@ class Education extends Component {
               preload.slides.map(
                 (slide) =>
                   <div className={`education-panel panel-${slide.index}`}>
+
                     {/* <Col md={3}>
                       <h4>{slide.leftSidePanelTitle}</h4>
                       <small>{slide.leftSidePanelDescription}</small>

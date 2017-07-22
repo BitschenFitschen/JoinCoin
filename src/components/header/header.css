@@ -4,10 +4,14 @@
 
 /*temporary css*/
 
-h1, p, h3 {
+h1, p, h3, {
 	/*border: 2px solid #0e567f;*/
 	background-color:#0e567f;
 	color:#fff;
 	padding:5px;
 
+}
+
+#header {
+	color:#fff;
 }
