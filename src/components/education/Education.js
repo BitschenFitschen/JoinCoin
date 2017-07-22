@@ -34,12 +34,9 @@ class Education extends Component {
                       <h4>{slide.leftSidePanelTitle}</h4>
                       <small>{slide.leftSidePanelDescription}</small>
                     </Col> */}
-<<<<<<< HEAD
                     <h5 id={`section${slide.index + 1}`}>{slide.title}</h5>
                     {/*<h5 id="basics">{slide.title}</h5>*/}
-=======
                     <h5 className='slide-title'>{slide.title}</h5>
->>>>>>> 827cd422b755bbcd4d223a5af2ffe554e6770a22
                     <Col md={6}>
                       {/* <p>{slide.description}</p> */}
 
