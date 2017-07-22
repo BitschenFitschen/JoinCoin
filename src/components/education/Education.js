@@ -5,6 +5,7 @@ import EducationHeader from './Education-Header';
 // import Slider from 'react-slick';
 import './education.css';
 import preload from './educationdata.json';
+import ProfitCalculator from '../profitCalculator/ProfitCalculator';
 
 
 // import CCAnimate from './img/CC-Intro.gif';
@@ -17,24 +18,28 @@ class Education extends Component {
 
     return (
       <div className='education container-fluid'>
-        <Col xs={12} sm={12} md={12} lg={12}>
-          
-          <EducationHeader />
-
+        <div className="topbar">
+          <a href="/"><span className="icon icon-chevron-with-circle-left back-arrow"></span></a>
+          <h1 id="edu-title">JoinCoin</h1>
+        </div>
+        <Col className="education-container" xs={12} sm={12} md={12} lg={12}>
           {/* <Slider {...settings}> */}
 
             {
               preload.slides.map(
                 (slide) =>
-
-                  <div className='education-panel'>
+                  <div className={`education-panel panel-${slide.index}`}>
 
                     {/* <Col md={3}>
                       <h4>{slide.leftSidePanelTitle}</h4>
                       <small>{slide.leftSidePanelDescription}</small>
                     </Col> */}
+<<<<<<< HEAD
                     <h5 id={`section${slide.index + 1}`}>{slide.title}</h5>
                     {/*<h5 id="basics">{slide.title}</h5>*/}
+=======
+                    <h5 className='slide-title'>{slide.title}</h5>
+>>>>>>> 827cd422b755bbcd4d223a5af2ffe554e6770a22
                     <Col md={6}>
                       {/* <p>{slide.description}</p> */}
 
@@ -60,6 +65,9 @@ class Education extends Component {
                   </div>
               )
             }
+            
+            <ProfitCalculator />
+
             {/* FAQ */}
             <div className='education-panel'>
               <Col md={3} />

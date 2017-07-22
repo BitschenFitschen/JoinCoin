@@ -7,7 +7,7 @@ class Introduction extends Component {
   render() {
     return (
       <div className="introduction">
-        <Col classname="col-xs-push-12" xs={12} sm={6} md={6} lg={6}>
+        <Col className xs={12} sm={6} md={6} lg={6}>
         <div className="innerIntro">
         	<div className="introFringeUpper">
           </div>

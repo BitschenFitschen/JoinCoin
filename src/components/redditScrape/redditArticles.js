@@ -15,9 +15,9 @@ class RedditArticles extends Component {
   render () {
     return (
       <div className="redditArticles">
-        <h1></h1>
+        <h1>Listing of the latest Cryptocurrency discussions on <a href="https://www.reddit.com/r/CryptoCurrency/">Reddit</a></h1>
         {
-        	this.state.result.map(i => <ol><a href={i.link}><span key={i.title}>{i.title}</span></a><span key={i.link}>    Link: {i.link}</span></ol>) 
+        	this.state.result.map(i => <ul><a href={i.link}><li key={i.title}>{i.title}</li></a><span key={i.link}>    Link: {i.link}</span></ul>) 
         }
       </div>
       )
