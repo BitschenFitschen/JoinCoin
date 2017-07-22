@@ -8,6 +8,7 @@
 .header,
 .Ticker {
     text-align: center;
+    font-family: 'Amiri', serif;
 }
 
 .ticker-text {
@@ -17,6 +18,8 @@
 #banner {
     margin-top: -10px;
     margin-bottom: -10px;
+    color: #ddd;
+    font-family: 'Amiri', serif;
 }
 
 .c {
@@ -56,6 +59,8 @@
 #sideHeader {
     text-align: center;
     padding-top: 5%;
+    color: #ddd;
+    font-family: 'Amiri', serif;
 }
 
 .innerCaptionBeginner {
@@ -150,6 +155,8 @@
     margin: 20px auto;
     margin-bottom: -20px;
     width: 800px;
+    color: #ddd;
+    font-family: 'Amiri', serif;
 }
 
 .animated2 {
@@ -253,11 +260,6 @@
     height: 20px;
 }
 
-.innerCaptionWelcomeText {
-    font-size: 2.1em;
-    color: white;
-}
-
 .innerCaptionRedditText {
     font-size: 1.9em;
     color: black;
@@ -274,16 +276,6 @@
 .centerIntroCaptionWelcomeSubText {
     text-align: center;
     font-size: 1em;
-}
-
-#welcomeC {
-    font-size: 1.6em;
-    color: white;
-}
-
-#welcomeCWhite {
-    font-size: 1.6em;
-    color: white;
 }
 
 #innerCaptionBeginner {
@@ -313,23 +305,58 @@
     width: 200px;
 }
 
+#welcomeC {
+    font-size: 1.6em;
+    color: white;
+}
+
+#welcomeCWhite {
+    font-size: 1.6em;
+    color: white;
+}
+
+.leftIntroCaptionWelcomeSubText, 
+.centerIntroCaptionWelcomeSubText, 
+.centerIntroCaptionWelcomeSubText2, 
+#innerCaptionBeginner, 
+#welcomeCWhite, 
+.introCaptionBeginnerSubText, 
+#innerCaptionCoinsText, 
+#innerCaptionCoinsText2, 
+.innerCaptionReddit2, 
+.innerCaptionReddit {
+    font-family: 'Amiri', serif;
+}
+
+#leftIntroCaptionWelcomeSubText, 
+#centerIntroCaptionWelcomeSubText, 
+#centerIntroCaptionWelcomeSubText2 {
+	font-size: .9em !important;
+}
+
+#innerCaptionWelcomeText {
+    font-size: 2.1em !important;
+    color: white;
+    font-family: 'Amiri', serif;
+}
+
 @media screen and (min-width: 0px) and (max-width: 411.9px) {
 
 
     .innerCaptionCoins {
-        position: absolute;
-        top: 46%;
-        transform: translateY(-46%);
+        position: absolute !important;
+        top: 42% !important;
+        transform: translateY(-42%) !important;
     }
 
     #innerCaptionCoinsText {
-        font-size: 1.3em;
+        font-size: 1.3em !important;
         color: #000000;
         padding: 0;
     }
 
     #innerCaptionCoinsText2 {
-        font-size: 1.3em;
+        font-size: 1.3em !important;
         color: #000000;
         padding: 0;
     }
@@ -539,18 +566,34 @@
         margin-top: 20px;
     }
     .innerCaptionReddit2 {
-        position: absolute;
-        bottom: 0%;
-        transform: translateY(15%);
-        font-size: .6em;
+        position: absolute !important;
+        bottom: 0% !important;
+        transform: translateY(15%) !important;
+        font-size: .6em !important;
+    }
+    #innerCaptionWelcomeText {
+    font-size: 1.6em !important;
+    color: white;
+    font-family: 'Amiri', serif;
+}
+    .innerCaptionWelcome {
+        position: absolute !important;
+        top: 2% !important;
+        transform: translateY(2%) !important;
+    }
+    .introCaptionWelcomeSubText {
+        position: absolute !important;
+        top: 53% !important;
+        transform: translateY(-53%) !important;
+        font-size: 1.2em !important;
     }
 }
 
 @media (min-width: 412px) and (max-width: 767px) {
     .innerCaptionCoins {
-        position: absolute;
-        top: 46%;
-        transform: translateY(-46%);
+        position: absolute !important;
+        top: 40% !important;
+        transform: translateY(-40%) !important;
     }
 
     #innerCaptionCoinsText {
@@ -778,6 +821,12 @@
         width: 98%;
         padding-bottom: 10px;
     }
+    .innerCaptionReddit2 {
+        position: absolute !important;
+        bottom: 0% !important;
+        transform: translateY(15%) !important;
+        font-size: .75em !important;
+    }
 
     @keyframes pulse {
         0% {
@@ -844,13 +893,40 @@
         transform: translateY(20%);
         font-size: .8em;
     }
+    #innerCaptionWelcomeText {
+    font-size: 1.6em !important;
+    color: white;
+    font-family: 'Amiri', serif;
+}
+    .innerCaptionWelcome {
+        position: absolute !important;
+        top: 2% !important;
+        transform: translateY(2%) !important;
+    }
+    .introCaptionWelcomeSubText {
+        position: absolute !important;
+        top: 53% !important;
+        transform: translateY(-53%) !important;
+        font-size: 1.2em !important;
+    }
 }
 
 @media (min-width: 767.1px) and (max-width: 980px) {
+    .innerCaptionReddit2 {
+        position: absolute !important;
+        bottom: 0% !important;
+        transform: translateY(15%) !important;
+        
+    }
+    #innerCaptionReddit2, 
+    #innerCaptionReddit2 {
+    	font-size: .6em !important;
+        font-family: 'Amiri', serif !important;
+    }
     .innerCaptionCoins {
-        position: absolute;
-        top: 46%;
-        transform: translateY(-46%);
+        position: absolute !important;
+        top: 42% !important;
+        transform: translateY(-42%) !important;
     }
 
     #innerCaptionCoinsText {
@@ -941,20 +1017,21 @@
         width: 95%;
     }
     .introCaptionWelcomeSubText {
-        position: absolute;
-        top: 42%;
-        transform: translateY(-42%);
-        font-size: 1.2em;
+        position: absolute !important;
+        top: 44% !important;
+        transform: translateY(-44%) !important;
+        font-size: 1.2em !important;
     }
     .innerCaptionWelcome {
-        position: absolute;
-        top: 8%;
-        transform: translateY(-8%);
+        position: absolute !important;
+        top: -2% !important;
+        transform: translateY(-2%) !important;
     }
     .innerCaptionWelcomeText {
         font-size: 1.6em;
         color: white;
     }
+
     #banner {
         margin-top: -10px;
         margin-bottom: -10px;
@@ -1071,9 +1148,50 @@
         transform: translateY(25%);
         font-size: .8em;
     }
+    #welcomeC {
+    font-size: 1.6em;
+    color: white;
+}
+
+.leftIntroCaptionWelcomeSubText, 
+.centerIntroCaptionWelcomeSubText, 
+.centerIntroCaptionWelcomeSubText2, 
+#innerCaptionBeginner, 
+#welcomeCWhite, 
+.introCaptionBeginnerSubText, 
+#innerCaptionCoinsText, 
+#innerCaptionCoinsText2, 
+.innerCaptionReddit2, 
+.innerCaptionReddit {
+    font-family: 'Amiri', serif !important;
+}
+
+#leftIntroCaptionWelcomeSubText, 
+#centerIntroCaptionWelcomeSubText, 
+#centerIntroCaptionWelcomeSubText2 {
+	font-size: .8em !important;
+}
+
+#innerCaptionWelcomeText {
+    font-size: 1.6em !important;
+    color: white;
+    font-family: 'Amiri', serif;
+
+}
 }
 
 @media (min-width: 980.1px) {
+    .innerCaptionReddit2 {
+        position: absolute !important;
+        bottom: -1% !important;
+        transform: translateY(5%) !important;
+        
+    }
+    #innerCaptionReddit2, 
+    #innerCaptionReddit2 {
+    	font-size: 1em !important;
+        font-family: 'Amiri', serif !important;
+    }
     .innerCaptionWelcomeText {
         font-size: 1.85em;
         color: white;

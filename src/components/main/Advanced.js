@@ -9,6 +9,7 @@ class Advanced extends Component {
   }
   render() {
     return (
+
       <div className="advanced sideSection">
          <Col xs={12} sm={3} md={3} lg={3}>
             <div className="upperSideBarFringe">
