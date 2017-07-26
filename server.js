@@ -148,8 +148,8 @@ app.get('/goldScrape', function (req, res) {
 
 app.use('/users', users);
 
-app.get('*', function (req, res) {
-  res.sendFile('index.html', { root: '/build/' });
+app.get('*', function(req, res) {
+  res.sendFile(path.resolve(__dirname + 'build/index.html'));
 });
 
 // Set Port
