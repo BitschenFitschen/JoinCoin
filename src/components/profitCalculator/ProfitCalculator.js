@@ -41,7 +41,7 @@ class ProfitCalculator extends Component {
 
     axios.get('https://api.coinmarketcap.com/v1/ticker/?limit=10')
       .then(function (response) {
-        console.log(response.data);
+        // console.log(response.data);
         that.setState({ top10: response.data });
 
         axios.get('http://localhost:3000/goldScrape')
@@ -89,7 +89,7 @@ class ProfitCalculator extends Component {
   }
 
   buyIn(e) {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     this.setState({ buyin: parseFloat(e.target.value) });
 
     if(parseInt(e.target.value, 10) !== 0 && parseFloat(e.target.value) !== 0 && e.target.value !== '') {
