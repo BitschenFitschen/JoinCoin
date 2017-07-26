@@ -80,7 +80,7 @@ app.use(function (req, res, next) {
 });
 
 // Database configuration with mongoose
-mongoose.connect('mongodb://localhost/JoinCoin');
+mongoose.connect(process.env.MONGODB_URI);
 var db = mongoose.connection;
 
 // Show any mongoose errors
