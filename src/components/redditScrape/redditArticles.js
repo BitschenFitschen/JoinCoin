@@ -8,7 +8,7 @@ class RedditArticles extends Component {
   }
   componentWillMount(){
   	let that = this;
-  	axios.get('https://localhost:3001/redditResult').then(function (response) {
+  	axios.get('/redditResult').then(function (response) {
   		that.setState({result:response.data})
   	})
   }
