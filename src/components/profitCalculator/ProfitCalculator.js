@@ -44,7 +44,7 @@ class ProfitCalculator extends Component {
         // console.log(response.data);
         that.setState({ top10: response.data });
 
-        axios.get('http://localhost:3000/goldScrape')
+        axios.get('http://localhost:3001/goldScrape')
           .then(function (response) {
             that.setState({ goldPrice: parseFloat(response.data.replace(/,/g, '')) });
           })
